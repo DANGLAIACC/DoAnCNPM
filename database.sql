@@ -35,23 +35,23 @@ CREATE TABLE EXAM_TYPE(
 	exam_type_price int not null,
 )
 GO
-CREATE TABLE RECORD( /*Bản ghi hồ sơ khám bệnh*/
+CREATE TABLE RECORD( 
 	rec_id int identity(100000,1) primary key,
 	rec_date datetime not null,
 	par_id int foreign key references PATIENT(par_id) not null,
 	doc_id varchar(12) foreign key references DOCTOR(doc_id) not null,
-	rec_diagnostic nvarchar(100) not null, /*chuẩn đoán*/
-	hospital nvarchar(100), /*Bệnh viện được yêu cầu chuyển đến, nếu ko có nội dung là ko chuyển*/
+	rec_diagnostic nvarchar(100) not null,
+	hospital nvarchar(100),
 	exam_type_id int foreign key references EXAM_TYPE(exam_type_id) not null,
 	rec_note nvarchar(100)
 )
 GO
 CREATE TABLE MEDICINE(
-	med_id varchar(50) primary key, /*từ viết tắt*/
+	med_id varchar(50) primary key,
 	med_name nvarchar(70) not null
 )
 GO
-CREATE TABLE PRESCRIPTION( /*Chi tiết đơn thuốc*/
+CREATE TABLE PRESCRIPTION(
 	rec_id int foreign key references RECORD(rec_id),
 	med_id varchar(50) foreign key references MEDICINE(med_id),
 	
@@ -63,10 +63,66 @@ CREATE TABLE PRESCRIPTION( /*Chi tiết đơn thuốc*/
 	primary key (rec_id,med_id)
 )
 GO
-CREATE TABLE EXAMINATION( /*Xét nghiệm*/
-	rec_id int primary key, /*Yêu cầu xét nghiệm đi với record*/
-	exa_place nvarchar(50) not null, /*nơi xét nghiệm*/
-	exa_content nvarchar(100) not null, /*loại xét nghiệm: máu, tổng quát,...*/
+CREATE TABLE EXAMINATION(
+	rec_id int primary key,
+	exa_place nvarchar(50) not null,
+	exa_content nvarchar(100) not null,
 	exa_result nvarchar(500),
 	foreign key (rec_id) references RECORD(rec_id)
 )
+GO
+
+INSERT INTO DOCTOR VALUES
+('dqlai','dqlai',N'Đặng Quốc Lai',1,'12/22/2000',N'BS. Chuyên khoa II',N'Quốc lộ 13, Thủ Đức, TP.HCM','0772470922',1),
+('nkuyen','nkuyen',N'Nguyễn Kiều Uyên',0,'12/12/2000',N'BS. Chuyên khoa I',N'Hậu Giang, Q.6, TP.HCM','0123456789',1)
+
+GO
+
+INSERT INTO PATIENT(par_fullname, par_gender, par_dob, par_phone1, par_phone2, par_anamnesis) VALUES
+(N'Nguyễn Thị Thập',0,'11/11/1960','0468512167','0684235972',N'Viêm ruột thừa'),
+(N'Trần Văn Hòa',1,'10/09/1980','0992457859','0145012359',N'Sỏi thận'),
+(N'Phạm Quốc Tuấn',1,'12/08/1990','0881535859','0453823893',N'Tăng huyết áp')
+
+GO
+
+INSERT INTO EXAM_TYPE VALUES
+(1,N'Khám có kê toa',150000),
+(2,N'Khám không kê toa',100000),
+(3,N'Tư vấn sức khỏe',80000)
+
+GO
+/* todo
+	Thêm 1 bệnh có yêu cầu xét nghiệm
+	Thêm vào bảng xét nghiệm
+*/
+INSERT INTO RECORD(rec_date,par_id,doc_id,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
+('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
+('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ')
+
+GO 
+INSERT INTO MEDICINE VALUES
+('hapacolc500',N'Hapacol Caplet Acetaminophen 500mg'),
+('hapacola500',N'Hapacol Ace Acetaminophen 500mg Capsules Dhg'),
+('quazimin',N'Quazimin Arginine Aspartate 1000mg Opv'),
+('bedexlor',N'Bedexlor Dexchlorpheniramin Chunggei Pharm Co'),
+('volexin250',N'Volexin Levofloxacin 250mg Boston'),
+('dalekine200',N'Dalekine Natri Valproat 200mg Danapha'),
+('prega150',N'Pendo - Pregabalin 150mg Domesco'),
+('betahistin16',N'Betahistin 16mg An Thiên'),
+('gaberon300',N'Gaberon Gabapentin 300mg Domesco'),
+('pendo50',N'Pendo - Pregabalin 50mg Domesco'),
+('docorrimin125',N'Docorrimin 125mg/1500mg Domesco'),
+('dococetam',N'Dorocetam Piracetam 800mg Domesco'),
+('phenytoin100',N'Phenytoin 100mg Danapha '),
+('olanxol',N'Olanxol Olanzapin 10mg Danapha'),
+('sakuzyal',N'Sakuzyal Oxcarbazepin 300mg Davipharm'),
+('maleutyl',N'Maleutyl 500mg Hasan ')
+
+GO
+INSERT INTO PRESCRIPTION VALUES
+(100003,'hapacolc500',1,1,1,N'Uống trước khi ăn'),
+(100004,'quazimin',1,0,1,N'Uống san khi ăn no')
+
+GO
+
+SELECT * FROM DOCTOR

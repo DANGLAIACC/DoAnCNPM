@@ -35,35 +35,8 @@ namespace GUI.Forms
         {
 
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (isCollapsed)
-            {
-                panelLeft.Width = panelLeft.Width + 10;
-                if (panelLeft.Width >= PanelWidth)
-                {
-                    timer1.Stop();
-                    isCollapsed = false;
-                    this.Refresh();
-                }
-            }
-            else
-            {
-                panelLeft.Width = panelLeft.Width - 10;
-                if (panelLeft.Width <= 59)
-                {
-                    timer1.Stop();
-                    isCollapsed = true;
-                    this.Refresh();
-                }
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
+        
+        
         private void moveSidePanel(Control btn)
         {
             panelSide.Top = btn.Top;
@@ -126,7 +99,7 @@ namespace GUI.Forms
         private void timerTime_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            labelTime.Text = dt.ToString("HH:MM:ss");
+            labelTime.Text = dt.ToString("HH:MM:ss DD/mm/YYYY");
         }
     }
 }
