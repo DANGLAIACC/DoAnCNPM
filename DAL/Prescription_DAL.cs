@@ -17,7 +17,7 @@ namespace DAL
                 p.Pre_afternoon, p.Pre_note);
             return DataProvider.ExecuteNonQuery(query);
         }
-        public static Prescription_DTO getPreScriptionById(int rec_id)
+        public static Prescription_DTO getPrescriptionById(int rec_id)
         {
             DataTable table = new DataTable();
             string query = string.Format("select * from prescription where rec_id = {0}",rec_id);

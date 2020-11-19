@@ -165,8 +165,7 @@
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(203, 60);
             this.btnPurchase.TabIndex = 2;
-            this.btnPurchase.Text = "     Xét nghiệm";
-            this.btnPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPurchase.Text = "       Xét nghiệm";
             this.btnPurchase.UseVisualStyleBackColor = true;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
@@ -250,7 +249,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(6, 9);
+            this.label4.Location = new System.Drawing.Point(6, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 41);
             this.label4.TabIndex = 0;

@@ -10,7 +10,6 @@ namespace DAL
 {
     public class Patient_DAL
     {
-
         public static List<Patient_DTO> getPatient()
         {
             DataTable table = new DataTable();
