@@ -1,0 +1,4 @@
+- Chức năng với bác sĩ: Đăng nhập
+- Chức năng liên quan đến xét nghiệm: Liệt kê danh sách xét nghiệm, cập nhật kết quả xét nghiệm, tìm kiếm xét nghiệm.
+- Chức năng liên quan đến bệnh nhân: Liệt kê danh sách bệnh nhân, thêm bệnh nhân, tìm kiếm bệnh nhân theo tên, sđt, mã hồ sơ bệnh nhân; Xem hồ sơ bệnh án của bệnh nhân đó.
+- Đơn thuốc: Thêm đơn thuốc, liệt kê danh sách đơn thuốc, xem chi tiết đơn thuốc.

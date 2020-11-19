@@ -8,7 +8,7 @@ GO
 USE FAMILY_DOCTOR 
 GO
 CREATE TABLE DOCTOR (
-	doc_id varchar(12) primary key,
+	doc_usr varchar(12) primary key,
 	doc_pwd varchar(20) not null,
 	doc_fullname nvarchar(50) not null,
 	doc_gender bit not null,
@@ -20,13 +20,14 @@ CREATE TABLE DOCTOR (
 )
 GO
 CREATE TABLE PATIENT(
-	par_id int identity(1000,1) primary key,
-	par_fullname nvarchar(50) not null,
-	par_gender bit not null,
-	par_dob date not null,
-	par_phone1 char(10) not null,
-	par_phone2 char(10),
-	par_anamnesis nvarchar(500)
+	pat_id int identity(1000,1) primary key,
+	pat_fullname nvarchar(50) not null,
+	pat_gender bit not null,
+	pat_dob date not null,
+	pat_address nvarchar(100),
+	pat_phone1 char(10) not null,
+	pat_phone2 char(10),
+	pat_anamnesis nvarchar(500)
 )
 GO
 CREATE TABLE EXAM_TYPE(
@@ -38,7 +39,7 @@ GO
 CREATE TABLE RECORD( 
 	rec_id int identity(100000,1) primary key,
 	rec_date datetime not null,
-	par_id int foreign key references PATIENT(par_id) not null,
+	pat_id int foreign key references PATIENT(pat_id) not null,
 	doc_id varchar(12) foreign key references DOCTOR(doc_id) not null,
 	rec_diagnostic nvarchar(100) not null,
 	hospital nvarchar(100),
@@ -78,10 +79,10 @@ INSERT INTO DOCTOR VALUES
 
 GO
 
-INSERT INTO PATIENT(par_fullname, par_gender, par_dob, par_phone1, par_phone2, par_anamnesis) VALUES
-(N'Nguyễn Thị Thập',0,'11/11/1960','0468512167','0684235972',N'Viêm ruột thừa'),
-(N'Trần Văn Hòa',1,'10/09/1980','0992457859','0145012359',N'Sỏi thận'),
-(N'Phạm Quốc Tuấn',1,'12/08/1990','0881535859','0453823893',N'Tăng huyết áp')
+INSERT INTO PATIENT(pat_fullname, pat_gender, pat_dob, pat_phone1, pat_phone2, pat_anamnesis) VALUES
+(N'Nguyễn Thị Thập',0,'11/11/1960',N'123 Quốc Hương, P. Thảo Điền, Q.2','0468512167','0684235972',N'Viêm ruột thừa'),
+(N'Trần Văn Hòa',1,'10/09/1980',N'43 Trần Não, P. Bình An, Q.2','0992457859','0145012359',N'Sỏi thận'),
+(N'Phạm Quốc Tuấn',1,'12/08/1990',N'456 Lương Định Của, P. An Phú, Q.2','0881535859','0453823893',N'Tăng huyết áp')
 
 GO
 
@@ -95,7 +96,7 @@ GO
 	Thêm 1 bệnh có yêu cầu xét nghiệm
 	Thêm vào bảng xét nghiệm
 */
-INSERT INTO RECORD(rec_date,par_id,doc_id,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
+INSERT INTO RECORD(rec_date,pat_id,doc_id,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
 ('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
 ('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ')
 
@@ -120,9 +121,75 @@ INSERT INTO MEDICINE VALUES
 
 GO
 INSERT INTO PRESCRIPTION VALUES
-(100003,'hapacolc500',1,1,1,N'Uống trước khi ăn'),
-(100004,'quazimin',1,0,1,N'Uống san khi ăn no')
+(100000,'hapacolc500',1,1,1,N'Uống trước khi ăn'),
+(100001,'quazimin',1,0,1,N'Uống san khi ăn no')
 
 GO
 
-SELECT * FROM DOCTOR
+/*
+
+CREATE PROCEDURE CREATEMODEL  
+(  
+     @TableName SYSNAME 
+)  
+AS  
+BEGIN  
+    DECLARE @Result VARCHAR(MAX)  
+    SET @Result = 'public class ' + upper(left(@TableName,1)) + substring(@TableName,2,len(@TableName))+ '_DTO
+{'  
+SELECT @Result = @Result + '  
+    public ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }'  
+FROM  
+(  
+    SELECT
+		upper(left(col.NAME,1)) + substring(col.NAME,2,len(col.NAME)) ColumnName,  
+        column_id ColumnId,  
+        CASE typ.NAME   
+            WHEN 'bigint' THEN 'long'  
+            WHEN 'binary' THEN 'byte[]'  
+            WHEN 'bit' THEN 'bool'  
+            WHEN 'char' THEN 'string'  
+            WHEN 'date' THEN 'DateTime'  
+            WHEN 'datetime' THEN 'DateTime'  
+            WHEN 'datetime2' then 'DateTime'  
+            WHEN 'datetimeoffset' THEN 'DateTimeOffset'  
+            WHEN 'decimal' THEN 'decimal'  
+            WHEN 'float' THEN 'float'  
+            WHEN 'image' THEN 'byte[]'  
+            WHEN 'int' THEN 'int'  
+            WHEN 'money' THEN 'decimal'  
+            WHEN 'nchar' THEN 'char'  
+            WHEN 'ntext' THEN 'string'  
+            WHEN 'numeric' THEN 'decimal'  
+            WHEN 'nvarchar' THEN 'string'  
+            WHEN 'real' THEN 'double'  
+            WHEN 'smalldatetime' THEN 'DateTime'  
+            WHEN 'smallint' THEN 'short'  
+            WHEN 'smallmoney' THEN 'decimal'  
+            WHEN 'text' THEN 'string'  
+            WHEN 'time' THEN 'TimeSpan'  
+            WHEN 'timestamp' THEN 'DateTime'  
+            WHEN 'tinyint' THEN 'byte'  
+            WHEN 'uniqueidentifier' THEN 'Guid'  
+            WHEN 'varbinary' THEN 'byte[]'  
+            WHEN 'varchar' THEN 'string'  
+            ELSE 'UNKNOWN_' + typ.NAME  
+        END ColumnType,  
+        CASE   
+            WHEN col.is_nullable = 1 and typ.NAME in ('bigint', 'bit', 'date', 'datetime', 'datetime2', 'datetimeoffset', 'decimal', 'float', 'int', 'money', 'numeric', 'real', 'smalldatetime', 'smallint', 'smallmoney', 'time', 'tinyint', 'uniqueidentifier')   
+            THEN '?'   
+            ELSE ''   
+        END NullableSign  
+    FROM SYS.COLUMNS col join sys.types typ on col.system_type_id = typ.system_type_id AND col.user_type_id = typ.user_type_id  
+    where object_id = object_id(@TableName)  
+) t  
+ORDER BY ColumnId  
+SET @Result = @Result  + '  
+}'  
+print @Result  
+END
+
+exec CREATEMODEL 'exam_type'
+*/
+
+select * from examination where rec_id = 100000

@@ -46,13 +46,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.panelControls = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelLeft.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -222,7 +221,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(38, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 21);
+            this.label2.Size = new System.Drawing.Size(151, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bác sĩ gia đình";
             // 
@@ -253,7 +252,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.label4.Location = new System.Drawing.Point(6, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 32);
+            this.label4.Size = new System.Drawing.Size(135, 41);
             this.label4.TabIndex = 0;
             this.label4.Text = "Khoa nội";
             // 
@@ -263,7 +262,7 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,6 +287,17 @@
             this.panel2.Size = new System.Drawing.Size(985, 92);
             this.panel2.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(140, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(220, 32);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Họ tên bệnh nhân";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -295,7 +305,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(8, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 25);
+            this.label6.Size = new System.Drawing.Size(136, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "Bệnh nhân:";
             // 
@@ -303,11 +313,11 @@
             // 
             this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
             this.labelTime.Location = new System.Drawing.Point(782, 32);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(191, 19);
+            this.labelTime.Size = new System.Drawing.Size(264, 25);
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "HH:MM:SS DD/MM/YYYY";
             // 
@@ -318,7 +328,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(8, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 25);
+            this.label1.Size = new System.Drawing.Size(378, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bác sĩ Chuyên khoa I Họ tên gì đó";
             // 
@@ -334,17 +344,6 @@
             this.panelControls.Size = new System.Drawing.Size(985, 580);
             this.panelControls.TabIndex = 2;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(112, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Họ tên bệnh nhân";
-            // 
             // Form_Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -354,12 +353,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelLeft);
-            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Dashboard";
             this.Text = "Form_Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form_Dashboard_Load);
             this.panelLeft.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -393,7 +391,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panelControls;
         private System.Windows.Forms.Label label3;

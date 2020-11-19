@@ -43,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="Doctor_DAL.cs" />
+    <Compile Include="Examination_DAL.cs" />
+    <Compile Include="Prescription_DAL.cs" />
+    <Compile Include="Patient_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -109,11 +109,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\UC_Home.cs">
+    <Compile Include="UserControls\UC_BenhNhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Home.Designer.cs">
-      <DependentUpon>UC_Home.cs</DependentUpon>
+    <Compile Include="UserControls\UC_BenhNhan.Designer.cs">
+      <DependentUpon>UC_BenhNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_ManageExpense.cs">
       <SubType>UserControl</SubType>
@@ -181,8 +181,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\UC_Home.resx">
-      <DependentUpon>UC_Home.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UC_BenhNhan.resx">
+      <DependentUpon>UC_BenhNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_ManageExpense.resx">
       <DependentUpon>UC_ManageExpense.cs</DependentUpon>

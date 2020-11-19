@@ -30,11 +30,6 @@ namespace GUI.Forms
         {
             this.Dispose();
         }
-
-        private void Form_Dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
         
         
         private void moveSidePanel(Control btn)

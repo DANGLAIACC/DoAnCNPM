@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.Forms;
 
 namespace FamilyDoctor.Forms
 {
@@ -20,6 +21,14 @@ namespace FamilyDoctor.Forms
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            using (Form_Dashboard fd = new Form_Dashboard())
+            {
+                fd.ShowDialog();
+            }
         }
     }
 }
