@@ -53,7 +53,7 @@ namespace GUI.Forms
 
         private void btnThemBenhAn_Click(object sender, EventArgs e)
         {
-            frmAdd f = new frmAdd("Thêm bệnh án mới", new UC_AddRecord());
+            frmAdd f = new frmAdd("Thêm bệnh án mới", new UC_AddRecord(patient.Pat_id,patient.Pat_fullname));
             f.ShowDialog();
         }
     }

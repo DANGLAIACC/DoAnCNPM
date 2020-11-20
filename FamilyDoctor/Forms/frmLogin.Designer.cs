@@ -1,4 +1,4 @@
-﻿namespace FamilyDoctor.Forms
+﻿namespace GUI.Forms
 {
     partial class frmLogin
     {

@@ -8,11 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.global;
-using GUI.Forms;
 using DTO;
 using BLL;
 
-namespace FamilyDoctor.Forms
+namespace GUI.Forms
 {
     public partial class frmLogin : Form
     {

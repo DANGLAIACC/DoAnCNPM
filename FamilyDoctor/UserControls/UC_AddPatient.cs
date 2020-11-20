@@ -16,5 +16,10 @@ namespace GUI.UserControls
         {
             InitializeComponent();
         }
+
+        private void UC_AddPatient_Load(object sender, EventArgs e)
+        {
+            txtTen.Focus();
+        }
     }
 }

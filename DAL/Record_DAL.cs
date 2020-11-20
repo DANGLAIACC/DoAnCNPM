@@ -77,5 +77,14 @@ namespace DAL
             }
             return null;
         }
+
+        public static bool addRecord(Record_DTO r)
+        {
+            // todo
+            // string query = string.Format("")
+
+            return true;
+
+        }
     }
 }

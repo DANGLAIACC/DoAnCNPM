@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_AddRecord));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboExamType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cboExamType);
             this.panel2.Controls.Add(this.btnClear);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.label6);
@@ -73,14 +73,24 @@
             this.panel2.Size = new System.Drawing.Size(585, 415);
             this.panel2.TabIndex = 10;
             // 
-            // comboBox1
+            // cboExamType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(393, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 36);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Tư vấn sức khỏe";
+            this.cboExamType.BackColor = System.Drawing.Color.Transparent;
+            this.cboExamType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboExamType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboExamType.FocusedColor = System.Drawing.Color.Empty;
+            this.cboExamType.FocusedState.Parent = this.cboExamType;
+            this.cboExamType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboExamType.ForeColor = System.Drawing.Color.Black;
+            this.cboExamType.FormattingEnabled = true;
+            this.cboExamType.HoverState.Parent = this.cboExamType;
+            this.cboExamType.ItemHeight = 30;
+            this.cboExamType.ItemsAppearance.Parent = this.cboExamType;
+            this.cboExamType.Location = new System.Drawing.Point(378, 21);
+            this.cboExamType.Name = "cboExamType";
+            this.cboExamType.ShadowDecoration.Parent = this.cboExamType;
+            this.cboExamType.Size = new System.Drawing.Size(187, 36);
+            this.cboExamType.TabIndex = 6;
             // 
             // btnClear
             // 
@@ -96,7 +106,7 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.ShadowDecoration.Parent = this.btnClear;
             this.btnClear.Size = new System.Drawing.Size(157, 45);
-            this.btnClear.TabIndex = 8;
+            this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Nhập lại";
             // 
             // btnThem
@@ -113,8 +123,9 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.ShadowDecoration.Parent = this.btnThem;
             this.btnThem.Size = new System.Drawing.Size(157, 45);
-            this.btnThem.TabIndex = 7;
+            this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label6
             // 
@@ -137,7 +148,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(286, 22);
+            this.label5.Location = new System.Drawing.Point(280, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 28);
             this.label5.TabIndex = 2;
@@ -146,7 +157,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 78);
+            this.label3.Location = new System.Drawing.Point(15, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 28);
             this.label3.TabIndex = 2;
@@ -158,7 +169,7 @@
             this.txtDiagnostic.Multiline = true;
             this.txtDiagnostic.Name = "txtDiagnostic";
             this.txtDiagnostic.Size = new System.Drawing.Size(437, 76);
-            this.txtDiagnostic.TabIndex = 4;
+            this.txtDiagnostic.TabIndex = 1;
             // 
             // txtBenhNhan
             // 
@@ -167,6 +178,7 @@
             this.txtBenhNhan.ReadOnly = true;
             this.txtBenhNhan.Size = new System.Drawing.Size(437, 34);
             this.txtBenhNhan.TabIndex = 2;
+            this.txtBenhNhan.TabStop = false;
             // 
             // txtBacSi
             // 
@@ -175,20 +187,21 @@
             this.txtBacSi.ReadOnly = true;
             this.txtBacSi.Size = new System.Drawing.Size(437, 34);
             this.txtBacSi.TabIndex = 2;
+            this.txtBacSi.TabStop = false;
             // 
             // txtHospital
             // 
             this.txtHospital.Location = new System.Drawing.Point(128, 313);
             this.txtHospital.Name = "txtHospital";
             this.txtHospital.Size = new System.Drawing.Size(437, 34);
-            this.txtHospital.TabIndex = 6;
+            this.txtHospital.TabIndex = 3;
             // 
             // txtNote
             // 
             this.txtNote.Location = new System.Drawing.Point(128, 266);
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(437, 34);
-            this.txtNote.TabIndex = 5;
+            this.txtNote.TabIndex = 2;
             // 
             // label8
             // 
@@ -215,6 +228,7 @@
             this.txtPat_id.ReadOnly = true;
             this.txtPat_id.Size = new System.Drawing.Size(139, 34);
             this.txtPat_id.TabIndex = 0;
+            this.txtPat_id.TabStop = false;
             // 
             // label1
             // 
@@ -245,7 +259,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private System.Windows.Forms.Label label6;
@@ -261,5 +274,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPat_id;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cboExamType;
     }
 }

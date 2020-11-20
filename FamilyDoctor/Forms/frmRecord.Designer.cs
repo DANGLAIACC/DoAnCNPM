@@ -34,6 +34,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecord));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grvLstRecord = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.btnThemBenhAn = new Guna.UI2.WinForms.Guna2Button();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvLstRecord)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -152,6 +152,30 @@
             this.grvLstRecord.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(215)))), ((int)(((byte)(95)))));
             this.grvLstRecord.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Mã bệnh án";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ngày khám";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Bác sĩ khám";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Col3
+            // 
+            this.Col3.HeaderText = "Kết quả chẩn đoán";
+            this.Col3.Name = "Col3";
+            this.Col3.ReadOnly = true;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
@@ -173,6 +197,7 @@
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClose.CheckedState.Parent = this.btnClose;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.CustomImages.Parent = this.btnClose;
             this.btnClose.FillColor = System.Drawing.Color.Red;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -304,30 +329,6 @@
             this.btnThemBenhAn.TabIndex = 4;
             this.btnThemBenhAn.Text = "Thêm bệnh án";
             this.btnThemBenhAn.Click += new System.EventHandler(this.btnThemBenhAn_Click);
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Mã bệnh án";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Ngày khám";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Bác sĩ khám";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Col3
-            // 
-            this.Col3.HeaderText = "Kết quả chẩn đoán";
-            this.Col3.Name = "Col3";
-            this.Col3.ReadOnly = true;
             // 
             // frmRecord
             // 

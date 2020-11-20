@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D8F85CC1-9472-4794-8449-5D545C316A4E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GUI</RootNamespace>
     <AssemblyName>GUI</AssemblyName>
@@ -34,6 +34,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>GUI.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.1.2, Culture=neutral, processorArchitecture=MSIL">
@@ -88,6 +91,12 @@
     </Compile>
     <Compile Include="Forms\Form_AddStock.Designer.cs">
       <DependentUpon>Form_AddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddPrescription.Designer.cs">
+      <DependentUpon>frmAddPrescription.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmAdd.cs">
       <SubType>Form</SubType>
@@ -152,6 +161,12 @@
     <Compile Include="UserControls\UC_ManageUser.Designer.cs">
       <DependentUpon>UC_ManageUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_PrescriptionItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_PrescriptionItem.Designer.cs">
+      <DependentUpon>UC_PrescriptionItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_PurchaseDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_AddStock.resx">
       <DependentUpon>Form_AddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddPrescription.resx">
+      <DependentUpon>frmAddPrescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAdd.resx">
       <DependentUpon>frmAdd.cs</DependentUpon>
@@ -227,6 +245,9 @@
     <EmbeddedResource Include="UserControls\UC_ManageUser.resx">
       <DependentUpon>UC_ManageUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_PrescriptionItem.resx">
+      <DependentUpon>UC_PrescriptionItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_PurchaseDetails.resx">
       <DependentUpon>UC_PurchaseDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +279,9 @@
       <Project>{39afd746-7387-417a-8b88-cb564ac58961}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -87,9 +87,9 @@ INSERT INTO PATIENT(pat_fullname, pat_gender, pat_dob, pat_address, pat_phone1, 
 GO
 
 INSERT INTO EXAM_TYPE VALUES
-(1,N'Khám có kê toa',150000),
-(2,N'Khám không kê toa',100000),
-(3,N'Tư vấn sức khỏe',80000)
+(0,N'Có kê toa',150000),
+(1,N'Không kê toa',100000),
+(2,N'Tư vấn sức khỏe',80000)
 
 GO
 /* todo
@@ -191,4 +191,3 @@ END
 
 exec CREATEMODEL 'exam_type'
 */
-select rec_id,rec_date,doc_fullname,rec_diagnostic from record a inner join doctor b on a.doc_usr = b.doc_usr where pat_id = 1000
