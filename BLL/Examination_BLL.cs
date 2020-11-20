@@ -18,4 +18,5 @@ namespace BLL
         {
             return Examination_DAL.updateResultExamination(rec_id, exa_result);
         }
+    }
 }

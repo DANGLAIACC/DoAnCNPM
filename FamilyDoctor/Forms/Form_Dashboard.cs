@@ -94,7 +94,7 @@ namespace GUI.Forms
         private void timerTime_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            labelTime.Text = dt.ToString("HH:MM:ss DD/mm/YYYY");
+            labelTime.Text = dt.ToString("HH:mm:ss dd/MM/yyyy");
         }
     }
 }

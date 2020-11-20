@@ -25,10 +25,14 @@ namespace FamilyDoctor.Forms
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            using (Form_Dashboard fd = new Form_Dashboard())
-            {
-                fd.ShowDialog();
-            }
+            //using (Form_Dashboard fd = new Form_Dashboard())
+            //{
+            //    fd.ShowDialog();
+            //}
+            Form_Dashboard f = new Form_Dashboard();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

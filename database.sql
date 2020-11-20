@@ -40,7 +40,7 @@ CREATE TABLE RECORD(
 	rec_id int identity(100000,1) primary key,
 	rec_date datetime not null,
 	pat_id int foreign key references PATIENT(pat_id) not null,
-	doc_id varchar(12) foreign key references DOCTOR(doc_id) not null,
+	doc_usr varchar(12) foreign key references DOCTOR(doc_usr) not null,
 	rec_diagnostic nvarchar(100) not null,
 	hospital nvarchar(100),
 	exam_type_id int foreign key references EXAM_TYPE(exam_type_id) not null,
@@ -79,7 +79,7 @@ INSERT INTO DOCTOR VALUES
 
 GO
 
-INSERT INTO PATIENT(pat_fullname, pat_gender, pat_dob, pat_phone1, pat_phone2, pat_anamnesis) VALUES
+INSERT INTO PATIENT(pat_fullname, pat_gender, pat_dob, pat_address, pat_phone1, pat_phone2, pat_anamnesis) VALUES
 (N'Nguyễn Thị Thập',0,'11/11/1960',N'123 Quốc Hương, P. Thảo Điền, Q.2','0468512167','0684235972',N'Viêm ruột thừa'),
 (N'Trần Văn Hòa',1,'10/09/1980',N'43 Trần Não, P. Bình An, Q.2','0992457859','0145012359',N'Sỏi thận'),
 (N'Phạm Quốc Tuấn',1,'12/08/1990',N'456 Lương Định Của, P. An Phú, Q.2','0881535859','0453823893',N'Tăng huyết áp')
@@ -96,7 +96,7 @@ GO
 	Thêm 1 bệnh có yêu cầu xét nghiệm
 	Thêm vào bảng xét nghiệm
 */
-INSERT INTO RECORD(rec_date,pat_id,doc_id,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
+INSERT INTO RECORD(rec_date,pat_id,doc_usr,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
 ('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
 ('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ')
 
@@ -192,4 +192,4 @@ END
 exec CREATEMODEL 'exam_type'
 */
 
-select * from examination where rec_id = 100000
+

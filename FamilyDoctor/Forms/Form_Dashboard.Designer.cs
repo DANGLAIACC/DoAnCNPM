@@ -314,7 +314,7 @@
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(782, 32);
+            this.labelTime.Location = new System.Drawing.Point(709, 33);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(264, 25);
             this.labelTime.TabIndex = 0;

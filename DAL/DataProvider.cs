@@ -12,9 +12,9 @@ namespace DAL
     {
         public static SqlConnection OpenConnection()
         {
-            //string strConnection = @"Data Source = (local); Initial Catalog=WATCH_STORE;Intergrated Security=True" // DANGLAI_PC\DANGLAI_PC;
+            //string strConnection = @"Data Source = (local); Initial Catalog=FAMILY_DOCTOR;Intergrated Security=True" // DANGLAI_PC\DANGLAI_PC;
             string strConnection = @"server=DANGLAI_PC\DANGLAI_PC;"
-                + "database=WATCH_STORE;Integrated Security=True;"
+                + "database=FAMILY_DOCTOR;Integrated Security=True;"
                 + "Trusted_Connection=true";
             SqlConnection connection = new SqlConnection(strConnection);
             connection.Open();
