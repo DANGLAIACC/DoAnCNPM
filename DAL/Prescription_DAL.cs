@@ -10,6 +10,11 @@ namespace DAL
 {
     public class Prescription_DAL
     {
+        /// <summary>
+        /// Thêm đơn thuốc
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public static bool addPrescription(Prescription_DTO p)
         {
             string query = string.Format("INSERT INTO PRESCRIPTION VALUES ({0}, '{1}', {2}, {3}, {4}, N'{5}')"
@@ -17,7 +22,13 @@ namespace DAL
                 p.Pre_afternoon, p.Pre_note);
             return DataProvider.ExecuteNonQuery(query);
         }
-        public static Prescription_DTO getPrescriptionById(int rec_id)
+        
+        /// <summary>
+        /// Lấy thông tin đơn thuốc bằng mã bản ghi khám bệnh
+        /// </summary>
+        /// <param name="rec_id"></param>
+        /// <returns></returns>
+        public static Prescription_DTO getPrescriptionByRecId(int rec_id)
         {
             DataTable table = new DataTable();
             string query = string.Format("select * from prescription where rec_id = {0}",rec_id);

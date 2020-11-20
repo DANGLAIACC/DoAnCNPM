@@ -30,7 +30,7 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (Form_Dashboard fd = new Form_Dashboard())
+            using (frmMain fd = new frmMain())
             {
                 fd.ShowDialog();
             }

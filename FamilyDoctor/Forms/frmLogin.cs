@@ -29,7 +29,7 @@ namespace FamilyDoctor.Forms
             //{
             //    fd.ShowDialog();
             //}
-            Form_Dashboard f = new Form_Dashboard();
+            frmMain f = new frmMain();
             this.Hide();
             f.ShowDialog();
             this.Close();

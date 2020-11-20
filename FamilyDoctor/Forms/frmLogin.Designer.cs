@@ -239,7 +239,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.label1.Location = new System.Drawing.Point(849, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.label1.Padding = new System.Windows.Forms.Padding(12);
             this.label1.Size = new System.Drawing.Size(262, 47);
             this.label1.TabIndex = 1;
             this.label1.Text = "Đặng Quốc Lai - 077.247.0922";

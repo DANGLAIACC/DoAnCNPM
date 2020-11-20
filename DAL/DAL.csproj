@@ -48,6 +48,7 @@
     <Compile Include="Prescription_DAL.cs" />
     <Compile Include="Patient_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record_DAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

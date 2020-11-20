@@ -1,6 +1,6 @@
 ﻿namespace GUI.UserControls
 {
-    partial class UC_Home
+    partial class UC_Patient
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Patient));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
@@ -198,11 +199,20 @@
             this.grvLstBenhNhan.Name = "grvLstBenhNhan";
             this.grvLstBenhNhan.ReadOnly = true;
             this.grvLstBenhNhan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvLstBenhNhan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grvLstBenhNhan.RowHeadersVisible = false;
             this.grvLstBenhNhan.RowHeadersWidth = 20;
             this.grvLstBenhNhan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grvLstBenhNhan.RowTemplate.DividerHeight = 1;
-            this.grvLstBenhNhan.RowTemplate.Height = 35;
+            this.grvLstBenhNhan.RowTemplate.Height = 40;
             this.grvLstBenhNhan.RowTemplate.ReadOnly = true;
             this.grvLstBenhNhan.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grvLstBenhNhan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -227,7 +237,7 @@
             this.grvLstBenhNhan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grvLstBenhNhan.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grvLstBenhNhan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.grvLstBenhNhan.ThemeStyle.RowsStyle.Height = 35;
+            this.grvLstBenhNhan.ThemeStyle.RowsStyle.Height = 40;
             this.grvLstBenhNhan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
             this.grvLstBenhNhan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.grvLstBenhNhan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvLstBenhNhan_CellDoubleClick);
@@ -262,13 +272,13 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // UC_Home
+            // UC_Patient
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "UC_Home";
+            this.Name = "UC_Patient";
             this.Size = new System.Drawing.Size(985, 580);
             this.Load += new System.EventHandler(this.UC_Home_Load);
             this.panel1.ResumeLayout(false);

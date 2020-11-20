@@ -191,5 +191,4 @@ END
 
 exec CREATEMODEL 'exam_type'
 */
-
-
+select rec_id,rec_date,doc_fullname,rec_diagnostic from record a inner join doctor b on a.doc_usr = b.doc_usr where pat_id = 1000

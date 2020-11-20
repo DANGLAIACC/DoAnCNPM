@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using DTO;
 using BLL;
 using GUI.global;
+using GUI.Forms;
 
 namespace GUI.UserControls
 {
-    public partial class UC_Home : UserControl
+    public partial class UC_Patient : UserControl
     {
-        public UC_Home()
+        public UC_Patient()
         {
             InitializeComponent();
         }
@@ -42,8 +43,8 @@ namespace GUI.UserControls
 
         private void grvLstBenhNhan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            MessageBox.Show("Xuất hồ sơ bệnh án của hồ sơ " + GlobalVariable.lstPatient[e.RowIndex].Pat_id);
+            frmRecord f = new frmRecord(GlobalVariable.lstPatient[e.RowIndex]);
+            f.ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GUI.Forms
 {
-    partial class Form_Dashboard
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelSide = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnViewSales = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.btnExpense = new System.Windows.Forms.Button();
-            this.btnPurchase = new System.Windows.Forms.Button();
-            this.btnSaleBooks = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnHospital = new System.Windows.Forms.Button();
+            this.btnExamination = new System.Windows.Forms.Button();
+            this.btnMedicine = new System.Windows.Forms.Button();
+            this.btnPatient = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPat_fullname = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,10 +66,10 @@
             this.panelLeft.Controls.Add(this.btnSettings);
             this.panelLeft.Controls.Add(this.btnViewSales);
             this.panelLeft.Controls.Add(this.btnUsers);
-            this.panelLeft.Controls.Add(this.btnExpense);
-            this.panelLeft.Controls.Add(this.btnPurchase);
-            this.panelLeft.Controls.Add(this.btnSaleBooks);
-            this.panelLeft.Controls.Add(this.btnHome);
+            this.panelLeft.Controls.Add(this.btnHospital);
+            this.panelLeft.Controls.Add(this.btnExamination);
+            this.panelLeft.Controls.Add(this.btnMedicine);
+            this.panelLeft.Controls.Add(this.btnPatient);
             this.panelLeft.Controls.Add(this.panel3);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
@@ -136,72 +136,72 @@
             this.btnUsers.UseVisualStyleBackColor = true;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // btnExpense
+            // btnHospital
             // 
-            this.btnExpense.FlatAppearance.BorderSize = 0;
-            this.btnExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpense.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpense.ForeColor = System.Drawing.Color.White;
-            this.btnExpense.Image = ((System.Drawing.Image)(resources.GetObject("btnExpense.Image")));
-            this.btnExpense.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExpense.Location = new System.Drawing.Point(12, 336);
-            this.btnExpense.Name = "btnExpense";
-            this.btnExpense.Size = new System.Drawing.Size(203, 60);
-            this.btnExpense.TabIndex = 2;
-            this.btnExpense.Text = "     Chuyển viện";
-            this.btnExpense.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExpense.UseVisualStyleBackColor = true;
-            this.btnExpense.Click += new System.EventHandler(this.button4_Click);
+            this.btnHospital.FlatAppearance.BorderSize = 0;
+            this.btnHospital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHospital.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHospital.ForeColor = System.Drawing.Color.White;
+            this.btnHospital.Image = ((System.Drawing.Image)(resources.GetObject("btnHospital.Image")));
+            this.btnHospital.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHospital.Location = new System.Drawing.Point(12, 336);
+            this.btnHospital.Name = "btnHospital";
+            this.btnHospital.Size = new System.Drawing.Size(203, 60);
+            this.btnHospital.TabIndex = 2;
+            this.btnHospital.Text = "     Chuyển viện";
+            this.btnHospital.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHospital.UseVisualStyleBackColor = true;
+            this.btnHospital.Click += new System.EventHandler(this.btnHospital_Click);
             // 
-            // btnPurchase
+            // btnExamination
             // 
-            this.btnPurchase.FlatAppearance.BorderSize = 0;
-            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchase.Image")));
-            this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchase.Location = new System.Drawing.Point(12, 271);
-            this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(203, 60);
-            this.btnPurchase.TabIndex = 2;
-            this.btnPurchase.Text = "       Xét nghiệm";
-            this.btnPurchase.UseVisualStyleBackColor = true;
-            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
+            this.btnExamination.FlatAppearance.BorderSize = 0;
+            this.btnExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExamination.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExamination.ForeColor = System.Drawing.Color.White;
+            this.btnExamination.Image = ((System.Drawing.Image)(resources.GetObject("btnExamination.Image")));
+            this.btnExamination.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExamination.Location = new System.Drawing.Point(12, 271);
+            this.btnExamination.Name = "btnExamination";
+            this.btnExamination.Size = new System.Drawing.Size(203, 60);
+            this.btnExamination.TabIndex = 2;
+            this.btnExamination.Text = "       Xét nghiệm";
+            this.btnExamination.UseVisualStyleBackColor = true;
+            this.btnExamination.Click += new System.EventHandler(this.btnExamination_Click);
             // 
-            // btnSaleBooks
+            // btnMedicine
             // 
-            this.btnSaleBooks.FlatAppearance.BorderSize = 0;
-            this.btnSaleBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaleBooks.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaleBooks.ForeColor = System.Drawing.Color.White;
-            this.btnSaleBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnSaleBooks.Image")));
-            this.btnSaleBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaleBooks.Location = new System.Drawing.Point(12, 205);
-            this.btnSaleBooks.Name = "btnSaleBooks";
-            this.btnSaleBooks.Size = new System.Drawing.Size(203, 60);
-            this.btnSaleBooks.TabIndex = 2;
-            this.btnSaleBooks.Text = "     Đơn thuốc";
-            this.btnSaleBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSaleBooks.UseVisualStyleBackColor = true;
-            this.btnSaleBooks.Click += new System.EventHandler(this.btnSaleBooks_Click);
+            this.btnMedicine.FlatAppearance.BorderSize = 0;
+            this.btnMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedicine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedicine.ForeColor = System.Drawing.Color.White;
+            this.btnMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnMedicine.Image")));
+            this.btnMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedicine.Location = new System.Drawing.Point(12, 205);
+            this.btnMedicine.Name = "btnMedicine";
+            this.btnMedicine.Size = new System.Drawing.Size(203, 60);
+            this.btnMedicine.TabIndex = 2;
+            this.btnMedicine.Text = "     Thuốc";
+            this.btnMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMedicine.UseVisualStyleBackColor = true;
+            this.btnMedicine.Click += new System.EventHandler(this.btnMedicine_Click);
             // 
-            // btnHome
+            // btnPatient
             // 
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(11, 140);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(203, 60);
-            this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "     Bệnh nhân";
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnPatient.FlatAppearance.BorderSize = 0;
+            this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatient.ForeColor = System.Drawing.Color.White;
+            this.btnPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnPatient.Image")));
+            this.btnPatient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPatient.Location = new System.Drawing.Point(11, 140);
+            this.btnPatient.Name = "btnPatient";
+            this.btnPatient.Size = new System.Drawing.Size(203, 60);
+            this.btnPatient.TabIndex = 2;
+            this.btnPatient.Text = "     Bệnh nhân";
+            this.btnPatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPatient.UseVisualStyleBackColor = true;
+            this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
             // 
             // panel3
             // 
@@ -264,10 +264,9 @@
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(941, 0);
+            this.button9.Location = new System.Drawing.Point(937, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(44, 48);
+            this.button9.Size = new System.Drawing.Size(48, 48);
             this.button9.TabIndex = 2;
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = true;
@@ -276,7 +275,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblPat_fullname);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.labelTime);
             this.panel2.Controls.Add(this.label1);
@@ -286,16 +285,16 @@
             this.panel2.Size = new System.Drawing.Size(985, 92);
             this.panel2.TabIndex = 1;
             // 
-            // label3
+            // lblPat_fullname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(140, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 32);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Họ tên bệnh nhân";
+            this.lblPat_fullname.AutoSize = true;
+            this.lblPat_fullname.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPat_fullname.ForeColor = System.Drawing.Color.White;
+            this.lblPat_fullname.Location = new System.Drawing.Point(140, 58);
+            this.lblPat_fullname.Name = "lblPat_fullname";
+            this.lblPat_fullname.Size = new System.Drawing.Size(220, 32);
+            this.lblPat_fullname.TabIndex = 0;
+            this.lblPat_fullname.Text = "Họ tên bệnh nhân";
             // 
             // label6
             // 
@@ -343,7 +342,7 @@
             this.panelControls.Size = new System.Drawing.Size(985, 580);
             this.panelControls.TabIndex = 2;
             // 
-            // Form_Dashboard
+            // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -354,7 +353,7 @@
             this.Controls.Add(this.panelLeft);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_Dashboard";
+            this.Name = "frmMain";
             this.Text = "Form_Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelLeft.ResumeLayout(false);
@@ -374,7 +373,7 @@
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnPatient;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
@@ -383,15 +382,15 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnViewSales;
         private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnExpense;
-        private System.Windows.Forms.Button btnPurchase;
-        private System.Windows.Forms.Button btnSaleBooks;
+        private System.Windows.Forms.Button btnHospital;
+        private System.Windows.Forms.Button btnExamination;
+        private System.Windows.Forms.Button btnMedicine;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panelControls;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPat_fullname;
     }
 }

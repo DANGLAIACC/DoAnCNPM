@@ -11,18 +11,18 @@ using System.Windows.Forms;
 
 namespace GUI.Forms
 {
-    public partial class Form_Dashboard : Form
+    public partial class frmMain : Form
     {
         int PanelWidth;
         bool isCollapsed;
 
-        public Form_Dashboard()
+        public frmMain()
         {
             InitializeComponent();
             timerTime.Start();
             PanelWidth = panelLeft.Width;
             isCollapsed = false;
-            UC_Home uch = new UC_Home();
+            UC_Patient uch = new UC_Patient();
             AddControlsToPanel(uch);
         }
 
@@ -44,30 +44,30 @@ namespace GUI.Forms
             panelControls.Controls.Clear();
             panelControls.Controls.Add(c);
         }
-        private void btnHome_Click(object sender, EventArgs e)
+        private void btnPatient_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnHome);
-            UC_Home uch = new UC_Home();
+            moveSidePanel(btnPatient);
+            UC_Patient uch = new UC_Patient();
             AddControlsToPanel(uch);
         }
 
-        private void btnSaleBooks_Click(object sender, EventArgs e)
+        private void btnMedicine_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnSaleBooks);
+            moveSidePanel(btnMedicine);
             UC_Sales us = new UC_Sales();
             AddControlsToPanel(us);
         }
 
-        private void btnPurchase_Click(object sender, EventArgs e)
+        private void btnExamination_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnPurchase);
+            moveSidePanel(btnExamination);
             UC_PurchaseDetails up = new UC_PurchaseDetails();
             AddControlsToPanel(up);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnHospital_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnExpense);
+            moveSidePanel(btnHospital);
             UC_ManageExpense ea = new UC_ManageExpense();
             AddControlsToPanel(ea);
         }
@@ -96,5 +96,6 @@ namespace GUI.Forms
             DateTime dt = DateTime.Now;
             labelTime.Text = dt.ToString("HH:mm:ss dd/MM/yyyy");
         }
+         
     }
 }
