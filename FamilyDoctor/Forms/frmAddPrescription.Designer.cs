@@ -42,11 +42,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTen = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnPrescritionItems = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.pnPrescritionItems = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,16 +217,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên:";
             // 
-            // pnPrescritionItems
-            // 
-            this.pnPrescritionItems.AllowDrop = true;
-            this.pnPrescritionItems.AutoScroll = true;
-            this.pnPrescritionItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPrescritionItems.Location = new System.Drawing.Point(3, 103);
-            this.pnPrescritionItems.Name = "pnPrescritionItems";
-            this.pnPrescritionItems.Size = new System.Drawing.Size(1084, 471);
-            this.pnPrescritionItems.TabIndex = 1;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnThem);
@@ -256,6 +246,7 @@
             this.btnThem.TabIndex = 99;
             this.btnThem.TabStop = false;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnClear
             // 
@@ -274,6 +265,7 @@
             this.btnClear.TabIndex = 100;
             this.btnClear.TabStop = false;
             this.btnClear.Text = "Nhập lại";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label4
             // 
@@ -287,6 +279,16 @@
             this.label4.Size = new System.Drawing.Size(379, 23);
             this.label4.TabIndex = 101;
             this.label4.Text = "Double click vào số thứ tự để hủy phần thuốc.";
+            // 
+            // pnPrescritionItems
+            // 
+            this.pnPrescritionItems.AllowDrop = true;
+            this.pnPrescritionItems.AutoScroll = true;
+            this.pnPrescritionItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnPrescritionItems.Location = new System.Drawing.Point(3, 103);
+            this.pnPrescritionItems.Name = "pnPrescritionItems";
+            this.pnPrescritionItems.Size = new System.Drawing.Size(1084, 471);
+            this.pnPrescritionItems.TabIndex = 1;
             // 
             // frmAddPrescription
             // 
@@ -335,6 +337,6 @@
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private System.Windows.Forms.Label label4;
-        protected System.Windows.Forms.Panel pnPrescritionItems;
+        public System.Windows.Forms.Panel pnPrescritionItems;
     }
 }

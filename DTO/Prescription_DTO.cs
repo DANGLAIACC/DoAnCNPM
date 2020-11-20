@@ -24,5 +24,11 @@ namespace DTO
         public int Pre_middle { get; set; }
         public int Pre_afternoon { get; set; }
         public string Pre_note { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("Rec_id: {0}\nMed_id: {1}\nPre_morning: {2}\nPre_middle: {3}\nPre_afternoon: {4}\nPre_note: {5}\n",
+            Rec_id, Med_id, Pre_morning, Pre_middle, Pre_afternoon, Pre_note);
+        }
     }
 }
