@@ -95,18 +95,6 @@
     <Compile Include="Forms\frmAdd.Designer.cs">
       <DependentUpon>frmAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddRecord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAddRecord.Designer.cs">
-      <DependentUpon>frmAddRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmAddPatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAddPatient.Designer.cs">
-      <DependentUpon>frmAddPatient.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,12 +189,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAdd.resx">
       <DependentUpon>frmAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddRecord.resx">
-      <DependentUpon>frmAddRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddPatient.resx">
-      <DependentUpon>frmAddPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

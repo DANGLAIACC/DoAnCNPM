@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.global;
 
 namespace GUI.UserControls
 {
@@ -15,6 +16,11 @@ namespace GUI.UserControls
         public UC_AddRecord()
         {
             InitializeComponent();
+        }
+
+        private void UC_AddRecord_Load(object sender, EventArgs e)
+        {
+            txtBacSi.Text = GlobalVariable.curentDoctor.Doc_fullname;
         }
     }
 }

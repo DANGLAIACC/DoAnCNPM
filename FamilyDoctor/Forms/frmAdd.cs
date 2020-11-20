@@ -21,5 +21,10 @@ namespace GUI.Forms
             pnMain.Controls.Clear();
             pnMain.Controls.Add(u);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

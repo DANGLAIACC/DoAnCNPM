@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.global;
 
 namespace GUI.Forms
 {
@@ -19,11 +20,14 @@ namespace GUI.Forms
         public frmMain()
         {
             InitializeComponent();
+
             timerTime.Start();
             PanelWidth = panelLeft.Width;
             isCollapsed = false;
             UC_Patient uch = new UC_Patient();
             AddControlsToPanel(uch);
+
+            lblDoctor.Text = GlobalVariable.curentDoctor.Doc_title + " " + GlobalVariable.curentDoctor.Doc_fullname;
         }
 
         private void button9_Click(object sender, EventArgs e)

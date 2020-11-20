@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
+using GUI.UserControls;
 
 namespace GUI.Forms
 {
@@ -52,7 +53,8 @@ namespace GUI.Forms
 
         private void btnThemBenhAn_Click(object sender, EventArgs e)
         {
-
+            frmAdd f = new frmAdd("Thêm bệnh án mới", new UC_AddRecord());
+            f.ShowDialog();
         }
     }
 }

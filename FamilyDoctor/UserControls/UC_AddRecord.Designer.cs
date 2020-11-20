@@ -235,6 +235,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_AddRecord";
             this.Size = new System.Drawing.Size(585, 415);
+            this.Load += new System.EventHandler(this.UC_AddRecord_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

@@ -49,7 +49,7 @@
             this.lblPat_fullname = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDoctor = new System.Windows.Forms.Label();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.panelControls = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
@@ -278,7 +278,7 @@
             this.panel2.Controls.Add(this.lblPat_fullname);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.labelTime);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblDoctor);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(215, 48);
             this.panel2.Name = "panel2";
@@ -319,16 +319,16 @@
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "HH:MM:SS DD/MM/YYYY";
             // 
-            // label1
+            // lblDoctor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bác sĩ Chuyên khoa I Họ tên gì đó";
+            this.lblDoctor.AutoSize = true;
+            this.lblDoctor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctor.ForeColor = System.Drawing.Color.White;
+            this.lblDoctor.Location = new System.Drawing.Point(8, 14);
+            this.lblDoctor.Name = "lblDoctor";
+            this.lblDoctor.Size = new System.Drawing.Size(378, 32);
+            this.lblDoctor.TabIndex = 0;
+            this.lblDoctor.Text = "Bác sĩ Chuyên khoa I Họ tên gì đó";
             // 
             // timerTime
             // 
@@ -378,7 +378,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDoctor;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnViewSales;
         private System.Windows.Forms.Button btnUsers;
