@@ -46,5 +46,11 @@ namespace GUI.UserControls
             frmRecord f = new frmRecord(GlobalVariable.lstPatient[e.RowIndex]);
             f.ShowDialog();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmAdd f = new frmAdd("Thêm bệnh nhân mới", new UC_AddPatient());
+            f.ShowDialog();
+        }
     }
 }

@@ -89,6 +89,24 @@
     <Compile Include="Forms\Form_AddStock.Designer.cs">
       <DependentUpon>Form_AddStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdd.Designer.cs">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddRecord.Designer.cs">
+      <DependentUpon>frmAddRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddPatient.Designer.cs">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +134,18 @@
     <Compile Include="global\GlobalVariable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UC_AddRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_AddRecord.Designer.cs">
+      <DependentUpon>UC_AddRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_AddPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_AddPatient.Designer.cs">
+      <DependentUpon>UC_AddPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Patient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +199,15 @@
     <EmbeddedResource Include="Forms\Form_AddStock.resx">
       <DependentUpon>Form_AddStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdd.resx">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddRecord.resx">
+      <DependentUpon>frmAddRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddPatient.resx">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +230,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\UC_AddRecord.resx">
+      <DependentUpon>UC_AddRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_AddPatient.resx">
+      <DependentUpon>UC_AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Patient.resx">
       <DependentUpon>UC_Patient.cs</DependentUpon>
     </EmbeddedResource>

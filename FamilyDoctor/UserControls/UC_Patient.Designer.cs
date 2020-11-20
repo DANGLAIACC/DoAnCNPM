@@ -136,6 +136,7 @@
             this.btnThem.Size = new System.Drawing.Size(106, 43);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // tableLayoutPanel1
             // 

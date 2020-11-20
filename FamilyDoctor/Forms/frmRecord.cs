@@ -29,7 +29,7 @@ namespace GUI.Forms
 
             lblName.Text = patient.Pat_fullname;
             lblAge.Text = (DateTime.Now.Year - patient.Pat_dob.Year).ToString();
-            lblGender.Text = patient.Pat_gender.ToString();
+            //lblGender.Text = patient.Pat_gender.ToString();
             lblPhone.Text = patient.Pat_phone1;
 
             List<Record_DTO> lstRecord = Record_BLL.getRecordByPatId(patient.Pat_id);
@@ -48,6 +48,11 @@ namespace GUI.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnThemBenhAn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
