@@ -80,10 +80,13 @@
             this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtTen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTen.Location = new System.Drawing.Point(26, 3);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(394, 34);
             this.txtTen.TabIndex = 0;
+            this.txtTen.Leave += new System.EventHandler(this.txtTen_Leave);
             // 
             // guna2HtmlLabel2
             // 
@@ -104,7 +107,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSang.Location = new System.Drawing.Point(470, 3);
             this.txtSang.Name = "txtSang";
-            this.txtSang.Size = new System.Drawing.Size(54, 34);
+            this.txtSang.Size = new System.Drawing.Size(32, 34);
             this.txtSang.TabIndex = 1;
             this.txtSang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSang_KeyPress);
             // 
@@ -113,21 +116,21 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.IsContextMenuEnabled = false;
             this.guna2HtmlLabel3.IsSelectionEnabled = false;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(530, 3);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(508, 3);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(31, 18);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(46, 30);
             this.guna2HtmlLabel3.TabIndex = 99;
             this.guna2HtmlLabel3.TabStop = false;
-            this.guna2HtmlLabel3.Text = "Trưa";
+            this.guna2HtmlLabel3.Text = "Trưa:";
             // 
             // txtTrua
             // 
             this.txtTrua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTrua.Location = new System.Drawing.Point(567, 3);
+            this.txtTrua.Location = new System.Drawing.Point(560, 3);
             this.txtTrua.Name = "txtTrua";
-            this.txtTrua.Size = new System.Drawing.Size(54, 34);
+            this.txtTrua.Size = new System.Drawing.Size(32, 34);
             this.txtTrua.TabIndex = 2;
             this.txtTrua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSang_KeyPress);
             // 
@@ -136,7 +139,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.IsContextMenuEnabled = false;
             this.guna2HtmlLabel4.IsSelectionEnabled = false;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(627, 3);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(598, 3);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(26, 18);
             this.guna2HtmlLabel4.TabIndex = 99;
@@ -148,9 +151,9 @@
             this.txtToi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtToi.Location = new System.Drawing.Point(659, 3);
+            this.txtToi.Location = new System.Drawing.Point(630, 3);
             this.txtToi.Name = "txtToi";
-            this.txtToi.Size = new System.Drawing.Size(54, 34);
+            this.txtToi.Size = new System.Drawing.Size(32, 34);
             this.txtToi.TabIndex = 3;
             this.txtToi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSang_KeyPress);
             // 
@@ -159,21 +162,21 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.IsContextMenuEnabled = false;
             this.guna2HtmlLabel5.IsSelectionEnabled = false;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(719, 3);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(668, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(47, 18);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(73, 30);
             this.guna2HtmlLabel5.TabIndex = 99;
             this.guna2HtmlLabel5.TabStop = false;
-            this.guna2HtmlLabel5.Text = "Ghi chú";
+            this.guna2HtmlLabel5.Text = "Ghi chú:";
             // 
             // txtNote
             // 
             this.txtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNote.Location = new System.Drawing.Point(772, 3);
+            this.txtNote.Location = new System.Drawing.Point(747, 3);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(247, 34);
+            this.txtNote.Size = new System.Drawing.Size(264, 34);
             this.txtNote.TabIndex = 4;
             this.txtNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNote_KeyDown);
             // 

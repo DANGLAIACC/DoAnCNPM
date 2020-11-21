@@ -45,6 +45,7 @@
     <Compile Include="Doctor_BLL.cs" />
     <Compile Include="Examination_BLL.cs" />
     <Compile Include="ExamType_BLL.cs" />
+    <Compile Include="Medicine_BLL.cs" />
     <Compile Include="Patient_BLL.cs" />
     <Compile Include="Prescription_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
