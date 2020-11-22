@@ -105,7 +105,7 @@ INSERT INTO MEDICINE VALUES
 ('hapacolc500',N'Hapacol Caplet Acetaminophen 500mg'),
 ('hapacola500',N'Hapacol Ace Acetaminophen 500mg Capsules Dhg'),
 ('quazimin',N'Quazimin Arginine Aspartate 1000mg Opv'),
-('bedexlor',N'Bedexlor Dexchlorpheniramin Chunggei Pharm Co'),
+('dotoux25',N'Dotoux Plus Domesco (h/25)'),
 ('volexin250',N'Volexin Levofloxacin 250mg Boston'),
 ('dalekine200',N'Dalekine Natri Valproat 200mg Danapha'),
 ('prega150',N'Pendo - Pregabalin 150mg Domesco'),

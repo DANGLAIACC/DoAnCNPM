@@ -23,10 +23,11 @@ namespace GUI.UserControls
             lblSTT.Text = 
                 (frm.pnPrescritionItems.Controls.Count+1)
                 .ToString("00");
+
+            txtTen.Focus();
         }
         private void UC_PrescriptionItem_Load(object sender, EventArgs e)
         {
-            txtTen.Focus();
             loadAutoCompleteMedName();
         }
         /// <summary>
@@ -34,9 +35,11 @@ namespace GUI.UserControls
         /// </summary>
         private void loadAutoCompleteMedName()
         {
+
             AutoCompleteStringCollection auto= new AutoCompleteStringCollection();
-            foreach (Medicine_DTO m in frmAddPrescription.lstMedicine)
+            foreach (Medicine_DTO m in frmAddPrescription.lstMedicineSuggest)
                 auto.Add(m.Med_id);
+
             txtTen.AutoCompleteCustomSource = auto;
         }
 
@@ -64,7 +67,6 @@ namespace GUI.UserControls
                 {
                     frm.addNewPrescription();
                 }
-                //this.Parent.Controls.Add(this);
             }
         }
 
@@ -77,14 +79,14 @@ namespace GUI.UserControls
             string med_name = txtTen.Text.Trim();
 
             foreach (Medicine_DTO m 
-                in frmAddPrescription.lstMedicine)
+                in frmAddPrescription.lstMedicineSuggest)
                 if (m.Med_name == txtTen.Text.Trim())
                     return m.Med_id;
 
             return "";
         }
         /// <summary>
-        /// Trả về giá trị thuốc cần tìm
+        /// Trả về giá trị thuốc của usercontrol này
         /// </summary>
         /// <returns></returns>
         public Prescription_DTO getValue(int rec_id)
@@ -119,48 +121,62 @@ namespace GUI.UserControls
         
         private void txtTen_Leave(object sender, EventArgs e)
         {
-            /*
-            - Kiểm tra, nếu mã thuốc đang tồn tại trong frmAddPrescription.lstMedicine 
-             + kiểm tra mã thuốc đang tồn tại trong frmAddPrescription.lstPrescription thì thông báo là mã thuốc ko được trùng trong 1 toa thuốc
-             + nếu ko tồn tại thì lưu mã thuốc vào med_id trong usercontrol này, chuyển giá trị textbox thành tên thuốc 
+            string med_id = txtTen.Text.Trim();
 
-            - Nếu mã chưa tồn tại trong lstMedicine thì hiện hộp thoại thêm tên thuốc để add vào database, add vào lstMedicine, thay đổi med_id trong usercontrol này.
-             */
-
-            foreach (Medicine_DTO m in frmAddPrescription.lstMedicine)
+            if(med_id == "")
             {
-                string med_id = txtTen.Text.Trim();
-                if (m.Med_id == med_id)
-                {
-                    foreach (Prescription_DTO p in frmAddPrescription.lstPrescription)
-                    {
-                        if(p.Med_id == med_id)
-                        {
-                            MessageBox.Show("Mã thuốc đã tồn tại trong đơn thuốc này.", "Thêm thất bại");
-                            txtTen.Text = "";
-                            txtTen.Focus();
-                            return;
-                        }
-                    }
+                frmAlert frmAlert = new frmAlert();
+                frmAlert.showAlert(
+                    "Tên thuốc bị trống",
+                    frmAlert.enmType.Error);
 
+                txtTen.Text = "";
+                txtTen.Focus();
+                return;
+            }
+
+             // Kiểm tra mã thuốc chưa tồn tại ở các uc_item trước đó
+             foreach (UC_PrescriptionItem u in frm.pnPrescritionItems.Controls)
+                if(med_id == u.med_id)
+                {
+                    frmAlert frmAlert = new frmAlert();
+                    frmAlert.showAlert(
+                        "Mã thuốc đã tồn tại",
+                        frmAlert.enmType.Error);
+
+                    txtTen.SelectAll();
+                    txtTen.Focus();
+
+                    return;
+                }
+
+             // Mã thuốc mới hoàn toàn, bắt đầu thay bằng tên và gán vào med_id
+             foreach(Medicine_DTO m in frmAddPrescription.lstMedicineSuggest)
+                if (med_id == m.Med_id)
+                {
                     this.med_id = med_id;
                     txtTen.Text = m.Med_name;
                     return;
                 }
-            }
-            // ra khỏi vòng lặp kiểm tra mà còn chạy chứng tỏ mã thuốc ko tồn tại trong lstMedicine
-            if(med_id == "")
-            {
-                UC_AddMedicine uc = new UC_AddMedicine(txtTen.Text.Trim());
-                frmAdd f = new frmAdd("Thêm thuốc mới",uc);
 
-                if (uc.med_name != "")
-                {
-                    // Thêm thuốc vào database thành công
-                    this.med_id = txtTen.Text.Trim();
-                    txtTen.Text = uc.med_name;
-                }
+            // Mã thuốc chưa tồn tại trong Danh sách thuốc có sẵn
+
+            frmAlert frmAlert2 = new frmAlert();
+            frmAlert2.showAlert(
+                "Mã thuốc chưa tồn tại.",
+                frmAlert.enmType.Warning);
+
+            UC_AddMedicine uc = new UC_AddMedicine(med_id);
+            frmAdd f = new frmAdd("Thêm thuốc mới", uc);
+            f.TopMost = true;
+            f.ShowDialog();
+
+            if (uc.med_name != "")
+            {
+                // Thêm thuốc vào database thành công
+                txtTen.Text = uc.med_name;
             }
+
         }
     }
 }

@@ -118,7 +118,7 @@
             this.guna2HtmlLabel3.IsSelectionEnabled = false;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(508, 3);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(46, 30);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(34, 18);
             this.guna2HtmlLabel3.TabIndex = 99;
             this.guna2HtmlLabel3.TabStop = false;
             this.guna2HtmlLabel3.Text = "Trưa:";
@@ -128,7 +128,7 @@
             this.txtTrua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTrua.Location = new System.Drawing.Point(560, 3);
+            this.txtTrua.Location = new System.Drawing.Point(548, 3);
             this.txtTrua.Name = "txtTrua";
             this.txtTrua.Size = new System.Drawing.Size(32, 34);
             this.txtTrua.TabIndex = 2;
@@ -139,7 +139,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.IsContextMenuEnabled = false;
             this.guna2HtmlLabel4.IsSelectionEnabled = false;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(598, 3);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(586, 3);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(26, 18);
             this.guna2HtmlLabel4.TabIndex = 99;
@@ -151,7 +151,7 @@
             this.txtToi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtToi.Location = new System.Drawing.Point(630, 3);
+            this.txtToi.Location = new System.Drawing.Point(618, 3);
             this.txtToi.Name = "txtToi";
             this.txtToi.Size = new System.Drawing.Size(32, 34);
             this.txtToi.TabIndex = 3;
@@ -162,9 +162,9 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.IsContextMenuEnabled = false;
             this.guna2HtmlLabel5.IsSelectionEnabled = false;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(668, 3);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(656, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(73, 30);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(50, 18);
             this.guna2HtmlLabel5.TabIndex = 99;
             this.guna2HtmlLabel5.TabStop = false;
             this.guna2HtmlLabel5.Text = "Ghi chú:";
@@ -174,7 +174,7 @@
             this.txtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNote.Location = new System.Drawing.Point(747, 3);
+            this.txtNote.Location = new System.Drawing.Point(712, 3);
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(264, 34);
             this.txtNote.TabIndex = 4;

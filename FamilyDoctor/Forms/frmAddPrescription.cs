@@ -17,17 +17,29 @@ namespace GUI.Forms
     {
         //public List<Prescription_DTO> lstPrescription2 = new List<Prescription_DTO>();
         // lstMedicine phải public để các ucitem có thể đọc được điền vào suggest
-        public static List<Medicine_DTO> lstMedicine = new List<Medicine_DTO>();
+        public static List<Medicine_DTO> lstMedicineSuggest = 
+            new List<Medicine_DTO>();
+
         public static List<Prescription_DTO> lstPrescription = new List<Prescription_DTO>();
 
         public frmAddPrescription()
         {
             InitializeComponent();
+            lstMedicineSuggest = Medicine_BLL.getMedicine();
         }
         private void frmAddPrescription_Load(object sender, EventArgs e)
         {
+            loadCboExamType();
             addNewPrescription();
-            lstMedicine = Medicine_BLL.getMedicine();
+        }
+
+        private void loadCboExamType()
+        {
+            List<ExamType_DTO> lst = ExamType_BLL.getExamType();
+            foreach (ExamType_DTO e in lst)
+                cboExamType.Items.Add(e);
+
+            cboExamType.SelectedIndex = 0;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -53,12 +65,35 @@ namespace GUI.Forms
             {
                 pnPrescritionItems.Controls.Clear();
                 addNewPrescription();
+
+                cboExamType.SelectedIndex = 0;
+                txtHospital.Text = txtRec_diagnostic.Text = txtRec_note.Text = "";
+                txtRec_diagnostic.Focus();
             }
         }
 
         private void btnThem_Click(object sender,
             EventArgs e)
         {
+            if (txtRec_diagnostic.Text.Trim() == "")
+            {
+                MessageBox.Show("Kết quả chẩn đoán không được để trống, vui lòng nhập nội dung.", "Thêm bệnh án thất bại");
+                txtRec_diagnostic.Text = "";
+                txtRec_diagnostic.Focus();
+            }
+            else
+            {
+                ExamType_DTO a = (ExamType_DTO)cboExamType.SelectedItem;
+
+                DialogResult result = MessageBox.Show("Phí khám bệnh: " + a.Exam_type_price, "Xác nhận thanh toán", MessageBoxButtons.OKCancel);
+
+                if (result == DialogResult.OK)
+                {
+                    //...
+                }
+            }
+
+
             UC_PrescriptionItem first 
                 = (UC_PrescriptionItem) pnPrescritionItems.Controls[0];
 
@@ -95,10 +130,15 @@ namespace GUI.Forms
         /// <returns></returns>
         private string getMedIdByName(string med_name)
         {
-            foreach(Medicine_DTO m in lstMedicine)
+            foreach(Medicine_DTO m in lstMedicineSuggest)
                 if(m.Med_name == med_name)
                     return m.Med_id;
             return "";
+        }
+
+        private void cboExamType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnPrescritionItems.Visible = (sender as ComboBox).Text == "Có kê toa";
         }
     }
 }

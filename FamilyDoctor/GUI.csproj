@@ -104,6 +104,12 @@
     <Compile Include="Forms\frmAdd.Designer.cs">
       <DependentUpon>frmAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAlert.designer.cs">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,14 +140,8 @@
     <Compile Include="UserControls\UC_AddMedicine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_AddMedicine.Designer.cs">
+    <Compile Include="UserControls\UC_AddMedicine.designer.cs">
       <DependentUpon>UC_AddMedicine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_AddRecord.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_AddRecord.Designer.cs">
-      <DependentUpon>UC_AddRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_AddPatient.cs">
       <SubType>UserControl</SubType>
@@ -214,6 +214,9 @@
     <EmbeddedResource Include="Forms\frmAdd.resx">
       <DependentUpon>frmAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlert.resx">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,9 +241,6 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_AddMedicine.resx">
       <DependentUpon>UC_AddMedicine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_AddRecord.resx">
-      <DependentUpon>UC_AddRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_AddPatient.resx">
       <DependentUpon>UC_AddPatient.cs</DependentUpon>
@@ -291,6 +291,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
