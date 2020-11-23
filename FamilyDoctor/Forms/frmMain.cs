@@ -15,7 +15,6 @@ namespace GUI.Forms
     public partial class frmMain : Form
     {
         int PanelWidth;
-        bool isCollapsed;
 
         public frmMain()
         {
@@ -23,7 +22,6 @@ namespace GUI.Forms
 
             timerTime.Start();
             PanelWidth = panelLeft.Width;
-            isCollapsed = false;
             UC_Patient uch = new UC_Patient();
             AddControlsToPanel(uch);
 

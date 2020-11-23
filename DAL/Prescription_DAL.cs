@@ -15,14 +15,13 @@ namespace DAL
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        public static bool addPrescription(Prescription_DTO p)
+        public static bool addPrescription(string rec_id, Prescription_DTO p)
         {
-            string query = string.Format("INSERT INTO PRESCRIPTION VALUES ({0}, '{1}', {2}, {3}, {4}, N'{5}')"
-                ,p.Rec_id,p.Med_id,p.Pre_morning,p.Pre_middle,
-                p.Pre_afternoon, p.Pre_note);
+            string query = string.Format("INSERT INTO PRESCRIPTION VALUES ({0}, '{1}', {2}, {3}, {4}, N'{5}')", rec_id, p.Med_id, p.Pre_morning, p.Pre_middle,
+              p.Pre_afternoon, p.Pre_note);
             return DataProvider.ExecuteNonQuery(query);
         }
-        
+
         /// <summary>
         /// Lấy thông tin đơn thuốc bằng mã bản ghi khám bệnh
         /// </summary>
@@ -31,7 +30,7 @@ namespace DAL
         public static Prescription_DTO getPrescriptionByRecId(int rec_id)
         {
             DataTable table = new DataTable();
-            string query = string.Format("select * from prescription where rec_id = {0}",rec_id);
+            string query = string.Format("select * from prescription where rec_id = {0}", rec_id);
             table = DataProvider.Execute(query);
             int count = table.Rows.Count;
             if (table != null && count > 0)

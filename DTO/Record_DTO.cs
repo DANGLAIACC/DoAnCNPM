@@ -20,6 +20,14 @@ namespace DTO
             Rec_note = rec_note;
         }
 
+        public Record_DTO(int rec_id, DateTime rec_date, string doc_fullname, string rec_diagnostic)
+        {
+            Rec_id = rec_id;
+            Rec_date = rec_date;
+            Doc_fullname = doc_fullname;
+            Rec_diagnostic = rec_diagnostic;
+        }
+
         public int Rec_id { get; set; }
         public DateTime Rec_date { get; set; }
         public int Par_id { get; set; }
@@ -30,13 +38,6 @@ namespace DTO
         public string Rec_note { get; set; }
 
         public string Doc_fullname { get; set; }
-        public Record_DTO(int rec_id, DateTime rec_date, string doc_fullname, string rec_diagnostic)
-        {
-            Rec_id = rec_id;
-            Rec_date = rec_date;
-            Doc_fullname = doc_fullname;
-            Rec_diagnostic = rec_diagnostic;
-        }
     }
 
 

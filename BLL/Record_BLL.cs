@@ -18,6 +18,11 @@ namespace BLL
         {
             return Record_DAL.getRecordByPatId(pat_id);
         }
+        public static string addRecord(Record_DTO r)
+        {
+            return Record_DAL.addRecord(r);
+        }
+
 
     }
 }

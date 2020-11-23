@@ -91,15 +91,6 @@ INSERT INTO EXAM_TYPE VALUES
 (1,N'Không kê toa',100000),
 (2,N'Tư vấn sức khỏe',80000)
 
-GO
-/* todo
-	Thêm 1 bệnh có yêu cầu xét nghiệm
-	Thêm vào bảng xét nghiệm
-*/
-INSERT INTO RECORD(rec_date,pat_id,doc_usr,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
-('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
-('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ')
-
 GO 
 INSERT INTO MEDICINE VALUES
 ('hapacolc500',N'Hapacol Caplet Acetaminophen 500mg'),
@@ -121,6 +112,15 @@ INSERT INTO MEDICINE VALUES
 ('alzental400',N'Alzental 400mg'),
 ('albendazol400',N'Albendazol STELLA 400 mg'),
 ('acemuc200',N'Acemuc 200mg')
+GO
+/* todo
+	Thêm 1 bệnh có yêu cầu xét nghiệm
+	Thêm vào bảng xét nghiệm
+*/
+INSERT INTO RECORD(rec_date,pat_id,doc_usr,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
+('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
+('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ')
+
 GO
 INSERT INTO PRESCRIPTION VALUES
 (100000,'hapacolc500',1,1,1,N'Uống trước khi ăn'),

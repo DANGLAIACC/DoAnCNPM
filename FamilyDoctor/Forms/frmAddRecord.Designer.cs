@@ -1,6 +1,6 @@
 ﻿namespace GUI.Forms
 {
-    partial class frmAddPrescription
+    partial class frmAddRecord
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPrescription));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddRecord));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -191,7 +191,7 @@
             this.cboExamType.Name = "cboExamType";
             this.cboExamType.ShadowDecoration.Parent = this.cboExamType;
             this.cboExamType.Size = new System.Drawing.Size(187, 36);
-            this.cboExamType.TabIndex = 0;
+            this.cboExamType.TabIndex = 98;
             this.cboExamType.SelectedIndexChanged += new System.EventHandler(this.cboExamType_SelectedIndexChanged);
             // 
             // txtHospital
@@ -201,8 +201,7 @@
             this.txtHospital.Multiline = true;
             this.txtHospital.Name = "txtHospital";
             this.txtHospital.Size = new System.Drawing.Size(328, 38);
-            this.txtHospital.TabIndex = 3;
-            this.txtHospital.Text = "Yêu cầu nhập viện";
+            this.txtHospital.TabIndex = 2;
             // 
             // txtRec_note
             // 
@@ -211,8 +210,7 @@
             this.txtRec_note.Multiline = true;
             this.txtRec_note.Name = "txtRec_note";
             this.txtRec_note.Size = new System.Drawing.Size(366, 38);
-            this.txtRec_note.TabIndex = 2;
-            this.txtRec_note.Text = "Lưu ý cho bệnh nhân";
+            this.txtRec_note.TabIndex = 1;
             // 
             // txtRec_diagnostic
             // 
@@ -221,15 +219,14 @@
             this.txtRec_diagnostic.Multiline = true;
             this.txtRec_diagnostic.Name = "txtRec_diagnostic";
             this.txtRec_diagnostic.Size = new System.Drawing.Size(854, 38);
-            this.txtRec_diagnostic.TabIndex = 1;
-            this.txtRec_diagnostic.Text = "Kết quả chẩn đoán của bác sĩ";
+            this.txtRec_diagnostic.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(16, 102);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 28);
+            this.label6.Size = new System.Drawing.Size(155, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "Lưu ý với bệnh nhân:";
             // 
@@ -238,7 +235,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(16, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 28);
+            this.label2.Size = new System.Drawing.Size(141, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Kết quả chẩn đoán:";
             // 
@@ -247,7 +244,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(625, 102);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 28);
+            this.label7.Size = new System.Drawing.Size(84, 21);
             this.label7.TabIndex = 0;
             this.label7.Text = "Nhập viện:";
             // 
@@ -256,7 +253,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(766, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 28);
+            this.label3.Size = new System.Drawing.Size(85, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Loại khám:";
             // 
@@ -266,7 +263,7 @@
             this.lblPat_id.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPat_id.Location = new System.Drawing.Point(161, 16);
             this.lblPat_id.Name = "lblPat_id";
-            this.lblPat_id.Size = new System.Drawing.Size(108, 28);
+            this.lblPat_id.Size = new System.Drawing.Size(82, 21);
             this.lblPat_id.TabIndex = 0;
             this.lblPat_id.Text = "01234567";
             // 
@@ -276,7 +273,7 @@
             this.lblPat_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPat_name.Location = new System.Drawing.Point(386, 16);
             this.lblPat_name.Name = "lblPat_name";
-            this.lblPat_name.Size = new System.Drawing.Size(321, 28);
+            this.lblPat_name.Size = new System.Drawing.Size(251, 21);
             this.lblPat_name.TabIndex = 0;
             this.lblPat_name.Text = "TÊN TÊN TÊN TÊN TÊN TÊN TÊN";
             // 
@@ -285,7 +282,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(16, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 28);
+            this.label5.Size = new System.Drawing.Size(113, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã bệnh nhân:";
             // 
@@ -294,7 +291,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(307, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 28);
+            this.label1.Size = new System.Drawing.Size(59, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên:";
             // 
@@ -363,16 +360,16 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(4, 18);
+            this.label4.Location = new System.Drawing.Point(69, 22);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 375, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(379, 23);
+            this.label4.Size = new System.Drawing.Size(314, 19);
             this.label4.TabIndex = 101;
             this.label4.Text = "Double click vào số thứ tự để hủy phần thuốc.";
             // 
-            // frmAddPrescription
+            // frmAddRecord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1200, 749);
@@ -381,7 +378,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmAddPrescription";
+            this.Name = "frmAddRecord";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo đơn thuốc";

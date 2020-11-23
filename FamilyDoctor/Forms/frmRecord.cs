@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
-using GUI.UserControls;
 
 namespace GUI.Forms
 {
@@ -24,13 +23,14 @@ namespace GUI.Forms
 
         private void frmRecord_Load(object sender, EventArgs e)
         {
+            lblTitle.Text = "Xem hồ sơ bệnh án số " + patient.Pat_id;
+
             grvLstRecord.Columns[0].Width = 150;
             grvLstRecord.Columns[1].Width = 250;
             grvLstRecord.Columns[2].Width = 250;
 
             lblName.Text = patient.Pat_fullname;
             lblAge.Text = (DateTime.Now.Year - patient.Pat_dob.Year).ToString();
-            //lblGender.Text = patient.Pat_gender.ToString();
             lblPhone.Text = patient.Pat_phone1;
 
             List<Record_DTO> lstRecord = Record_BLL.getRecordByPatId(patient.Pat_id);
@@ -53,7 +53,7 @@ namespace GUI.Forms
 
         private void btnThemBenhAn_Click(object sender, EventArgs e)
         {
-            frmAddPrescription f = new frmAddPrescription();
+            frmAddRecord f = new frmAddRecord(patient.Pat_id, patient.Pat_fullname);
             f.ShowDialog();
         }
     }

@@ -59,7 +59,7 @@
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1084, 42);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1040, 42);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // lblSTT
@@ -69,7 +69,7 @@
             this.lblSTT.IsSelectionEnabled = false;
             this.lblSTT.Location = new System.Drawing.Point(3, 3);
             this.lblSTT.Name = "lblSTT";
-            this.lblSTT.Size = new System.Drawing.Size(17, 18);
+            this.lblSTT.Size = new System.Drawing.Size(15, 15);
             this.lblSTT.TabIndex = 99;
             this.lblSTT.TabStop = false;
             this.lblSTT.Text = "01";
@@ -83,9 +83,9 @@
             this.txtTen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTen.Location = new System.Drawing.Point(26, 3);
+            this.txtTen.Location = new System.Drawing.Point(24, 3);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(394, 34);
+            this.txtTen.Size = new System.Drawing.Size(394, 29);
             this.txtTen.TabIndex = 0;
             this.txtTen.Leave += new System.EventHandler(this.txtTen_Leave);
             // 
@@ -94,9 +94,9 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.IsContextMenuEnabled = false;
             this.guna2HtmlLabel2.IsSelectionEnabled = false;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(426, 3);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(424, 3);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(38, 18);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(31, 15);
             this.guna2HtmlLabel2.TabIndex = 99;
             this.guna2HtmlLabel2.TabStop = false;
             this.guna2HtmlLabel2.Text = "Sáng:";
@@ -106,9 +106,9 @@
             this.txtSang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSang.Location = new System.Drawing.Point(470, 3);
+            this.txtSang.Location = new System.Drawing.Point(461, 3);
             this.txtSang.Name = "txtSang";
-            this.txtSang.Size = new System.Drawing.Size(32, 34);
+            this.txtSang.Size = new System.Drawing.Size(32, 29);
             this.txtSang.TabIndex = 1;
             this.txtSang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSang_KeyPress);
             // 
@@ -117,9 +117,9 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.IsContextMenuEnabled = false;
             this.guna2HtmlLabel3.IsSelectionEnabled = false;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(508, 3);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(499, 3);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(34, 18);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel3.TabIndex = 99;
             this.guna2HtmlLabel3.TabStop = false;
             this.guna2HtmlLabel3.Text = "Trưa:";
@@ -129,9 +129,9 @@
             this.txtTrua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTrua.Location = new System.Drawing.Point(548, 3);
+            this.txtTrua.Location = new System.Drawing.Point(533, 3);
             this.txtTrua.Name = "txtTrua";
-            this.txtTrua.Size = new System.Drawing.Size(32, 34);
+            this.txtTrua.Size = new System.Drawing.Size(32, 29);
             this.txtTrua.TabIndex = 2;
             this.txtTrua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSang_KeyPress);
             // 
@@ -140,9 +140,9 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.IsContextMenuEnabled = false;
             this.guna2HtmlLabel4.IsSelectionEnabled = false;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(586, 3);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(571, 3);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(26, 18);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(21, 15);
             this.guna2HtmlLabel4.TabIndex = 99;
             this.guna2HtmlLabel4.TabStop = false;
             this.guna2HtmlLabel4.Text = "Tối:";
@@ -152,9 +152,9 @@
             this.txtToi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtToi.Location = new System.Drawing.Point(618, 3);
+            this.txtToi.Location = new System.Drawing.Point(598, 3);
             this.txtToi.Name = "txtToi";
-            this.txtToi.Size = new System.Drawing.Size(32, 34);
+            this.txtToi.Size = new System.Drawing.Size(32, 29);
             this.txtToi.TabIndex = 3;
             this.txtToi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSang_KeyPress);
             // 
@@ -163,9 +163,9 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.IsContextMenuEnabled = false;
             this.guna2HtmlLabel5.IsSelectionEnabled = false;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(656, 3);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(636, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(50, 18);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(43, 15);
             this.guna2HtmlLabel5.TabIndex = 99;
             this.guna2HtmlLabel5.TabStop = false;
             this.guna2HtmlLabel5.Text = "Ghi chú:";
@@ -175,18 +175,18 @@
             this.txtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNote.Location = new System.Drawing.Point(712, 3);
+            this.txtNote.Location = new System.Drawing.Point(685, 3);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(264, 34);
+            this.txtNote.Size = new System.Drawing.Size(336, 29);
             this.txtNote.TabIndex = 4;
-            this.txtNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNote_KeyDown);
+            this.txtNote.Leave += new System.EventHandler(this.txtNote_Leave);
             // 
             // UC_PrescriptionItem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "UC_PrescriptionItem";
-            this.Size = new System.Drawing.Size(1084, 42);
+            this.Size = new System.Drawing.Size(1040, 42);
             this.Load += new System.EventHandler(this.UC_PrescriptionItem_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -197,15 +197,15 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.TextBox txtSang;
         private System.Windows.Forms.TextBox txtTrua;
         private System.Windows.Forms.TextBox txtToi;
         private System.Windows.Forms.TextBox txtNote;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblSTT;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblSTT;
+        private System.Windows.Forms.TextBox txtTen;
     }
 }

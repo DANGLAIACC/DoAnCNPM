@@ -14,37 +14,20 @@ namespace GUI.UserControls
 {
     public partial class UC_PrescriptionItem : UserControl
     {
-        private frmAddPrescription frm;
+        private frmAddRecord frm;
         //private string med_id;
         public Prescription_DTO prescription = new Prescription_DTO(0, "", 0, 0, 0, "");
 
-        public UC_PrescriptionItem(frmAddPrescription frm, int stt)
+        public UC_PrescriptionItem(frmAddRecord frm, int stt)
         {
             InitializeComponent();
             this.frm = frm;
             lblSTT.Text = stt.ToString("00");
-
-            txtTen.Focus();
-        }
-
-        public UC_PrescriptionItem(frmAddPrescription frm, int stt, Prescription_DTO pre)
-        {
-            InitializeComponent();
-            this.frm = frm;
-            lblSTT.Text = stt.ToString("00");
-            prescription = pre;
-
-            txtTen.Text = getMedNameById(pre.Med_id);
-
-            txtSang.Text = pre.Pre_morning.ToString();
-            txtTrua.Text = pre.Pre_middle.ToString();
-            txtToi.Text = pre.Pre_afternoon.ToString();
-            txtNote.Text = pre.Pre_note;
         }
 
         private string getMedNameById(string med_id)
         {
-            foreach (Medicine_DTO m in frmAddPrescription.lstAllMedicine)
+            foreach (Medicine_DTO m in frmAddRecord.lstAllMedicine)
                 if (m.Med_id == med_id)
                     return med_id;
             return "";
@@ -52,16 +35,23 @@ namespace GUI.UserControls
 
         private void UC_PrescriptionItem_Load(object sender, EventArgs e)
         {
-            loadAutoCompleteMedName();
+            loadAutoCompleteMedName(txtTen, frmAddRecord.lstMedicineSuggest);
+
+            txtTen.Text = getMedNameById(prescription.Med_id);
+            txtSang.Text = prescription.Pre_morning.ToString();
+            txtTrua.Text = prescription.Pre_middle.ToString();
+            txtToi.Text = prescription.Pre_afternoon.ToString();
+            txtNote.Text = prescription.Pre_note;
+
         }
         /// <summary>
         /// Lấy dữ liệu từ frmAddPrescription để làm data cho suggess textbox
         /// </summary>
-        private void loadAutoCompleteMedName()
+        private void loadAutoCompleteMedName(TextBox txt, List<Medicine_DTO> lst)
         {
 
             AutoCompleteStringCollection auto= new AutoCompleteStringCollection();
-            foreach (Medicine_DTO m in frmAddPrescription.lstMedicineSuggest)
+            foreach (Medicine_DTO m in lst)
                 auto.Add(m.Med_id);
 
             txtTen.AutoCompleteCustomSource = auto;
@@ -69,44 +59,24 @@ namespace GUI.UserControls
 
         private void lblSTT_DoubleClick(object sender, EventArgs e)
         {
-            frmAddPrescription.lstMedicineSuggest.Add(new Medicine_DTO(prescription.Med_id, txtTen.Text));
+            if (Parent.Controls.Count == 1)
+            {
+                txtTen.Text = txtSang.Text = txtTrua.Text = txtToi.Text = txtNote.Text = "";
+                txtTen.Enabled = true;
+                txtTen.Focus();
+
+                return;
+            }
+            // Thay đổi lstSuggest
+            frmAddRecord.lstMedicineSuggest.Add(new Medicine_DTO(prescription.Med_id, txtTen.Text));
 
             Parent.Controls.Remove(this);
-            
+            frm.refreshSerial();
+
             frmAlert f = new frmAlert();
             f.showAlert("Đã xóa đơn thuốc.", frmAlert.enmType.Info);
         }
 
-        private void txtNote_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (txtTen.Text.Trim() == "")
-                {
-                    MessageBox.Show("Tên thuốc không được để trống");
-                    txtTen.Focus();
-                }
-                else if(txtSang.Text == "" && txtTrua.Text == "" && txtToi.Text == "")
-                {
-                    MessageBox.Show("Liều dùng thuốc không được để trống");
-                    txtSang.Focus();
-                }
-                else
-                {
-                    prescription.Pre_afternoon = Int32.Parse(txtToi.Text==""?"0":txtToi.Text);
-                    prescription.Pre_morning = Int32.Parse(txtSang.Text == "" ? "0" : txtSang.Text);
-                    prescription.Pre_middle = Int32.Parse(txtTrua.Text == "" ? "0" : txtTrua.Text);
-                    prescription.Pre_note = txtNote.Text;
-
-                    frm.addNewPrescription();
-                }
-            }
-        }
-
-        public string getNameMedicine()
-        {
-            return txtTen.Text.Trim();
-        }
         /// <summary>
         /// Kiểm tra dữ liệu trong user control hợp lệ
         /// Tên thuốc không rỗng 
@@ -115,8 +85,16 @@ namespace GUI.UserControls
         /// <returns>true nếu hợp lệ</returns>
         public bool isUcValid()
         {
-            return txtTen.Text.Trim() != "" &&
-                (txtSang.Text != "" || txtTrua.Text != "" || txtToi.Text != "");
+            int sang = Int32.Parse(txtSang.Text != "" ? txtSang.Text : "0"),
+                trua = Int32.Parse(txtTrua.Text != "" ? txtTrua.Text : "0"),
+                toi = Int32.Parse(txtToi.Text != "" ? txtToi.Text : "0");
+
+            prescription.Pre_afternoon = toi;
+            prescription.Pre_morning = sang;
+            prescription.Pre_middle = trua;
+            prescription.Pre_note = txtNote.Text;
+
+            return txtTen.Text.Trim() != "" && (sang+trua+toi > 0);
         }
         /// <summary>
         /// Chỉ cho nhập số vào textbox
@@ -160,12 +138,12 @@ namespace GUI.UserControls
                 }
 
              // Mã thuốc mới hoàn toàn, bắt đầu thay bằng tên và gán vào med_id
-             foreach(Medicine_DTO m in frmAddPrescription.lstMedicineSuggest)
+             foreach(Medicine_DTO m in frmAddRecord.lstMedicineSuggest)
                 if (med_id == m.Med_id)
                 {
                     prescription.Med_id = med_id;
                     txtTen.Text = m.Med_name;
-                    frmAddPrescription.lstMedicineSuggest.Remove(m);
+                    frmAddRecord.lstMedicineSuggest.Remove(m);
                     txtTen.Enabled = false;
                     return;
                 }
@@ -189,6 +167,32 @@ namespace GUI.UserControls
                 txtTen.Text = uc.med_name;
             }
 
+        }
+
+        private void txtNote_Leave(object sender, EventArgs e)
+        {
+            int sang = Int32.Parse(txtSang.Text != "" ? txtSang.Text : "0"),
+                trua = Int32.Parse(txtTrua.Text != "" ? txtTrua.Text : "0"),
+                toi = Int32.Parse(txtToi.Text != "" ? txtToi.Text : "0");
+
+            if (txtTen.Text.Trim() == "")
+            {
+                MessageBox.Show("Tên thuốc không được để trống");
+                txtTen.Focus();
+            }
+            else if (sang + trua + toi == 0)
+            {
+                MessageBox.Show("Chưa nhập liều dùng thuốc");
+                txtSang.Focus();
+            }
+            else
+            {
+                prescription.Pre_afternoon = toi;
+                prescription.Pre_morning = sang;
+                prescription.Pre_middle = trua;
+                prescription.Pre_note = txtNote.Text;
+                frm.addNewPrescription();
+            }
         }
     }
 }

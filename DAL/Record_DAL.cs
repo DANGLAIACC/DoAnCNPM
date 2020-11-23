@@ -55,7 +55,7 @@ namespace DAL
         public static List<Record_DTO> getRecordByPatId(int pat_id)
         {
             DataTable table = new DataTable();
-            string query = "select rec_id,rec_date,doc_fullname,rec_diagnostic from record a inner join doctor b on a.doc_usr = b.doc_usr where pat_id = "+pat_id;
+            string query = "select rec_id,rec_date,doc_fullname,rec_diagnostic from record a inner join doctor b on a.doc_usr = b.doc_usr where pat_id = " + pat_id;
 
             table = DataProvider.Execute(query);
             int count = table.Rows.Count;
@@ -77,14 +77,19 @@ namespace DAL
             }
             return null;
         }
-
-        public static bool addRecord(Record_DTO r)
+        /// <summary>
+        /// Thêm dữ liệu vào bảng Record (id auto)
+        /// </summary>
+        /// <param name="r">record cần thêm</param>
+        /// <returns>id vừa thêm</returns>
+        public static string addRecord(Record_DTO r)
         {
-            // todo
-            // string query = string.Format("")
+            string query = string.Format("INSERT INTO RECORD(rec_date, pat_id, doc_usr, rec_diagnostic, hospital, exam_type_id, rec_note)  OUTPUT Inserted.rec_id VALUES('{0}', {1}, '{2}', N'{3}', N'{4}', {5}, N'{6}')", r.Rec_date,r.Par_id,r.Doc_usr,r.Rec_diagnostic,r.Hospital, r.Exam_type_id,r.Rec_note);
 
-            return true;
+            DataTable table = new DataTable();
+            table = DataProvider.Execute(query);
 
+            return table.Rows[0]["rec_id"].ToString();
         }
     }
 }

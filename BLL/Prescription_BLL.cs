@@ -10,9 +10,9 @@ namespace BLL
 {
     public class Prescription_BLL
     {
-        public static bool addPrescription(Prescription_DTO p)
+        public static bool addPrescription(string rec_id, Prescription_DTO p)
         {
-            return Prescription_DAL.addPrescription(p);
+            return Prescription_DAL.addPrescription(rec_id, p);
         }
 
     }
