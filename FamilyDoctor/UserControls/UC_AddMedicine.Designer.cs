@@ -50,8 +50,8 @@
             // 
             this.txtMedId.Location = new System.Drawing.Point(145, 33);
             this.txtMedId.Name = "txtMedId";
-            this.txtMedId.Size = new System.Drawing.Size(280, 34);
-            this.txtMedId.TabIndex = 0;
+            this.txtMedId.Size = new System.Drawing.Size(337, 34);
+            this.txtMedId.TabIndex = 1;
             // 
             // label2
             // 
@@ -66,42 +66,54 @@
             // 
             this.txtMedName.Location = new System.Drawing.Point(145, 92);
             this.txtMedName.Name = "txtMedName";
-            this.txtMedName.Size = new System.Drawing.Size(280, 34);
-            this.txtMedName.TabIndex = 1;
+            this.txtMedName.Size = new System.Drawing.Size(337, 34);
+            this.txtMedName.TabIndex = 0;
+            this.txtMedName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMedName_KeyDown);
             // 
             // btnClear
             // 
+            this.btnClear.BorderColor = System.Drawing.Color.White;
             this.btnClear.BorderRadius = 8;
+            this.btnClear.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnClear.CheckedState.Parent = this.btnClear;
             this.btnClear.CustomImages.Parent = this.btnClear;
             this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnClear.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnClear.HoverState.Parent = this.btnClear;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
-            this.btnClear.Location = new System.Drawing.Point(105, 157);
+            this.btnClear.Location = new System.Drawing.Point(162, 153);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.btnClear.Name = "btnClear";
             this.btnClear.ShadowDecoration.Parent = this.btnClear;
             this.btnClear.Size = new System.Drawing.Size(157, 45);
-            this.btnClear.TabIndex = 10;
+            this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Nhập lại";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.BorderColor = System.Drawing.Color.White;
             this.btnThem.BorderRadius = 8;
+            this.btnThem.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnThem.CheckedState.Parent = this.btnThem;
             this.btnThem.CustomImages.Parent = this.btnThem;
             this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnThem.HoverState.Parent = this.btnThem;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(268, 157);
+            this.btnThem.Location = new System.Drawing.Point(325, 153);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnThem.Name = "btnThem";
+            this.btnThem.ShadowDecoration.BorderRadius = 0;
             this.btnThem.ShadowDecoration.Parent = this.btnThem;
             this.btnThem.Size = new System.Drawing.Size(157, 45);
-            this.btnThem.TabIndex = 9;
+            this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -119,7 +131,8 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_AddMedicine";
-            this.Size = new System.Drawing.Size(463, 237);
+            this.Size = new System.Drawing.Size(536, 237);
+            this.Load += new System.EventHandler(this.UC_AddMedicine_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

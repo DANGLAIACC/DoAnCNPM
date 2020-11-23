@@ -52,7 +52,7 @@ namespace GUI.Forms
                 Doctor_DTO d = Doctor_BLL.getLogin(usr, pwd);
                 if (d != null)
                 {
-                    GlobalVariable.curentDoctor = d;
+                    List.curentDoctor = d;
 
                     frmMain f = new frmMain();
                     this.Hide();

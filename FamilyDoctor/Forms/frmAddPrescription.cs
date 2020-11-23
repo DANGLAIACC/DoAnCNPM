@@ -17,20 +17,38 @@ namespace GUI.Forms
     {
         //public List<Prescription_DTO> lstPrescription2 = new List<Prescription_DTO>();
         // lstMedicine phải public để các ucitem có thể đọc được điền vào suggest
+
         public static List<Medicine_DTO> lstMedicineSuggest = 
             new List<Medicine_DTO>();
+
+        public static List<Medicine_DTO> lstAllMedicine;
 
         public static List<Prescription_DTO> lstPrescription = new List<Prescription_DTO>();
 
         public frmAddPrescription()
         {
             InitializeComponent();
-            lstMedicineSuggest = Medicine_BLL.getMedicine();
+            lstAllMedicine = lstMedicineSuggest = Medicine_BLL.getMedicine();
         }
         private void frmAddPrescription_Load(object sender, EventArgs e)
         {
             loadCboExamType();
-            addNewPrescription();
+            addNewPrescription(new UC_PrescriptionItem(this, lstPrescription.Count));
+        }
+
+        public void refreshPnPrescriptionItems()
+        {
+            int totalUC = pnPrescritionItems.Controls.Count;
+
+            for(int i = 0; i < totalUC; i++)
+            {
+                UC_PrescriptionItem thisUC = (UC_PrescriptionItem)pnPrescritionItems.Controls[0];
+
+                Prescription_DTO thisPre = thisUC.prescription;
+
+                addNewPrescription(new UC_PrescriptionItem(this, i + 1, thisPre));
+                //pnPrescritionItems.Controls.RemoveAt(0);
+            }
         }
 
         private void loadCboExamType()
@@ -47,29 +65,40 @@ namespace GUI.Forms
             this.Close();
         }
 
-        public void addNewPrescription()
+        public void addNewPrescription(UC_PrescriptionItem u)
         {
-            UC_PrescriptionItem u =
-                        new UC_PrescriptionItem(this);
             u.Dock = DockStyle.Top;
             pnPrescritionItems.Controls.Add(u);
             pnPrescritionItems.Controls.SetChildIndex(u, pnPrescritionItems.Controls.Count);
 
             u.BringToFront();
         }
+        public void addNewPrescription()
+        {
+            UC_PrescriptionItem u = new UC_PrescriptionItem(this, pnPrescritionItems.Controls.Count+1);
 
+            u.Dock = DockStyle.Top;
+            pnPrescritionItems.Controls.Add(u);
+            pnPrescritionItems.Controls.SetChildIndex(u, pnPrescritionItems.Controls.Count);
+
+            u.BringToFront();
+        }
         private void btnClear_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Xóa tất cả các phần thuốc đã liệt kê??", "Xác nhận nhập lại", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
-            {
-                pnPrescritionItems.Controls.Clear();
-                addNewPrescription();
+            //DialogResult result = MessageBox.Show("Xóa tất cả các phần thuốc đã liệt kê??", "Xác nhận nhập lại", MessageBoxButtons.OKCancel);
+            //if (result == DialogResult.OK)
+            //{
+            //    pnPrescritionItems.Controls.Clear();
+            //    addNewPrescription(new UC_PrescriptionItem(this, lstPrescription.Count));
 
-                cboExamType.SelectedIndex = 0;
-                txtHospital.Text = txtRec_diagnostic.Text = txtRec_note.Text = "";
-                txtRec_diagnostic.Focus();
-            }
+            //    cboExamType.SelectedIndex = 0;
+            //    txtHospital.Text = txtRec_diagnostic.Text = txtRec_note.Text = "";
+            //    txtRec_diagnostic.Focus();
+            //}
+
+
+            // ngày 23 tháng 11, thay thế bằng refresh để test sau khi xóa 1 item
+            refreshPnPrescriptionItems();
         }
 
         private void btnThem_Click(object sender,

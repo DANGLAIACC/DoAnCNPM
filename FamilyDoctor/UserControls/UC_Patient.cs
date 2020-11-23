@@ -23,11 +23,11 @@ namespace GUI.UserControls
 
         private void UC_Home_Load(object sender, EventArgs e)
         {
-            if(GlobalVariable.lstPatient.Count == 0)
+            if(List.lstPatient.Count == 0)
             { // mảng chưa có bệnh nhân nào
-                GlobalVariable.lstPatient = Patient_BLL.getPatient();
+                List.lstPatient = Patient_BLL.getPatient();
             }
-            foreach (Patient_DTO p in GlobalVariable.lstPatient)
+            foreach (Patient_DTO p in List.lstPatient)
             {
                 grvLstBenhNhan.Rows.Add(new string[] {
                         p.Pat_id.ToString(),
@@ -43,7 +43,7 @@ namespace GUI.UserControls
 
         private void grvLstBenhNhan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmRecord f = new frmRecord(GlobalVariable.lstPatient[e.RowIndex]);
+            frmRecord f = new frmRecord(List.lstPatient[e.RowIndex]);
             f.ShowDialog();
         }
 

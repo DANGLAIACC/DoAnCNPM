@@ -82,6 +82,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTen.Location = new System.Drawing.Point(26, 3);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(394, 34);

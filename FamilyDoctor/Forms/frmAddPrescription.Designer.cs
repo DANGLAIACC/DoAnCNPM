@@ -276,9 +276,9 @@
             this.lblPat_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPat_name.Location = new System.Drawing.Point(386, 16);
             this.lblPat_name.Name = "lblPat_name";
-            this.lblPat_name.Size = new System.Drawing.Size(363, 28);
+            this.lblPat_name.Size = new System.Drawing.Size(321, 28);
             this.lblPat_name.TabIndex = 0;
-            this.lblPat_name.Text = "HOÀNG THỤC LINH LINH LINH LINH ";
+            this.lblPat_name.Text = "TÊN TÊN TÊN TÊN TÊN TÊN TÊN";
             // 
             // label5
             // 

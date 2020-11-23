@@ -134,7 +134,8 @@
     <Compile Include="Forms\frmRecord.Designer.cs">
       <DependentUpon>frmRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="global\GlobalVariable.cs" />
+    <Compile Include="global\Function.cs" />
+    <Compile Include="global\List.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\UC_AddMedicine.cs">

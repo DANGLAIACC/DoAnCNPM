@@ -117,8 +117,10 @@ INSERT INTO MEDICINE VALUES
 ('phenytoin100',N'Phenytoin 100mg Danapha '),
 ('olanxol',N'Olanxol Olanzapin 10mg Danapha'),
 ('sakuzyal',N'Sakuzyal Oxcarbazepin 300mg Davipharm'),
-('maleutyl',N'Maleutyl 500mg Hasan ')
-
+('maleutyl',N'Maleutyl 500mg Hasan '),
+('alzental400',N'Alzental 400mg'),
+('albendazol400',N'Albendazol STELLA 400 mg'),
+('acemuc200',N'Acemuc 200mg')
 GO
 INSERT INTO PRESCRIPTION VALUES
 (100000,'hapacolc500',1,1,1,N'Uống trước khi ăn'),

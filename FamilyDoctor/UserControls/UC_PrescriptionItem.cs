@@ -15,17 +15,41 @@ namespace GUI.UserControls
     public partial class UC_PrescriptionItem : UserControl
     {
         private frmAddPrescription frm;
-        private string med_id;
-        public UC_PrescriptionItem(frmAddPrescription frm)
+        //private string med_id;
+        public Prescription_DTO prescription = new Prescription_DTO(0, "", 0, 0, 0, "");
+
+        public UC_PrescriptionItem(frmAddPrescription frm, int stt)
         {
             InitializeComponent();
             this.frm = frm;
-            lblSTT.Text = 
-                (frm.pnPrescritionItems.Controls.Count+1)
-                .ToString("00");
+            lblSTT.Text = stt.ToString("00");
 
             txtTen.Focus();
         }
+
+        public UC_PrescriptionItem(frmAddPrescription frm, int stt, Prescription_DTO pre)
+        {
+            InitializeComponent();
+            this.frm = frm;
+            lblSTT.Text = stt.ToString("00");
+            prescription = pre;
+
+            txtTen.Text = getMedNameById(pre.Med_id);
+
+            txtSang.Text = pre.Pre_morning.ToString();
+            txtTrua.Text = pre.Pre_middle.ToString();
+            txtToi.Text = pre.Pre_afternoon.ToString();
+            txtNote.Text = pre.Pre_note;
+        }
+
+        private string getMedNameById(string med_id)
+        {
+            foreach (Medicine_DTO m in frmAddPrescription.lstAllMedicine)
+                if (m.Med_id == med_id)
+                    return med_id;
+            return "";
+        }
+
         private void UC_PrescriptionItem_Load(object sender, EventArgs e)
         {
             loadAutoCompleteMedName();
@@ -45,8 +69,12 @@ namespace GUI.UserControls
 
         private void lblSTT_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Xóa loại thuốc thứ: " + lblSTT.Text);
-            this.Parent.Controls.Remove(this);
+            frmAddPrescription.lstMedicineSuggest.Add(new Medicine_DTO(prescription.Med_id, txtTen.Text));
+
+            Parent.Controls.Remove(this);
+            
+            frmAlert f = new frmAlert();
+            f.showAlert("Đã xóa đơn thuốc.", frmAlert.enmType.Info);
         }
 
         private void txtNote_KeyDown(object sender, KeyEventArgs e)
@@ -65,6 +93,11 @@ namespace GUI.UserControls
                 }
                 else
                 {
+                    prescription.Pre_afternoon = Int32.Parse(txtToi.Text==""?"0":txtToi.Text);
+                    prescription.Pre_morning = Int32.Parse(txtSang.Text == "" ? "0" : txtSang.Text);
+                    prescription.Pre_middle = Int32.Parse(txtTrua.Text == "" ? "0" : txtTrua.Text);
+                    prescription.Pre_note = txtNote.Text;
+
                     frm.addNewPrescription();
                 }
             }
@@ -73,30 +106,6 @@ namespace GUI.UserControls
         public string getNameMedicine()
         {
             return txtTen.Text.Trim();
-        }
-        public string getMedIdByName()
-        {
-            string med_name = txtTen.Text.Trim();
-
-            foreach (Medicine_DTO m 
-                in frmAddPrescription.lstMedicineSuggest)
-                if (m.Med_name == txtTen.Text.Trim())
-                    return m.Med_id;
-
-            return "";
-        }
-        /// <summary>
-        /// Trả về giá trị thuốc của usercontrol này
-        /// </summary>
-        /// <returns></returns>
-        public Prescription_DTO getValue(int rec_id)
-        {
-            return new Prescription_DTO(
-                rec_id, med_id,
-                Int32.Parse(txtSang.Text),
-                Int32.Parse(txtTrua.Text),
-                Int32.Parse(txtToi.Text),
-                txtNote.Text);
         }
         /// <summary>
         /// Kiểm tra dữ liệu trong user control hợp lệ
@@ -137,7 +146,7 @@ namespace GUI.UserControls
 
              // Kiểm tra mã thuốc chưa tồn tại ở các uc_item trước đó
              foreach (UC_PrescriptionItem u in frm.pnPrescritionItems.Controls)
-                if(med_id == u.med_id)
+                if(med_id == u.prescription.Med_id)
                 {
                     frmAlert frmAlert = new frmAlert();
                     frmAlert.showAlert(
@@ -154,8 +163,10 @@ namespace GUI.UserControls
              foreach(Medicine_DTO m in frmAddPrescription.lstMedicineSuggest)
                 if (med_id == m.Med_id)
                 {
-                    this.med_id = med_id;
+                    prescription.Med_id = med_id;
                     txtTen.Text = m.Med_name;
+                    frmAddPrescription.lstMedicineSuggest.Remove(m);
+                    txtTen.Enabled = false;
                     return;
                 }
 
@@ -168,12 +179,13 @@ namespace GUI.UserControls
 
             UC_AddMedicine uc = new UC_AddMedicine(med_id);
             frmAdd f = new frmAdd("Thêm thuốc mới", uc);
-            f.TopMost = true;
-            f.ShowDialog();
+
+            f.ShowDialog(this);
 
             if (uc.med_name != "")
             {
                 // Thêm thuốc vào database thành công
+                prescription.Med_id = med_id;
                 txtTen.Text = uc.med_name;
             }
 

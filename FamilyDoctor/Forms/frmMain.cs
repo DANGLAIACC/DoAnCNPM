@@ -27,7 +27,7 @@ namespace GUI.Forms
             UC_Patient uch = new UC_Patient();
             AddControlsToPanel(uch);
 
-            lblDoctor.Text = GlobalVariable.curentDoctor.Doc_title + " " + GlobalVariable.curentDoctor.Doc_fullname;
+            lblDoctor.Text = List.curentDoctor.Doc_title + " " + List.curentDoctor.Doc_fullname;
         }
 
         private void button9_Click(object sender, EventArgs e)
