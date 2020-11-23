@@ -24,15 +24,6 @@ namespace GUI.UserControls
             this.frm = frm;
             lblSTT.Text = stt.ToString("00");
         }
-
-        private string getMedNameById(string med_id)
-        {
-            foreach (Medicine_DTO m in frmAddRecord.lstAllMedicine)
-                if (m.Med_id == med_id)
-                    return med_id;
-            return "";
-        }
-
         private void UC_PrescriptionItem_Load(object sender, EventArgs e)
         {
             loadAutoCompleteMedName(txtTen, frmAddRecord.lstMedicineSuggest);
@@ -43,7 +34,17 @@ namespace GUI.UserControls
             txtToi.Text = prescription.Pre_afternoon.ToString();
             txtNote.Text = prescription.Pre_note;
 
+            txtTen.Focus();
         }
+
+        private string getMedNameById(string med_id)
+        {
+            foreach (Medicine_DTO m in frmAddRecord.lstAllMedicine)
+                if (m.Med_id == med_id)
+                    return med_id;
+            return "";
+        }
+
         /// <summary>
         /// Lấy dữ liệu từ frmAddPrescription để làm data cho suggess textbox
         /// </summary>
@@ -193,6 +194,11 @@ namespace GUI.UserControls
                 prescription.Pre_note = txtNote.Text;
                 frm.addNewPrescription();
             }
+        }
+
+        private void txtTen_Enter(object sender, EventArgs e)
+        {
+            Console.WriteLine("Enter nè ");
         }
     }
 }

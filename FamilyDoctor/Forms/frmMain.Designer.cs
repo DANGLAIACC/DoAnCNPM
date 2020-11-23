@@ -46,7 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblPat_fullname = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.lblDoctor = new System.Windows.Forms.Label();
@@ -275,7 +274,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel2.Controls.Add(this.lblPat_fullname);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.labelTime);
             this.panel2.Controls.Add(this.lblDoctor);
@@ -285,17 +283,6 @@
             this.panel2.Size = new System.Drawing.Size(985, 92);
             this.panel2.TabIndex = 1;
             // 
-            // lblPat_fullname
-            // 
-            this.lblPat_fullname.AutoSize = true;
-            this.lblPat_fullname.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPat_fullname.ForeColor = System.Drawing.Color.White;
-            this.lblPat_fullname.Location = new System.Drawing.Point(140, 58);
-            this.lblPat_fullname.Name = "lblPat_fullname";
-            this.lblPat_fullname.Size = new System.Drawing.Size(220, 32);
-            this.lblPat_fullname.TabIndex = 0;
-            this.lblPat_fullname.Text = "Họ tên bệnh nhân";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -303,9 +290,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(8, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 32);
+            this.label6.Size = new System.Drawing.Size(285, 32);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Bệnh nhân:";
+            this.label6.Text = "Trạng thái: Đang làm việc";
             // 
             // labelTime
             // 
@@ -391,6 +378,5 @@
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panelControls;
-        private System.Windows.Forms.Label lblPat_fullname;
     }
 }

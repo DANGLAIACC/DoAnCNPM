@@ -20,25 +20,26 @@ namespace GUI.UserControls
         {
             InitializeComponent();
         }
-
+        private void loadLstPatientToGrv(List<Patient_DTO> lst)
+        {
+            grvLstBenhNhan.Rows.Clear();
+            foreach (Patient_DTO p in lst)
+            {
+                grvLstBenhNhan.Rows.Add(p.ToArrString());
+            }
+        }
         private void UC_Home_Load(object sender, EventArgs e)
         {
-            if(List.lstPatient.Count == 0)
-            { // mảng chưa có bệnh nhân nào
+            if (List.lstPatient.Count == 0)
+                // mảng chưa có bệnh nhân nào
                 List.lstPatient = Patient_BLL.getPatient();
-            }
-            foreach (Patient_DTO p in List.lstPatient)
-            {
-                grvLstBenhNhan.Rows.Add(new string[] {
-                        p.Pat_id.ToString(),
-                    p.Pat_fullname,
-                    p.Pat_phone1,
-                    p.Pat_dob.ToString("dd/MM/yyyy"),
-                    p.Pat_address
-                });
-            }
+
+            loadLstPatientToGrv(List.lstPatient);
 
             grvLstBenhNhan.Columns[0].Width = 100;
+            grvLstBenhNhan.Columns[2].Width =
+                grvLstBenhNhan.Columns[3].Width =
+                grvLstBenhNhan.Columns[4].Width = 170;
         }
 
         private void grvLstBenhNhan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -49,8 +50,58 @@ namespace GUI.UserControls
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            frmAdd f = new frmAdd("Thêm bệnh nhân mới", new UC_AddPatient());
+            UC_AddPatient u = new UC_AddPatient(List.lstPatient[List.lstPatient.Count - 1].Pat_id + 1);
+            frmAdd f = new frmAdd("Thêm bệnh nhân mới", u);
             f.ShowDialog();
+
+            if (u.p != null)
+            {
+                List.lstPatient.Add(u.p);
+                loadLstPatientToGrv(List.lstPatient);
+            }
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFilter.Text == "")
+                loadLstPatientToGrv(List.lstPatient);
+            else
+            {
+                grvLstBenhNhan.Rows.Clear();
+
+                if (btnTra.Text == "Tra theo tên")
+                {
+                    // filter by ID
+                    foreach (Patient_DTO p in List.lstPatient)
+                        if (p.Pat_id.ToString().IndexOf(txtFilter.Text) > -1)
+                            grvLstBenhNhan.Rows.Add(p.ToArrString());
+                }
+                else
+                {
+                    // filter by name
+                    foreach (Patient_DTO p in List.lstPatient)
+                        if (p.Pat_fullname.ToLower().IndexOf(txtFilter.Text.ToLower()) > -1)
+                            grvLstBenhNhan.Rows.Add(p.ToArrString());
+                }
+            }
+        }
+
+        private void btnTra_Click(object sender, EventArgs e)
+        {
+            txtFilter.Text = "";
+
+            if (btnTra.Text == "Tra theo tên")
+            {
+                txtFilter.PlaceholderText = "Nhập tên cần tìm"; 
+                btnTra.Text = "Tra Mã Hồ sơ";
+                txtFilter.Focus();
+            }
+            else
+            {
+                txtFilter.PlaceholderText = "Nhập mã bệnh nhân"; 
+                btnTra.Text = "Tra theo tên";
+                txtFilter.Focus();
+            }
         }
     }
 }

@@ -35,7 +35,7 @@
             this.lblTuoi = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.tglGender = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.cboTuoi = new System.Windows.Forms.DateTimePicker();
+            this.dtpTuoi = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.panel2.Controls.Add(this.lblTuoi);
             this.panel2.Controls.Add(this.lblGender);
             this.panel2.Controls.Add(this.tglGender);
-            this.panel2.Controls.Add(this.cboTuoi);
+            this.panel2.Controls.Add(this.dtpTuoi);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label9);
@@ -95,6 +95,7 @@
             this.btnClear.Size = new System.Drawing.Size(157, 45);
             this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Nhập lại";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnThem
             // 
@@ -112,15 +113,16 @@
             this.btnThem.Size = new System.Drawing.Size(157, 45);
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblTuoi
             // 
             this.lblTuoi.AutoSize = true;
             this.lblTuoi.Location = new System.Drawing.Point(449, 78);
             this.lblTuoi.Name = "lblTuoi";
-            this.lblTuoi.Size = new System.Drawing.Size(54, 28);
+            this.lblTuoi.Size = new System.Drawing.Size(23, 28);
             this.lblTuoi.TabIndex = 5;
-            this.lblTuoi.Text = "Nam";
+            this.lblTuoi.Text = "0";
             // 
             // lblGender
             // 
@@ -149,14 +151,16 @@
             this.tglGender.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.tglGender.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.tglGender.UncheckedState.Parent = this.tglGender;
+            this.tglGender.CheckedChanged += new System.EventHandler(this.tglGender_CheckedChanged);
             // 
-            // cboTuoi
+            // dtpTuoi
             // 
-            this.cboTuoi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cboTuoi.Location = new System.Drawing.Point(145, 72);
-            this.cboTuoi.Name = "cboTuoi";
-            this.cboTuoi.Size = new System.Drawing.Size(158, 34);
-            this.cboTuoi.TabIndex = 1;
+            this.dtpTuoi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTuoi.Location = new System.Drawing.Point(145, 72);
+            this.dtpTuoi.Name = "dtpTuoi";
+            this.dtpTuoi.Size = new System.Drawing.Size(158, 34);
+            this.dtpTuoi.TabIndex = 1;
+            this.dtpTuoi.ValueChanged += new System.EventHandler(this.dtpTuoi_ValueChanged);
             // 
             // label6
             // 
@@ -181,9 +185,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(369, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 28);
+            this.label9.Size = new System.Drawing.Size(50, 28);
             this.label9.TabIndex = 2;
-            this.label9.Text = "Tuổi:";
+            this.label9.Text = "Tuổi";
             // 
             // label4
             // 
@@ -290,7 +294,7 @@
         private System.Windows.Forms.Label lblTuoi;
         private System.Windows.Forms.Label lblGender;
         private Guna.UI2.WinForms.Guna2ToggleSwitch tglGender;
-        private System.Windows.Forms.DateTimePicker cboTuoi;
+        private System.Windows.Forms.DateTimePicker dtpTuoi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;

@@ -28,6 +28,7 @@ namespace DAL
                         DateTime.Parse( table.Rows[i]["pat_dob"].ToString()),
                         table.Rows[i]["pat_address"].ToString(),
                         table.Rows[i]["pat_phone1"].ToString(),
+                        table.Rows[i]["pat_phone2"].ToString(),
                         table.Rows[i]["pat_anamnesis"].ToString());
                     lst.Add(l);
                 }
@@ -38,12 +39,14 @@ namespace DAL
 
         public static bool addPatient(Patient_DTO p)
         {
-            string query = string.Format("INSERT INTO PATIENT(pat_fullname, pat_gender, pat_dob, pat_phone1, pat_phone2, pat_anamnesis) VALUES (N'{0}',{1},'{2}',N'{3}','{4}','{5}',N'{6}')"
-                ,p.Pat_fullname,p.Pat_gender,p.Pat_dob,p.Pat_address,
+            string query = string.Format("INSERT INTO PATIENT(pat_fullname, pat_gender, pat_dob, pat_address, pat_phone1, pat_phone2, pat_anamnesis) VALUES (N'{0}',{1},'{2}',N'{3}','{4}','{5}',N'{6}')"
+                , p.Pat_fullname,p.Pat_gender?1:0,p.Pat_dob.ToString("MM/dd/yyyy"),p.Pat_address,
                 p.Pat_phone1, p.Pat_phone2,p.Pat_anamnesis);
+
+            Console.WriteLine(query);
+
             return DataProvider.ExecuteNonQuery(query);
         }
 
-        /*Thêm tính năng xem lịch sử khám bệnh (bác sĩ khám, chẩn đoán bệnh tại thời điểm đó,...)*/
     }
 }

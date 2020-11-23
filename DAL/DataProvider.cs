@@ -14,13 +14,13 @@ namespace DAL
         {
             //string strConnection = @"Data Source = (local); Initial Catalog=FAMILY_DOCTOR;Intergrated Security=True" // DANGLAI_PC\DANGLAI_PC;
 
-            //string strConnection = @"server=DANGLAI_PC\DANGLAI_PC;"
-            //    + "database=FAMILY_DOCTOR;Integrated Security=True;"
-            //    + "Trusted_Connection=true";
-
-            string strConnection = @"server=TTTVT2-21\SQLEXPRESS;"
+            string strConnection = @"server=DANGLAI_PC\DANGLAI_PC;"
                 + "database=FAMILY_DOCTOR;Integrated Security=True;"
                 + "Trusted_Connection=true";
+
+            //string strConnection = @"server=TTTVT2-21\SQLEXPRESS;"
+            //    + "database=FAMILY_DOCTOR;Integrated Security=True;"
+            //    + "Trusted_Connection=true";
             SqlConnection connection = new SqlConnection(strConnection);
             connection.Open();
             return connection;

@@ -75,7 +75,9 @@ GO
 
 INSERT INTO DOCTOR VALUES
 ('dqlai','dqlai',N'Đặng Quốc Lai',1,'12/22/2000',N'BS. Chuyên khoa II',N'Quốc lộ 13, Thủ Đức, TP.HCM','0772470922',1),
-('nkuyen','nkuyen',N'Nguyễn Kiều Uyên',0,'12/12/2000',N'BS. Chuyên khoa I',N'Hậu Giang, Q.6, TP.HCM','0123456789',1)
+('admin','admin',N'Đặng Quốc Lai',1,'12/22/2000',N'BS. Chuyên khoa II',N'Quốc lộ 13, Thủ Đức, TP.HCM','0772470922',1),
+('nkuyen','nkuyen',N'Nguyễn Kiều Uyên',0,'12/12/2000',N'BS. Chuyên khoa I',N'Hậu Giang, Q.6, TP.HCM','0123456789',1) 
+
 
 GO
 
@@ -128,6 +130,7 @@ INSERT INTO PRESCRIPTION VALUES
 
 GO
 
+select * from DOCTOR
 /*
 
 CREATE PROCEDURE CREATEMODEL  
