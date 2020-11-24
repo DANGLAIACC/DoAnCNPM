@@ -11,5 +11,6 @@ rmdir /q/s BLL >nul
 rmdir /q/s DAL >nul
 rmdir /q/s DTO >nul
 rmdir /q/s FamilyDoctor >nul
+rmdir /q/s img >nul
 
 del /f/q/s %temp%\*.* >nul
