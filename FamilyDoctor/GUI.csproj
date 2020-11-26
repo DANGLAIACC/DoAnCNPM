@@ -150,6 +150,12 @@
     <Compile Include="UserControls\UC_AddPatient.Designer.cs">
       <DependentUpon>UC_AddPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Medicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Medicine.Designer.cs">
+      <DependentUpon>UC_Medicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Patient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,12 +185,6 @@
     </Compile>
     <Compile Include="UserControls\UC_PurchaseDetails.Designer.cs">
       <DependentUpon>UC_PurchaseDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_Sales.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_Sales.Designer.cs">
-      <DependentUpon>UC_Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_ViewSales.cs">
       <SubType>UserControl</SubType>
@@ -246,6 +246,9 @@
     <EmbeddedResource Include="UserControls\UC_AddPatient.resx">
       <DependentUpon>UC_AddPatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Medicine.resx">
+      <DependentUpon>UC_Medicine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Patient.resx">
       <DependentUpon>UC_Patient.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,9 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_PurchaseDetails.resx">
       <DependentUpon>UC_PurchaseDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Sales.resx">
-      <DependentUpon>UC_Sales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_ViewSales.resx">
       <DependentUpon>UC_ViewSales.cs</DependentUpon>

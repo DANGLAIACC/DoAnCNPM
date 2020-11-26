@@ -56,7 +56,7 @@ namespace GUI.Forms
         private void btnMedicine_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnMedicine);
-            UC_Sales us = new UC_Sales();
+            UC_Medicine us = new UC_Medicine();
             AddControlsToPanel(us);
         }
 

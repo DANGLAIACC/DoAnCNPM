@@ -12,13 +12,13 @@ namespace DAL
     {
         public static SqlConnection OpenConnection()
         {
-            //string strConnection = @"server=DANGLAI_PC\DANGLAI_PC;"
-            //    + "database=FAMILY_DOCTOR;Integrated Security=True;"
-            //    + "Trusted_Connection=true";
-
-            string strConnection = @"server=DESKTOP-I6D6J0Q\SQLEXPRESS;"
+            string strConnection = @"server=DANGLAI_PC\DANGLAI_PC;"
                 + "database=FAMILY_DOCTOR;Integrated Security=True;"
                 + "Trusted_Connection=true";
+
+            //string strConnection = @"server=DESKTOP-I6D6J0Q\SQLEXPRESS;"
+            //    + "database=FAMILY_DOCTOR;Integrated Security=True;"
+            //    + "Trusted_Connection=true";
 
             SqlConnection connection = new SqlConnection(strConnection);
             connection.Open();
