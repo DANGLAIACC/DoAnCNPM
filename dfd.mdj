@@ -1,0 +1,3094 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Family Doctor",
+	"ownedElements": [
+		{
+			"_type": "DFDDataFlowModel",
+			"_id": "AAAAAAF2Ac7s5RHLEOU=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Mức 0",
+			"ownedElements": [
+				{
+					"_type": "DFDDiagram",
+					"_id": "AAAAAAF2Ac7s5xHM9IU=",
+					"_parent": {
+						"$ref": "AAAAAAF2Ac7s5RHLEOU="
+					},
+					"name": "DFDDiagram1",
+					"ownedViews": [
+						{
+							"_type": "DFDProcessView",
+							"_id": "AAAAAAF2AdDyfBHV8Tg=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdDyfRHWkUo=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdDyfBHV8Tg="
+									},
+									"font": "Arial;13;0",
+									"left": 450,
+									"top": 232,
+									"width": 93,
+									"height": 39,
+									"text": "Hệ thống Quản lý phòng khám bác sĩ gia đình",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdDyfRHXQlE=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdDyfBHV8Tg="
+									},
+									"font": "Arial;13;0",
+									"left": 450,
+									"top": 205,
+									"width": 93,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 440,
+							"top": 200,
+							"width": 113,
+							"height": 113,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdDyfRHWkUo="
+							},
+							"idLabel": {
+								"$ref": "AAAAAAF2AdDyfRHXQlE="
+							}
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAF2AdRVjRHoi0Q=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdRVjBHmP+Y="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhuDChQpJPo=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRVjRHoi0Q="
+									},
+									"font": "Arial;13;0",
+									"left": 266,
+									"top": 133,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdRVjxHuoAg=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRVjRHoi0Q="
+									},
+									"font": "Arial;13;0",
+									"left": 266,
+									"top": 133,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdRVjhHpfOs=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRVjRHoi0Q="
+									},
+									"font": "Arial;13;0",
+									"left": 266,
+									"top": 138,
+									"width": 87.4326171875,
+									"height": 13,
+									"text": "Bệnh nhân",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdRVjhHqimU=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRVjRHoi0Q="
+									},
+									"font": "Arial;13;0",
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 256,
+							"top": 128,
+							"width": 107.4326171875,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdRVjhHpfOs="
+							}
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAF2AdRphxH0Hgw=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdRphxHy0bo="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhuDDxQvt18=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRphxH0Hgw="
+									},
+									"font": "Arial;13;0",
+									"left": 658,
+									"top": 141,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdRpiBH6jIk=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRphxH0Hgw="
+									},
+									"font": "Arial;13;0",
+									"left": 658,
+									"top": 141,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdRpiBH1bh4=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRphxH0Hgw="
+									},
+									"font": "Arial;13;0",
+									"left": 658,
+									"top": 146,
+									"width": 87.4326171875,
+									"height": 13,
+									"text": "Bác sĩ",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdRpiBH28EU=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdRphxH0Hgw="
+									},
+									"font": "Arial;13;0",
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 648,
+							"top": 136,
+							"width": 107.4326171875,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdRpiBH1bh4="
+							}
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAF2AdR5mRIAkXE=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdR5mRH+S2Y="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhuDEhQ1h8o=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdR5mRIAkXE="
+									},
+									"font": "Arial;13;0",
+									"left": 258,
+									"top": 341,
+									"width": 133,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdR5mhIG0g8=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdR5mRIAkXE="
+									},
+									"font": "Arial;13;0",
+									"left": 258,
+									"top": 341,
+									"width": 133,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdR5mRIBSuA=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdR5mRIAkXE="
+									},
+									"font": "Arial;13;0",
+									"left": 258,
+									"top": 346,
+									"width": 133,
+									"height": 13,
+									"text": "Lãnh đạo/Giám đốc",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AdR5mRICWRQ=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdR5mRIAkXE="
+									},
+									"font": "Arial;13;0",
+									"left": -48,
+									"top": -64,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 248,
+							"top": 336,
+							"width": 153,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdR5mRIBSuA="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AdgrgRIhmLs=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdgrgBIf9Po="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AdgrgRIieoM=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdgrgRIhmLs="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AdgrgBIf9Po="
+									},
+									"font": "Arial;13;0",
+									"left": 336,
+									"top": 208,
+									"width": 91.78076171875,
+									"height": 13,
+									"alpha": 0.18648686729114877,
+									"distance": 53.9351462406472,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AdgrgRIhmLs="
+									},
+									"edgePosition": 1,
+									"text": "Đến khám bệnh"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AdDyfBHV8Tg="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AdRVjRHoi0Q="
+							},
+							"lineStyle": 2,
+							"points": "328:160;328:224;440:224",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdgrgRIieoM="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AdjElxIsc6g=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdjElhIqz3g="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AdjElxItiDE=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdjElxIsc6g="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AdjElhIqz3g="
+									},
+									"font": "Arial;13;0",
+									"left": 559,
+									"top": 211,
+									"width": 112.60107421875,
+									"height": 13,
+									"alpha": -0.09347679567940492,
+									"distance": 64.28063471995279,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AdjElxIsc6g="
+									},
+									"edgePosition": 1,
+									"text": "Khám bệnh/Kê đơn"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AdDyfBHV8Tg="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AdRphxH0Hgw="
+							},
+							"lineStyle": 2,
+							"points": "679:168;679:224;552:224",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdjElxItiDE="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AdphbBJBgB0=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdphbBI/k8s="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AdphbBJC/lE=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdphbBJBgB0="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AdphbBI/k8s="
+									},
+									"font": "Arial;13;0",
+									"left": 336,
+									"top": 272,
+									"width": 97.576171875,
+									"height": 13,
+									"alpha": 0.17670882516769337,
+									"distance": 56.88585061331157,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AdphbBJBgB0="
+									},
+									"edgePosition": 1,
+									"text": "Yêu cầu báo cáo"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AdDyfBHV8Tg="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AdR5mRIAkXE="
+							},
+							"lineStyle": 2,
+							"points": "328:336;328:288;440:288",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdphbBJC/lE="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AdrgSRJOA/U=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AdrgSRJMSYs="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AdrgSRJPnyg=",
+									"_parent": {
+										"$ref": "AAAAAAF2AdrgSRJOA/U="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AdrgSRJMSYs="
+									},
+									"font": "Arial;13;0",
+									"left": 408,
+									"top": 335,
+									"width": 101.18798828125,
+									"height": 13,
+									"alpha": -0.18311085041898867,
+									"distance": 54.91812087098393,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AdrgSRJOA/U="
+									},
+									"edgePosition": 1,
+									"text": "Báo cáo thống kê"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AdR5mRIAkXE="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AdDyfBHV8Tg="
+							},
+							"lineStyle": 2,
+							"points": "512:312;512:352;400:352",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AdrgSRJPnyg="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2Adt4WhJb+Qg=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ac7s5xHM9IU="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Adt4WhJZ/nM="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2Adt4WxJc2Yo=",
+									"_parent": {
+										"$ref": "AAAAAAF2Adt4WhJb+Qg="
+									},
+									"model": {
+										"$ref": "AAAAAAF2Adt4WhJZ/nM="
+									},
+									"font": "Arial;13;0",
+									"left": 568,
+									"top": 136,
+									"width": 47.70263671875,
+									"height": 13,
+									"alpha": 0.1798534677924839,
+									"distance": 55.90169943749474,
+									"hostEdge": {
+										"$ref": "AAAAAAF2Adt4WhJb+Qg="
+									},
+									"edgePosition": 1,
+									"text": "Báo cáo"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AdRphxH0Hgw="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AdDyfBHV8Tg="
+							},
+							"lineStyle": 2,
+							"points": "536:200;536:152;648:152",
+							"nameLabel": {
+								"$ref": "AAAAAAF2Adt4WxJc2Yo="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDProcess",
+					"_id": "AAAAAAF2AdDyfBHTlmM=",
+					"_parent": {
+						"$ref": "AAAAAAF2Ac7s5RHLEOU="
+					},
+					"name": "Hệ thống Quản lý phòng khám bác sĩ gia đình",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AdrgSRJMSYs=",
+							"_parent": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							},
+							"name": "Báo cáo thống kê",
+							"source": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AdR5mRH+S2Y="
+							}
+						},
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2Adt4WhJZ/nM=",
+							"_parent": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							},
+							"name": "Báo cáo",
+							"source": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AdRphxHy0bo="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAF2AdRVjBHmP+Y=",
+					"_parent": {
+						"$ref": "AAAAAAF2Ac7s5RHLEOU="
+					},
+					"name": "Bệnh nhân",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AdgrgBIf9Po=",
+							"_parent": {
+								"$ref": "AAAAAAF2AdRVjBHmP+Y="
+							},
+							"name": "Đến khám bệnh",
+							"source": {
+								"$ref": "AAAAAAF2AdRVjBHmP+Y="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAF2AdRphxHy0bo=",
+					"_parent": {
+						"$ref": "AAAAAAF2Ac7s5RHLEOU="
+					},
+					"name": "Bác sĩ",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AdjElhIqz3g=",
+							"_parent": {
+								"$ref": "AAAAAAF2AdRphxHy0bo="
+							},
+							"name": "Khám bệnh/Kê đơn",
+							"source": {
+								"$ref": "AAAAAAF2AdRphxHy0bo="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAF2AdR5mRH+S2Y=",
+					"_parent": {
+						"$ref": "AAAAAAF2Ac7s5RHLEOU="
+					},
+					"name": "Lãnh đạo/Giám đốc",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AdphbBI/k8s=",
+							"_parent": {
+								"$ref": "AAAAAAF2AdR5mRH+S2Y="
+							},
+							"name": "Yêu cầu báo cáo",
+							"source": {
+								"$ref": "AAAAAAF2AdR5mRH+S2Y="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AdDyfBHTlmM="
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"_type": "DFDDataFlowModel",
+			"_id": "AAAAAAF2AeQGehJw0kI=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Mức 1",
+			"ownedElements": [
+				{
+					"_type": "DFDDiagram",
+					"_id": "AAAAAAF2AeQGexJxJsM=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "1. Tiếp nhận",
+					"ownedViews": [
+						{
+							"_type": "DFDProcessView",
+							"_id": "AAAAAAF2AeSydhJ6Nw4=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeQGexJxJsM="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AeSydRJ4bSM="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AeSydhJ7lbY=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeSydhJ6Nw4="
+									},
+									"font": "Arial;13;0",
+									"left": 458,
+									"top": 296,
+									"width": 69,
+									"height": 13,
+									"text": "Tiếp nhận",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AeSydxJ8RLs=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeSydhJ6Nw4="
+									},
+									"font": "Arial;13;0",
+									"left": 458,
+									"top": 269,
+									"width": 69,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 448,
+							"top": 264,
+							"width": 89,
+							"height": 56,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AeSydhJ7lbY="
+							},
+							"idLabel": {
+								"$ref": "AAAAAAF2AeSydxJ8RLs="
+							}
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAF2AeVRhBKJ4ck=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeQGexJxJsM="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AeVRgxKHeJ0="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhuDHRRaEKk=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeVRhBKJ4ck="
+									},
+									"font": "Arial;13;0",
+									"left": 290,
+									"top": 165,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AeVRhRKP9AE=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeVRhBKJ4ck="
+									},
+									"font": "Arial;13;0",
+									"left": 290,
+									"top": 165,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AeVRhBKKaEc=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeVRhBKJ4ck="
+									},
+									"font": "Arial;13;0",
+									"left": 290,
+									"top": 170,
+									"width": 87.4326171875,
+									"height": 13,
+									"text": "Bệnh nhân",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AeVRhBKLy7g=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeVRhBKJ4ck="
+									},
+									"font": "Arial;13;0",
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 280,
+							"top": 160,
+							"width": 107.4326171875,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AeVRhBKKaEc="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AeV1wRKVe2Q=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeQGexJxJsM="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AeV1wRKTCRQ="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AeV1wRKWJkA=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeV1wRKVe2Q="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AeV1wRKTCRQ="
+									},
+									"font": "Arial;13;0",
+									"left": 360,
+									"top": 256,
+									"width": 59.2490234375,
+									"height": 13,
+									"alpha": 0.2573236502042652,
+									"distance": 39.293765408777,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AeV1wRKVe2Q="
+									},
+									"edgePosition": 1,
+									"text": "Đến khám"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AeSydhJ6Nw4="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AeVRhBKJ4ck="
+							},
+							"lineStyle": 2,
+							"points": "351:192;351:272;448:272",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AeV1wRKWJkA="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AeY/JxKhlcM=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeQGexJxJsM="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AeY/JxKf21w="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AeY/KBKiI50=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeY/JxKhlcM="
+									},
+									"font": "Arial;13;0",
+									"left": 692,
+									"top": 178,
+									"width": 91,
+									"height": 13,
+									"text": "DS Bệnh nhân",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AeY/KBKjKUo=",
+									"_parent": {
+										"$ref": "AAAAAAF2AeY/JxKhlcM="
+									},
+									"font": "Arial;13;0",
+									"left": 677,
+									"top": 178,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 672,
+							"top": 168,
+							"width": 121,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AeY/KBKiI50="
+							},
+							"idLabel": {
+								"$ref": "AAAAAAF2AeY/KBKjKUo="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2Aea3FxKxu68=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeQGexJxJsM="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Aea3FxKv9rM="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2Aea3FxKy3qs=",
+									"_parent": {
+										"$ref": "AAAAAAF2Aea3FxKxu68="
+									},
+									"model": {
+										"$ref": "AAAAAAF2Aea3FxKv9rM="
+									},
+									"font": "Arial;13;0",
+									"left": 535,
+									"top": 160,
+									"width": 124.1474609375,
+									"height": 13,
+									"alpha": 0.14392542881632045,
+									"distance": 69.72087205421343,
+									"hostEdge": {
+										"$ref": "AAAAAAF2Aea3FxKxu68="
+									},
+									"edgePosition": 1,
+									"text": "Thêm bệnh nhân mới"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AeY/JxKhlcM="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AeSydhJ6Nw4="
+							},
+							"lineStyle": 2,
+							"points": "528:264;528:176;672:176",
+							"nameLabel": {
+								"$ref": "AAAAAAF2Aea3FxKy3qs="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2Aew1ShLCkdg=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeQGexJxJsM="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Aew1SRLAITI="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2Aew1ShLDJvY=",
+									"_parent": {
+										"$ref": "AAAAAAF2Aew1ShLCkdg="
+									},
+									"model": {
+										"$ref": "AAAAAAF2Aew1SRLAITI="
+									},
+									"font": "Arial;13;0",
+									"left": 567,
+									"top": 253,
+									"width": 154.908203125,
+									"height": 13,
+									"alpha": -0.13021145829113623,
+									"distance": 84.71717653463199,
+									"hostEdge": {
+										"$ref": "AAAAAAF2Aew1ShLCkdg="
+									},
+									"edgePosition": 1,
+									"text": "Trả về thông tin bệnh nhân"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AeSydhJ6Nw4="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AeY/JxKhlcM="
+							},
+							"lineStyle": 2,
+							"points": "728:200;728:271;536:271",
+							"nameLabel": {
+								"$ref": "AAAAAAF2Aew1ShLDJvY="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDProcess",
+					"_id": "AAAAAAF2AeSydRJ4bSM=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Tiếp nhận",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2Aea3FxKv9rM=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeSydRJ4bSM="
+							},
+							"name": "Thêm bệnh nhân mới",
+							"source": {
+								"$ref": "AAAAAAF2AeSydRJ4bSM="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AeY/JxKf21w="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAF2AeVRgxKHeJ0=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Bệnh nhân",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AeV1wRKTCRQ=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeVRgxKHeJ0="
+							},
+							"name": "Đến khám",
+							"source": {
+								"$ref": "AAAAAAF2AeVRgxKHeJ0="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AeSydRJ4bSM="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AeY/JxKf21w=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Bệnh nhân",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2Aew1SRLAITI=",
+							"_parent": {
+								"$ref": "AAAAAAF2AeY/JxKf21w="
+							},
+							"name": "Trả về thông tin bệnh nhân",
+							"source": {
+								"$ref": "AAAAAAF2AeY/JxKf21w="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AeSydRJ4bSM="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDiagram",
+					"_id": "AAAAAAF2AfHkjRLVsvY=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "2. Khám bệnh",
+					"ownedViews": [
+						{
+							"_type": "DFDProcessView",
+							"_id": "AAAAAAF2AfJpQxLc6SA=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfJpQxLdxpY=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfJpQxLc6SA="
+									},
+									"font": "Arial;13;0",
+									"left": 530,
+									"top": 344,
+									"width": 66.49169921875,
+									"height": 13,
+									"text": "Khám bệnh"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfJpQxLey3M=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfJpQxLc6SA="
+									},
+									"font": "Arial;13;0",
+									"left": 530,
+									"top": 317,
+									"width": 66.49169921875,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 520,
+							"top": 312,
+							"width": 86.49169921875,
+							"height": 56,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfJpQxLdxpY="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AfJpQxLey3M="
+							}
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAF2AfLrcRLtjcw=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfLrcRLr+T0="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhuDJhR6s00=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfLrcRLtjcw="
+									},
+									"font": "Arial;13;0",
+									"left": 298,
+									"top": 229,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfLrchLz7rQ=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfLrcRLtjcw="
+									},
+									"font": "Arial;13;0",
+									"left": 298,
+									"top": 229,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfLrcRLucqw=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfLrcRLtjcw="
+									},
+									"font": "Arial;13;0",
+									"left": 298,
+									"top": 234,
+									"width": 87.4326171875,
+									"height": 13,
+									"text": "Bác sĩ",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfLrchLvtAA=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfLrcRLtjcw="
+									},
+									"font": "Arial;13;0",
+									"left": -88,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 288,
+							"top": 224,
+							"width": 107.4326171875,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfLrcRLucqw="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AfMg4hL5XPI=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfMg4hL3Rf0="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfMg4xL6C9c=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfMg4hL5XPI="
+									},
+									"font": "Arial;13;0",
+									"left": 778.453125,
+									"top": 226,
+									"width": 70.103515625,
+									"height": 13,
+									"text": "DS Bệnh án"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfMg4xL7lMU=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfMg4hL5XPI="
+									},
+									"font": "Arial;13;0",
+									"left": 763.453125,
+									"top": 226,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 758.453125,
+							"top": 216,
+							"width": 100.103515625,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfMg4xL6C9c="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AfMg4xL7lMU="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AfOEHhMHOKY=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfOEHhMFWBM="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfOEHhMIufw=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfOEHhMHOKY="
+									},
+									"font": "Arial;13;0",
+									"left": 308,
+									"top": 338,
+									"width": 65.76171875,
+									"height": 13,
+									"text": "DS Thuốc",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfOEHxMJb7c=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfOEHhMHOKY="
+									},
+									"font": "Arial;13;0",
+									"left": 293,
+									"top": 338,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 288,
+							"top": 328,
+							"width": 95.76171875,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfOEHhMIufw="
+							},
+							"idLabel": {
+								"$ref": "AAAAAAF2AfOEHxMJb7c="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AfO1uBMTkAs=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfO1txMR9pA="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfO1uBMUzHI=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfO1uBMTkAs="
+									},
+									"font": "Arial;13;0",
+									"left": 788,
+									"top": 314,
+									"width": 60.556640625,
+									"height": 13,
+									"text": "Đơn thuốc"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AfO1uBMVdW8=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfO1uBMTkAs="
+									},
+									"font": "Arial;13;0",
+									"left": 773,
+									"top": 314,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 768,
+							"top": 304,
+							"width": 90.556640625,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfO1uBMUzHI="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AfO1uBMVdW8="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AfXyxBMsZVY=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfXyxBMqTwI="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AfXyxBMtRpc=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfXyxBMsZVY="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AfXyxBMqTwI="
+									},
+									"font": "Arial;13;0",
+									"left": 440,
+									"top": 304,
+									"width": 63.60986328125,
+									"height": 13,
+									"alpha": 0.03844258706697846,
+									"distance": 130.09611831257686,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AfXyxBMsZVY="
+									},
+									"edgePosition": 1,
+									"text": "Chẩn đoán"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AfLrcRLtjcw="
+							},
+							"lineStyle": 2,
+							"points": "341:256;341:315;520:315",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfXyxBMtRpc="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AfYv1xM3IrA=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfYv1xM15Pk="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AfYv1xM4+kE=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfYv1xM3IrA="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AfYv1xM15Pk="
+									},
+									"font": "Arial;13;0",
+									"left": 431,
+									"top": 223,
+									"width": 102.654296875,
+									"height": 13,
+									"alpha": -0.15991314851319283,
+									"distance": 62.80127387243033,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AfYv1xM3IrA="
+									},
+									"edgePosition": 1,
+									"text": "Hiện tiền sử bệnh"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AfLrcRLtjcw="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"lineStyle": 2,
+							"points": "544:312;544:240;394:240",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfYv1xM4+kE="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AfbVABNFwtU=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfbVABNDni8="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AfbVARNGXWM=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfbVABNFwtU="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AfbVABNDni8="
+									},
+									"font": "Arial;13;0",
+									"left": 600,
+									"top": 224,
+									"width": 109.6875,
+									"height": 13,
+									"alpha": 0.14189703460416672,
+									"distance": 70.71067811865476,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AfbVABNFwtU="
+									},
+									"edgePosition": 1,
+									"text": "Thêm bệnh án mới"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AfMg4hL5XPI="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"lineStyle": 2,
+							"points": "584:312;584:240;758:240",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfbVARNGXWM="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2Afc8mRNQ1k0=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Afc8mBNOT2g="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2Afc8mRNRE18=",
+									"_parent": {
+										"$ref": "AAAAAAF2Afc8mRNQ1k0="
+									},
+									"model": {
+										"$ref": "AAAAAAF2Afc8mBNOT2g="
+									},
+									"font": "Arial;13;0",
+									"left": 383,
+									"top": 336,
+									"width": 120.05322265625,
+									"height": 13,
+									"alpha": -3.985747260392962,
+									"distance": 12.041594578792296,
+									"hostEdge": {
+										"$ref": "AAAAAAF2Afc8mRNQ1k0="
+									},
+									"edgePosition": 1,
+									"text": "Trả về tên thuốc"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AfOEHhMHOKY="
+							},
+							"lineStyle": 2,
+							"points": "383:352;520:352",
+							"nameLabel": {
+								"$ref": "AAAAAAF2Afc8mRNRE18="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AfhctBNjM8c=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AfhctBNhK+U="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AfhctBNkbOM=",
+									"_parent": {
+										"$ref": "AAAAAAF2AfhctBNjM8c="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AfhctBNhK+U="
+									},
+									"font": "Arial;13;0",
+									"left": 617,
+									"top": 303,
+									"width": 121.09423828125,
+									"height": 13,
+									"alpha": -4.171970215408548,
+									"distance": 11.661903789690601,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AfhctBNjM8c="
+									},
+									"edgePosition": 1,
+									"text": "Thêm đơn thuốc mới"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AfO1uBMTkAs="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"lineStyle": 2,
+							"points": "605:320;768:320",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AfhctBNkbOM="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AgDURxOZXj8=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AgDURROX4IE="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AgDURxOaJoU=",
+									"_parent": {
+										"$ref": "AAAAAAF2AgDURxOZXj8="
+									},
+									"font": "Arial;13;0",
+									"left": 308,
+									"top": 410,
+									"width": 85.26171875,
+									"height": 13,
+									"text": "DS xét nghiệm"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AgDURxObyq8=",
+									"_parent": {
+										"$ref": "AAAAAAF2AgDURxOZXj8="
+									},
+									"font": "Arial;13;0",
+									"left": 293,
+									"top": 410,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 288,
+							"top": 400,
+							"width": 115.26171875,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AgDURxOaJoU="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AgDURxObyq8="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AgFFwBOoFDI=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AgFFwBOm/ig="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AgFFwBOpYnc=",
+									"_parent": {
+										"$ref": "AAAAAAF2AgFFwBOoFDI="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AgFFwBOm/ig="
+									},
+									"font": "Arial;13;0",
+									"left": 400,
+									"top": 399,
+									"width": 149.576171875,
+									"height": 13,
+									"alpha": -0.14189707460416656,
+									"distance": 70.71067811865476,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AgFFwBOoFDI="
+									},
+									"edgePosition": 1,
+									"text": "Thêm yêu cầu mới"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AgDURxOZXj8="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"lineStyle": 2,
+							"points": "544:367;544:416;402:416",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AgFFwBOpYnc="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AgS+yhP2wFY=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AgS+yRP0p3c="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AgS+yhP3QUo=",
+									"_parent": {
+										"$ref": "AAAAAAF2AgS+yhP2wFY="
+									},
+									"font": "Arial;13;0",
+									"left": 756,
+									"top": 410,
+									"width": 91.05078125,
+									"height": 13,
+									"text": "DS chuyển viện"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AgS+yhP46JY=",
+									"_parent": {
+										"$ref": "AAAAAAF2AgS+yhP2wFY="
+									},
+									"font": "Arial;13;0",
+									"left": 741,
+									"top": 410,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 736,
+							"top": 400,
+							"width": 121.05078125,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AgS+yhP3QUo="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AgS+yhP46JY="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AgUaoRQFwww=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AgUaoBQDdmw="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AgUaoRQGYK0=",
+									"_parent": {
+										"$ref": "AAAAAAF2AgUaoRQFwww="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AgUaoBQDdmw="
+									},
+									"font": "Arial;13;0",
+									"left": 623,
+									"top": 335,
+									"width": 108.2275390625,
+									"height": 13,
+									"alpha": -1.6907005050395492,
+									"distance": 83.60023923410746,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AgUaoRQFwww="
+									},
+									"edgePosition": 1,
+									"text": "Thêm yêu cầu mới"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AgS+yhP2wFY="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"lineStyle": 2,
+							"points": "605:352;760:352;760:400",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AgUaoRQGYK0="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AgWrhBQSjrM=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfHkjRLVsvY="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AgWrhBQQHoc="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AgWrhBQTH1I=",
+									"_parent": {
+										"$ref": "AAAAAAF2AgWrhBQSjrM="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AgWrhBQQHoc="
+									},
+									"font": "Arial;13;0",
+									"left": 602,
+									"top": 399,
+									"width": 95.24658203125,
+									"height": 13,
+									"alpha": -1.420424745790814,
+									"distance": 66.75327707311455,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AgWrhBQSjrM="
+									},
+									"edgePosition": 1,
+									"text": "In giấy giới thiệu"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AfJpQxLc6SA="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AgS+yhP2wFY="
+							},
+							"lineStyle": 2,
+							"points": "736:416;584:416;584:367",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AgWrhBQTH1I="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDProcess",
+					"_id": "AAAAAAF2AfJpQhLacb8=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Khám bệnh",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AfYv1xM15Pk=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"name": "Hiện tiền sử bệnh",
+							"source": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AfLrcRLr+T0="
+							}
+						},
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AfbVABNDni8=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"name": "Thêm bệnh án mới",
+							"source": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AfMg4hL3Rf0="
+							}
+						},
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AfhctBNhK+U=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"name": "Thêm đơn thuốc mới",
+							"source": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AfO1txMR9pA="
+							}
+						},
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AgFFwBOm/ig=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"name": "Thêm yêu cầu mới",
+							"source": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AgDURROX4IE="
+							}
+						},
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AgUaoBQDdmw=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"name": "Thêm yêu cầu mới",
+							"source": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AgS+yRP0p3c="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAF2AfLrcRLr+T0=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Bác sĩ",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AfXyxBMqTwI=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfLrcRLr+T0="
+							},
+							"name": "Chẩn đoán",
+							"source": {
+								"$ref": "AAAAAAF2AfLrcRLr+T0="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AfMg4hL3Rf0=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Bệnh án"
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AfOEHhMFWBM=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Thuốc",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2Afc8mBNOT2g=",
+							"_parent": {
+								"$ref": "AAAAAAF2AfOEHhMFWBM="
+							},
+							"name": "Trả về tên thuốc",
+							"source": {
+								"$ref": "AAAAAAF2AfOEHhMFWBM="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AfO1txMR9pA=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Đơn thuốc"
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AgDURROX4IE=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS xét nghiệm"
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AgS+yRP0p3c=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS chuyển viện",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AgWrhBQQHoc=",
+							"_parent": {
+								"$ref": "AAAAAAF2AgS+yRP0p3c="
+							},
+							"name": "In giấy giới thiệu",
+							"source": {
+								"$ref": "AAAAAAF2AgS+yRP0p3c="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AfJpQhLacb8="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDiagram",
+					"_id": "AAAAAAF2AhWNiRQjCN8=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "3.  Quản lý thuốc",
+					"ownedViews": [
+						{
+							"_type": "DFDProcessView",
+							"_id": "AAAAAAF2AhYWwRQqoHM=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhWNiRQjCN8="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AhYWwBQoLwk="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhYWwRQrvjY=",
+									"_parent": {
+										"$ref": "AAAAAAF2AhYWwRQqoHM="
+									},
+									"font": "Arial;13;0",
+									"left": 434,
+									"top": 360,
+									"width": 80.21533203125,
+									"height": 13,
+									"text": "Quản lý thuốc"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhYWwRQsY1w=",
+									"_parent": {
+										"$ref": "AAAAAAF2AhYWwRQqoHM="
+									},
+									"font": "Arial;13;0",
+									"left": 434,
+									"top": 333,
+									"width": 80.21533203125,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 424,
+							"top": 328,
+							"width": 100.21533203125,
+							"height": 56,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AhYWwRQrvjY="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AhYWwRQsY1w="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2Ahax2RRNRG0=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhWNiRQjCN8="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Ahax2BRLJws="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ahax2RRO4+8=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ahax2RRNRG0="
+									},
+									"font": "Arial;13;0",
+									"left": 636,
+									"top": 266,
+									"width": 65.76171875,
+									"height": 13,
+									"text": "DS Thuốc",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ahax2RRPfzo=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ahax2RRNRG0="
+									},
+									"font": "Arial;13;0",
+									"left": 621,
+									"top": 266,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 616,
+							"top": 256,
+							"width": 95.76171875,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2Ahax2RRO4+8="
+							},
+							"idLabel": {
+								"$ref": "AAAAAAF2Ahax2RRPfzo="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2Ahb2nhRmvaI=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhWNiRQjCN8="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Ahb2nRRkUa4="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2Ahb2nhRnEU4=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ahb2nhRmvaI="
+									},
+									"model": {
+										"$ref": "AAAAAAF2Ahb2nRRkUa4="
+									},
+									"font": "Arial;13;0",
+									"left": 503,
+									"top": 256,
+									"width": 94.49755859375,
+									"height": 13,
+									"alpha": 0.14189703460416672,
+									"distance": 70.71067811865476,
+									"hostEdge": {
+										"$ref": "AAAAAAF2Ahb2nhRmvaI="
+									},
+									"edgePosition": 1,
+									"text": "Thêm thuốc mới"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2Ahax2RRNRG0="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AhYWwRQqoHM="
+							},
+							"lineStyle": 2,
+							"points": "480:328;480:272;616:272",
+							"nameLabel": {
+								"$ref": "AAAAAAF2Ahb2nhRnEU4="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AhgTihSBB0E=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhWNiRQjCN8="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AhgTihR/nNE="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AhgTihSC1rM=",
+									"_parent": {
+										"$ref": "AAAAAAF2AhgTihSBB0E="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AhgTihR/nNE="
+									},
+									"font": "Arial;13;0",
+									"left": 526,
+									"top": 320,
+									"width": 88.17529296875,
+									"height": 13,
+									"alpha": -4.838980908214077,
+									"distance": 55.44366510251645,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AhgTihSBB0E="
+									},
+									"edgePosition": 1,
+									"text": "Cập nhật thuốc"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2Ahax2RRNRG0="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AhYWwRQqoHM="
+							},
+							"lineStyle": 2,
+							"points": "523:333;626:333;626:288",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AhgTihSC1rM="
+							}
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAF2AhwB2xToKTc=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhWNiRQjCN8="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AhwB2xTm+74="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhwB3BTund0=",
+									"_parent": {
+										"$ref": "AAAAAAF2AhwB2xToKTc="
+									},
+									"font": "Arial;13;0",
+									"left": 242,
+									"top": 269,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhwB2xTpt0I=",
+									"_parent": {
+										"$ref": "AAAAAAF2AhwB2xToKTc="
+									},
+									"font": "Arial;13;0",
+									"left": 242,
+									"top": 274,
+									"width": 87.4326171875,
+									"height": 13,
+									"text": "Bác sĩ",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AhwB2xTqdS8=",
+									"_parent": {
+										"$ref": "AAAAAAF2AhwB2xToKTc="
+									},
+									"font": "Arial;13;0",
+									"left": -40,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 232,
+							"top": 264,
+							"width": 107.4326171875,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AhwB2xTpt0I="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AhwofRT1AwM=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhWNiRQjCN8="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AhwofBTz9MM="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AhwofRT2lv0=",
+									"_parent": {
+										"$ref": "AAAAAAF2AhwofRT1AwM="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AhwofBTz9MM="
+									},
+									"font": "Arial;13;0",
+									"left": 342,
+									"top": 319,
+									"width": 78.05712890625,
+									"height": 13,
+									"alpha": -1.4141942204296472,
+									"distance": 57.706152185014034,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AhwofRT1AwM="
+									},
+									"edgePosition": 1,
+									"text": "Lấy tên thuốc"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AhwB2xToKTc="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AhYWwRQqoHM="
+							},
+							"lineStyle": 2,
+							"points": "424:335;325:335;325:296",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AhwofRT2lv0="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDProcess",
+					"_id": "AAAAAAF2AhYWwBQoLwk=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Quản lý thuốc",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2Ahb2nRRkUa4=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhYWwBQoLwk="
+							},
+							"name": "Thêm thuốc mới",
+							"source": {
+								"$ref": "AAAAAAF2AhYWwBQoLwk="
+							},
+							"target": {
+								"$ref": "AAAAAAF2Ahax2BRLJws="
+							}
+						},
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AhgTihR/nNE=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhYWwBQoLwk="
+							},
+							"name": "Cập nhật thuốc",
+							"source": {
+								"$ref": "AAAAAAF2AhYWwBQoLwk="
+							},
+							"target": {
+								"$ref": "AAAAAAF2Ahax2BRLJws="
+							}
+						},
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AhwofBTz9MM=",
+							"_parent": {
+								"$ref": "AAAAAAF2AhYWwBQoLwk="
+							},
+							"name": "Lấy tên thuốc",
+							"source": {
+								"$ref": "AAAAAAF2AhYWwBQoLwk="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AhwB2xTm+74="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2Ahax2BRLJws=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Thuốc"
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAF2AhwB2xTm+74=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Bác sĩ"
+				},
+				{
+					"_type": "DFDDiagram",
+					"_id": "AAAAAAF2Ah58vRT+qXE=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "4. Báo cáo thống kê",
+					"ownedViews": [
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAF2Ah7HOxUE/8M=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Ah7HOhUCUI4="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah7HPBUKOwE=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah7HOxUE/8M="
+									},
+									"font": "Arial;13;0",
+									"left": 218,
+									"top": 93,
+									"width": 113.46435546875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah7HOxUF9WM=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah7HOxUE/8M="
+									},
+									"font": "Arial;13;0",
+									"left": 218,
+									"top": 98,
+									"width": 113.46435546875,
+									"height": 13,
+									"text": "Lãnh đạo/Giám đốc"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah7HOxUGk9A=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah7HOxUE/8M="
+									},
+									"font": "Arial;13;0",
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 208,
+							"top": 88,
+							"width": 133.46435546875,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2Ah7HOxUF9WM="
+							},
+							"wordWrap": false
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2Ah8sUxUemWs=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Ah8sUxUciow="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah8sUxUfLHc=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah8sUxUemWs="
+									},
+									"font": "Arial;13;0",
+									"left": 649.98779296875,
+									"top": 130,
+									"width": 72.11572265625,
+									"height": 13,
+									"text": "DS Hóa đơn"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah8sVBUgaEs=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah8sUxUemWs="
+									},
+									"font": "Arial;13;0",
+									"left": 634.98779296875,
+									"top": 130,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 629.98779296875,
+							"top": 120,
+							"width": 102.11572265625,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2Ah8sUxUfLHc="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2Ah8sVBUgaEs="
+							}
+						},
+						{
+							"_type": "DFDProcessView",
+							"_id": "AAAAAAF2Ah9uGxUsWY4=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Ah9uGxUqWGA="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah9uGxUtpFw=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah9uGxUsWY4="
+									},
+									"font": "Arial;13;0",
+									"left": 378,
+									"top": 224,
+									"width": 101.18798828125,
+									"height": 13,
+									"text": "Báo cáo thống kê"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah9uGxUuX8k=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah9uGxUsWY4="
+									},
+									"font": "Arial;13;0",
+									"left": 378,
+									"top": 197,
+									"width": 101.18798828125,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 368,
+							"top": 192,
+							"width": 121.18798828125,
+							"height": 56,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2Ah9uGxUtpFw="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2Ah9uGxUuX8k="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2Ah/ulxU/NDE=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Ah/ulxU9Lc4="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah/ulxVAIEA=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah/ulxU/NDE="
+									},
+									"font": "Arial;13;0",
+									"left": 652,
+									"top": 178,
+									"width": 70.103515625,
+									"height": 13,
+									"text": "DS Bệnh án"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Ah/ulxVB2HA=",
+									"_parent": {
+										"$ref": "AAAAAAF2Ah/ulxU/NDE="
+									},
+									"font": "Arial;13;0",
+									"left": 637,
+									"top": 178,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 632,
+							"top": 168,
+							"width": 100.103515625,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2Ah/ulxVAIEA="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2Ah/ulxVB2HA="
+							}
+						},
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AiBY4hV5MKc=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AiBY4hV386s="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AiBY4hV6nBw=",
+									"_parent": {
+										"$ref": "AAAAAAF2AiBY4hV5MKc="
+									},
+									"font": "Arial;13;0",
+									"left": 639.8759765625,
+									"top": 226,
+									"width": 82.2275390625,
+									"height": 13,
+									"text": "DS Đơn thuốc"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AiBY4hV73k8=",
+									"_parent": {
+										"$ref": "AAAAAAF2AiBY4hV5MKc="
+									},
+									"font": "Arial;13;0",
+									"left": 624.8759765625,
+									"top": 226,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 619.8759765625,
+							"top": 216,
+							"width": 112.2275390625,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AiBY4hV6nBw="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AiBY4hV73k8="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AiENIhWWfXk=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AiENIhWUfAY="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AiENIhWXN9g=",
+									"_parent": {
+										"$ref": "AAAAAAF2AiENIhWWfXk="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AiENIhWUfAY="
+									},
+									"font": "Arial;13;0",
+									"left": 368,
+									"top": 87,
+									"width": 47.70263671875,
+									"height": 13,
+									"alpha": -2.1025207647595865,
+									"distance": 19.72308292331602,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AiENIhWWfXk="
+									},
+									"edgePosition": 1,
+									"text": "Yêu cầu"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2Ah9uGxUsWY4="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2Ah7HOxUE/8M="
+							},
+							"lineStyle": 2,
+							"points": "340:104;408:104;408:192",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AiENIhWXN9g="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AiF/2xWkwSQ=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AiF/2xWiG8U="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AiF/2xWlCvI=",
+									"_parent": {
+										"$ref": "AAAAAAF2AiF/2xWkwSQ="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AiF/2xWiG8U="
+									},
+									"font": "Arial;13;0",
+									"left": 319,
+									"top": 175,
+									"width": 47.70263671875,
+									"height": 13,
+									"alpha": -1.3654008403135698,
+									"distance": 49.03060268852505,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AiF/2xWkwSQ="
+									},
+									"edgePosition": 1,
+									"text": "Báo cáo"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2Ah7HOxUE/8M="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2Ah9uGxUsWY4="
+							},
+							"lineStyle": 2,
+							"points": "368:192;295:192;295:120",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AiF/2xWlCvI="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AiHbdBW3ruA=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AiHbdBW1HWw="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AiHbdBW4Grc=",
+									"_parent": {
+										"$ref": "AAAAAAF2AiHbdBW3ruA="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AiHbdBW1HWw="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 470,
+									"top": 129,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AiHbdBW3ruA="
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2Ah9uGxUsWY4="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2Ah8sUxUemWs="
+							},
+							"lineStyle": 2,
+							"points": "630:136;456:136;456:192",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AiHbdBW4Grc="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AiI9whXCwac=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AiI9whXA7M8="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AiI9wxXDwSE=",
+									"_parent": {
+										"$ref": "AAAAAAF2AiI9whXCwac="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AiI9whXA7M8="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 502,
+									"top": 169,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AiI9whXCwac="
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2Ah9uGxUsWY4="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2Ah/ulxU/NDE="
+							},
+							"lineStyle": 2,
+							"points": "632:176;488:176;488:192",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AiI9wxXDwSE="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2AiJHNhXLzwE=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah58vRT+qXE="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AiJHNhXJNoU="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2AiJHNhXMMwk=",
+									"_parent": {
+										"$ref": "AAAAAAF2AiJHNhXLzwE="
+									},
+									"model": {
+										"$ref": "AAAAAAF2AiJHNhXJNoU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 553,
+									"top": 240,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAF2AiJHNhXLzwE="
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2Ah9uGxUsWY4="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2AiBY4hV5MKc="
+							},
+							"lineStyle": 2,
+							"points": "620:231;488:231",
+							"nameLabel": {
+								"$ref": "AAAAAAF2AiJHNhXMMwk="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAF2Ah7HOhUCUI4=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Lãnh đạo/Giám đốc",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AiENIhWUfAY=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah7HOhUCUI4="
+							},
+							"name": "Yêu cầu",
+							"source": {
+								"$ref": "AAAAAAF2Ah7HOhUCUI4="
+							},
+							"target": {
+								"$ref": "AAAAAAF2Ah9uGxUqWGA="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2Ah8sUxUciow=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Hóa đơn",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AiHbdBW1HWw=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah8sUxUciow="
+							},
+							"source": {
+								"$ref": "AAAAAAF2Ah8sUxUciow="
+							},
+							"target": {
+								"$ref": "AAAAAAF2Ah9uGxUqWGA="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDProcess",
+					"_id": "AAAAAAF2Ah9uGxUqWGA=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Báo cáo thống kê",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AiF/2xWiG8U=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah9uGxUqWGA="
+							},
+							"name": "Báo cáo",
+							"source": {
+								"$ref": "AAAAAAF2Ah9uGxUqWGA="
+							},
+							"target": {
+								"$ref": "AAAAAAF2Ah7HOhUCUI4="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2Ah/ulxU9Lc4=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Bệnh án",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AiI9whXA7M8=",
+							"_parent": {
+								"$ref": "AAAAAAF2Ah/ulxU9Lc4="
+							},
+							"source": {
+								"$ref": "AAAAAAF2Ah/ulxU9Lc4="
+							},
+							"target": {
+								"$ref": "AAAAAAF2Ah9uGxUqWGA="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AiBY4hV386s=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Đơn thuốc",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2AiJHNhXJNoU=",
+							"_parent": {
+								"$ref": "AAAAAAF2AiBY4hV386s="
+							},
+							"source": {
+								"$ref": "AAAAAAF2AiBY4hV386s="
+							},
+							"target": {
+								"$ref": "AAAAAAF2Ah9uGxUqWGA="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDiagram",
+					"_id": "AAAAAAF2AiY+KBX79qg=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "5. Thanh toán",
+					"ownedViews": [
+						{
+							"_type": "DFDDataStoreView",
+							"_id": "AAAAAAF2AihVORYDIH8=",
+							"_parent": {
+								"$ref": "AAAAAAF2AiY+KBX79qg="
+							},
+							"model": {
+								"$ref": "AAAAAAF2AihVOBYBqjw="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AihVORYE4Gw=",
+									"_parent": {
+										"$ref": "AAAAAAF2AihVORYDIH8="
+									},
+									"font": "Arial;13;0",
+									"left": 612,
+									"top": 98,
+									"width": 72.11572265625,
+									"height": 13,
+									"text": "DS Hóa đơn"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2AihVORYF8Sc=",
+									"_parent": {
+										"$ref": "AAAAAAF2AihVORYDIH8="
+									},
+									"font": "Arial;13;0",
+									"left": 597,
+									"top": 98,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 592,
+							"top": 88,
+							"width": 102.11572265625,
+							"height": 33,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2AihVORYE4Gw="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2AihVORYF8Sc="
+							}
+						},
+						{
+							"_type": "DFDProcessView",
+							"_id": "AAAAAAF2Aihk+xYOngE=",
+							"_parent": {
+								"$ref": "AAAAAAF2AiY+KBX79qg="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Aihk+xYMGOU="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Aihk/BYP5Vg=",
+									"_parent": {
+										"$ref": "AAAAAAF2Aihk+xYOngE="
+									},
+									"font": "Arial;13;0",
+									"left": 386,
+									"top": 192,
+									"width": 65.7744140625,
+									"height": 13,
+									"text": "Thanh toán"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF2Aihk/BYQvus=",
+									"_parent": {
+										"$ref": "AAAAAAF2Aihk+xYOngE="
+									},
+									"font": "Arial;13;0",
+									"left": 386,
+									"top": 165,
+									"width": 65.7744140625,
+									"height": 13
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 376,
+							"top": 160,
+							"width": 85.7744140625,
+							"height": 56,
+							"autoResize": true,
+							"nameLabel": {
+								"$ref": "AAAAAAF2Aihk/BYP5Vg="
+							},
+							"wordWrap": false,
+							"idLabel": {
+								"$ref": "AAAAAAF2Aihk/BYQvus="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAF2Aii3rRYgG3g=",
+							"_parent": {
+								"$ref": "AAAAAAF2AiY+KBX79qg="
+							},
+							"model": {
+								"$ref": "AAAAAAF2Aii3rRYeoeU="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAF2Aii3rRYhuk8=",
+									"_parent": {
+										"$ref": "AAAAAAF2Aii3rRYgG3g="
+									},
+									"model": {
+										"$ref": "AAAAAAF2Aii3rRYeoeU="
+									},
+									"font": "Arial;13;0",
+									"left": 463,
+									"top": 104,
+									"width": 110.982421875,
+									"height": 13,
+									"alpha": 0.14189703460416672,
+									"distance": 70.71067811865476,
+									"hostEdge": {
+										"$ref": "AAAAAAF2Aii3rRYgG3g="
+									},
+									"edgePosition": 1,
+									"text": "Thêm hóa đơn mới"
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF2AihVORYDIH8="
+							},
+							"tail": {
+								"$ref": "AAAAAAF2Aihk+xYOngE="
+							},
+							"lineStyle": 2,
+							"points": "448:160;448:120;592:120",
+							"nameLabel": {
+								"$ref": "AAAAAAF2Aii3rRYhuk8="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDDataStore",
+					"_id": "AAAAAAF2AihVOBYBqjw=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "DS Hóa đơn"
+				},
+				{
+					"_type": "DFDProcess",
+					"_id": "AAAAAAF2Aihk+xYMGOU=",
+					"_parent": {
+						"$ref": "AAAAAAF2AeQGehJw0kI="
+					},
+					"name": "Thanh toán",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAF2Aii3rRYeoeU=",
+							"_parent": {
+								"$ref": "AAAAAAF2Aihk+xYMGOU="
+							},
+							"name": "Thêm hóa đơn mới",
+							"source": {
+								"$ref": "AAAAAAF2Aihk+xYMGOU="
+							},
+							"target": {
+								"$ref": "AAAAAAF2AihVOBYBqjw="
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"author": "Đặng Quốc Lai"
+}
