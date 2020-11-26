@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecord));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grvLstRecord = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.btnThemBenhAn = new Guna.UI2.WinForms.Guna2Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblExamination = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvLstRecord)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -70,7 +72,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1178, 704);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -81,40 +83,40 @@
             this.grvLstRecord.AllowUserToDeleteRows = false;
             this.grvLstRecord.AllowUserToResizeColumns = false;
             this.grvLstRecord.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(183)))));
-            this.grvLstRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(183)))));
+            this.grvLstRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.grvLstRecord.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvLstRecord.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
             this.grvLstRecord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grvLstRecord.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.grvLstRecord.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvLstRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvLstRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.grvLstRecord.ColumnHeadersHeight = 30;
             this.grvLstRecord.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column1,
             this.Column2,
             this.Col3});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(243)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(215)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvLstRecord.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(243)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(215)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvLstRecord.DefaultCellStyle = dataGridViewCellStyle9;
             this.grvLstRecord.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grvLstRecord.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.grvLstRecord.EnableHeadersVisualStyles = false;
             this.grvLstRecord.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(233)))), ((int)(((byte)(170)))));
-            this.grvLstRecord.Location = new System.Drawing.Point(3, 113);
+            this.grvLstRecord.Location = new System.Drawing.Point(3, 153);
             this.grvLstRecord.MultiSelect = false;
             this.grvLstRecord.Name = "grvLstRecord";
             this.grvLstRecord.ReadOnly = true;
@@ -127,7 +129,7 @@
             this.grvLstRecord.RowTemplate.ReadOnly = true;
             this.grvLstRecord.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grvLstRecord.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvLstRecord.Size = new System.Drawing.Size(1172, 588);
+            this.grvLstRecord.Size = new System.Drawing.Size(1172, 548);
             this.grvLstRecord.TabIndex = 4;
             this.grvLstRecord.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.SunFlower;
             this.grvLstRecord.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(183)))));
@@ -249,9 +251,11 @@
             this.flowLayoutPanel1.Controls.Add(this.label8);
             this.flowLayoutPanel1.Controls.Add(this.lblPhone);
             this.flowLayoutPanel1.Controls.Add(this.btnThemBenhAn);
+            this.flowLayoutPanel1.Controls.Add(this.label2);
+            this.flowLayoutPanel1.Controls.Add(this.lblExamination);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 53);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1172, 54);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1172, 94);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -330,9 +334,27 @@
             this.btnThemBenhAn.Text = "Thêm bệnh án";
             this.btnThemBenhAn.Click += new System.EventHandler(this.btnThemBenhAn_Click);
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(3, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 44);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Kết quả xét nghiệm:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblExamination
+            // 
+            this.lblExamination.Location = new System.Drawing.Point(196, 51);
+            this.lblExamination.Name = "lblExamination";
+            this.lblExamination.Size = new System.Drawing.Size(781, 44);
+            this.lblExamination.TabIndex = 0;
+            this.lblExamination.Text = "Không xét nghiệm.";
+            this.lblExamination.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmRecord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1178, 704);
@@ -374,5 +396,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblExamination;
     }
 }

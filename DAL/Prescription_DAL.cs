@@ -17,7 +17,7 @@ namespace DAL
         /// <returns></returns>
         public static bool addPrescription(string rec_id, Prescription_DTO p)
         {
-            string query = string.Format("INSERT INTO PRESCRIPTION VALUES ({0}, '{1}', {2}, {3}, {4}, N'{5}')", rec_id, p.Med_id, p.Pre_morning, p.Pre_middle,
+            string query = string.Format("INSERT INTO PRESCRIPTION VALUES ({0}, '{1}', {2}, {3}, {4}, N'{5}')", rec_id, p.Med_name, p.Pre_morning, p.Pre_middle,
               p.Pre_afternoon, p.Pre_note);
             return DataProvider.ExecuteNonQuery(query);
         }
@@ -37,7 +37,7 @@ namespace DAL
             {
                 Prescription_DTO d = new Prescription_DTO(
                     rec_id,
-                    table.Rows[0]["mec_id"].ToString(),
+                    table.Rows[0]["mec_name"].ToString(),
                     Int32.Parse(table.Rows[0]["pre_morning"].ToString()),
                     Int32.Parse(table.Rows[0]["pre_middle"].ToString()),
                     Int32.Parse(table.Rows[0]["pre_afternoon"].ToString()),

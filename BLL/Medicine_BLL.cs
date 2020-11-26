@@ -18,6 +18,9 @@ namespace BLL
         {
             return Medicine_DAL.addMedicine(m);
         }
-
+        public static bool updateMedicine(Medicine_DTO m)
+        {
+            return Medicine_DAL.updateMedicine(m);
+        }
     }
 }

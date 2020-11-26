@@ -14,7 +14,10 @@ namespace DAL
         {
 
             DataTable table = new DataTable();
-            table = DataProvider.Execute("select * from examination");
+            string query = "select a.*, doc_fullname, pat_fullname, d.pat_id, rec_date from EXAMINATION a inner join RECORD b on a.rec_id = b.rec_id inner join DOCTOR c on b.doc_usr = c.doc_usr inner join PATIENT d on b.pat_id = d.pat_id";
+            table = DataProvider.Execute(query);
+
+            Console.Write(query);
             int count = table.Rows.Count;
             if (table != null && count > 0)
             {
@@ -26,7 +29,12 @@ namespace DAL
                         Int32.Parse(table.Rows[i]["rec_id"].ToString()),
                         table.Rows[i]["exa_place"].ToString(),
                         table.Rows[i]["exa_content"].ToString(),
-                        table.Rows[i]["exa_result"].ToString());
+                        table.Rows[i]["exa_result"].ToString(),
+
+                        table.Rows[i]["Doc_fullname"].ToString(),
+                        table.Rows[i]["Pat_fullname"].ToString(),
+                        Int32.Parse(table.Rows[i]["Pat_id"].ToString()),
+                        DateTime.Parse(table.Rows[i]["Rec_date"].ToString()));
                     lst.Add(l);
                 }
                 return lst;

@@ -63,8 +63,8 @@ namespace GUI.Forms
         private void btnExamination_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnExamination);
-            UC_PurchaseDetails up = new UC_PurchaseDetails();
-            AddControlsToPanel(up);
+            UC_Examination u = new UC_Examination();
+            AddControlsToPanel(u);
         }
 
         private void btnHospital_Click(object sender, EventArgs e)

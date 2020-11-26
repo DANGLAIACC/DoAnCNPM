@@ -16,6 +16,15 @@ namespace DTO
 
         public string Med_id { get; set; }
         public string Med_name { get; set; }
+
+        public string[] ToArrString()
+        {
+            return new string[]
+            {
+                Med_id,
+                Med_name
+            };
+        }
     }
 
 }

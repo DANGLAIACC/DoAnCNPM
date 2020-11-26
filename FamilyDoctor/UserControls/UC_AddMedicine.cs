@@ -15,22 +15,27 @@ namespace GUI.UserControls
 {
     public partial class UC_AddMedicine : UserControl
     {
-        public string med_name="";
-        public UC_AddMedicine(string med_id)
+        public Medicine_DTO m;
+        // Sửa, thêm thuốc
+        public UC_AddMedicine(string med_id, string med_name)
         {
             InitializeComponent();
             txtMedId.Text = med_id;
-
-            Function.styleButtonEnter(btnThem);
-            Function.styleButtonEnter(btnClear);
-
+            txtMedName.Text = med_name;
+            m = new Medicine_DTO(med_id, med_name);
         }
         private void UC_AddMedicine_Load(object sender, EventArgs e)
         {
             // Nếu mã thuốc được truyền vào thì disable medId đi.
-           txtMedId.Enabled = txtMedId.Text == "";
+            if (txtMedId.Text != "")
+            {
+                txtMedId.Enabled = false;
+                btnThem.Text = "Lưu";
+            }
+            txtMedName.SelectAll();
+            Function.styleButtonEnter(btnThem);
+            Function.styleButtonEnter(btnClear);
         }
-
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -46,30 +51,42 @@ namespace GUI.UserControls
             string med_id = txtMedId.Text.Trim(), med_name = txtMedName.Text.Trim();
             if (med_id == "" || med_name == "")
             {
-                frmAlert fAlert = new frmAlert();
-                fAlert.showAlert("Mã hoặc tên bị trống.", frmAlert.enmType.Error);
+                frmAlert f2 = new frmAlert();
+                f2.showAlert("Mã hoặc tên bị trống.", frmAlert.enmType.Error);
 
                 return;
             }
 
-            if (Medicine_BLL.addMedicine(new Medicine_DTO(med_id, med_name)))
+            if (btnThem.Text == "Thêm" && Medicine_BLL.addMedicine(new Medicine_DTO(med_id, med_name)))
             {
+                frmAlert f3 = new frmAlert();
+                f3.showAlert("Thêm thành công.", frmAlert.enmType.Success);
 
-                frmAlert fAlert = new frmAlert();
-                fAlert.showAlert("Thêm thành công.", frmAlert.enmType.Success);
-
-                this.med_name = med_name;
+                m.Med_name = med_name;
+                m.Med_id = txtMedId.Text;
                 // đóng frmAdd
                 ((Form)this.TopLevelControl).Close();
+
+                return;
             }
-            else
+
+            if (btnThem.Text == "Lưu" && Medicine_BLL.updateMedicine(new Medicine_DTO(med_id, med_name)))
             {
+                frmAlert f1 = new frmAlert();
+                f1.showAlert("Lưu thành công.", frmAlert.enmType.Success);
 
-                frmAlert fAlert = new frmAlert();
-                fAlert.showAlert("Thêm thất bại.", frmAlert.enmType.Warning);
+                m.Med_name = med_name;
+                m.Med_id = txtMedId.Text;
+                // đóng frmAdd
+                ((Form)this.TopLevelControl).Close();
 
-                txtMedName.Focus();
+                return;
             }
+
+            frmAlert fAlert = new frmAlert();
+            fAlert.showAlert(btnThem.Text + " thất bại.", frmAlert.enmType.Warning);
+
+            txtMedName.Focus();
         }
 
         private void txtMedName_KeyDown(object sender, KeyEventArgs e)
@@ -78,7 +95,7 @@ namespace GUI.UserControls
             {
                 btnThem.PerformClick();
             }
-            else if(e.KeyCode == Keys.Escape)
+            else if (e.KeyCode == Keys.Escape)
             {
                 btnClear.PerformClick();
             }

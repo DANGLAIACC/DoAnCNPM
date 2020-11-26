@@ -16,91 +16,73 @@ namespace GUI.UserControls
 {
     public partial class UC_Medicine : UserControl
     {
+        private List<Medicine_DTO> lstMedicine = new List<Medicine_DTO>();
         public UC_Medicine()
         {
             InitializeComponent();
         }
-        private void loadLstPatientToGrv(List<Patient_DTO> lst)
+
+        private void UC_Medicine_Load(object sender, EventArgs e)
         {
-            grvLstBenhNhan.Rows.Clear();
-            foreach (Patient_DTO p in lst)
-            {
-                grvLstBenhNhan.Rows.Add(p.ToArrString());
-            }
+            if (lstMedicine.Count == 0)
+                lstMedicine = Medicine_BLL.getMedicine();
+
+            loadLstMedicineToGrv(lstMedicine);
+
+            grvLstThuoc.Columns[0].Width = 100;
         }
-        private void UC_Home_Load(object sender, EventArgs e)
-        {
-            if (List.lstPatient.Count == 0)
-                // mảng chưa có bệnh nhân nào
-                List.lstPatient = Patient_BLL.getPatient();
-
-            loadLstPatientToGrv(List.lstPatient);
-
-            grvLstBenhNhan.Columns[0].Width = 100;
-            grvLstBenhNhan.Columns[2].Width =
-                grvLstBenhNhan.Columns[3].Width =
-                grvLstBenhNhan.Columns[4].Width = 170;
-        }
-
-        private void grvLstBenhNhan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            frmRecord f = new frmRecord(List.lstPatient[e.RowIndex]);
-            f.ShowDialog();
-        }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
-            UC_AddPatient u = new UC_AddPatient(List.lstPatient[List.lstPatient.Count - 1].Pat_id + 1);
-            frmAdd f = new frmAdd("Thêm bệnh nhân mới", u);
+            UC_AddMedicine u = new UC_AddMedicine("", "");
+            frmAdd f = new frmAdd("Thêm thuốc mới", u);
             f.ShowDialog();
 
-            if (u.p != null)
+            if (u.m.Med_name != "")
             {
-                List.lstPatient.Add(u.p);
-                loadLstPatientToGrv(List.lstPatient);
+                lstMedicine.Add(u.m);
+                grvLstThuoc.Rows.Add(u.m.ToArrString());
+            }
+        }
+
+        private void loadLstMedicineToGrv(List<Medicine_DTO> lst)
+        {
+            grvLstThuoc.Rows.Clear();
+            foreach (Medicine_DTO m in lst)
+            {
+                grvLstThuoc.Rows.Add(m.ToArrString());
             }
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
             if (txtFilter.Text == "")
-                loadLstPatientToGrv(List.lstPatient);
+                loadLstMedicineToGrv(lstMedicine);
             else
             {
-                grvLstBenhNhan.Rows.Clear();
+                grvLstThuoc.Rows.Clear();
+                // filter by ID
+                string filter = txtFilter.Text.Trim();
+                foreach (Medicine_DTO m in lstMedicine)
+                    if (m.Med_id.IndexOf(filter) > -1 || m.Med_name.IndexOf(filter) > -1)
+                        grvLstThuoc.Rows.Add(m.ToArrString());
 
-                if (btnTra.Text == "Tra theo tên")
-                {
-                    // filter by ID
-                    foreach (Patient_DTO p in List.lstPatient)
-                        if (p.Pat_id.ToString().IndexOf(txtFilter.Text) > -1)
-                            grvLstBenhNhan.Rows.Add(p.ToArrString());
-                }
-                else
-                {
-                    // filter by name
-                    foreach (Patient_DTO p in List.lstPatient)
-                        if (p.Pat_fullname.ToLower().IndexOf(txtFilter.Text.ToLower()) > -1)
-                            grvLstBenhNhan.Rows.Add(p.ToArrString());
-                }
             }
         }
 
-        private void btnTra_Click(object sender, EventArgs e)
+        private void grvLstThuoc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtFilter.Text = "";
+            // double click vào chỉ có sửa thuốc chứ ko thêm thuốc
+            string oldMed_name = lstMedicine[e.RowIndex].Med_name;
+            UC_AddMedicine u = new UC_AddMedicine(lstMedicine[e.RowIndex].Med_id, oldMed_name);
 
-            if (btnTra.Text == "Tra theo tên")
+            frmAdd f = new frmAdd("Sửa thuốc", u);
+            f.ShowDialog();
+
+            // cập nhật lại tên thuốc ở lst và gridview
+            if (u.m.Med_name != oldMed_name)
             {
-                txtFilter.PlaceholderText = "Nhập tên cần tìm"; 
-                btnTra.Text = "Tra Mã Hồ sơ";
-                txtFilter.Focus();
-            }
-            else
-            {
-                txtFilter.PlaceholderText = "Nhập mã bệnh nhân"; 
-                btnTra.Text = "Tra theo tên";
-                txtFilter.Focus();
+                lstMedicine[e.RowIndex].Med_name = u.m.Med_name;
+                grvLstThuoc.Rows[e.RowIndex].Cells[1].Value = u.m.Med_name;
             }
         }
     }

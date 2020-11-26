@@ -39,5 +39,11 @@ namespace DAL
             string query = string.Format("INSERT INTO MEDICINE VALUES ('{0}',N'{1}')", m.Med_id, m.Med_name);
             return DataProvider.ExecuteNonQuery(query);
         }
+        public static bool updateMedicine(Medicine_DTO m)
+        {
+            string query = string.Format("UPDATE MEDICINE SET med_name = N'{0}' WHERE med_id = '{1}'", m.Med_name, m.Med_id);
+
+            return DataProvider.ExecuteNonQuery(query);
+        }
     }
 }

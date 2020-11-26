@@ -54,7 +54,7 @@ CREATE TABLE MEDICINE(
 GO
 CREATE TABLE PRESCRIPTION(
 	rec_id int foreign key references RECORD(rec_id),
-	med_id varchar(50) foreign key references MEDICINE(med_id),
+	med_id varchar(70) not null,
 	
 	pre_morning int,
 	pre_middle int,
@@ -114,23 +114,23 @@ INSERT INTO MEDICINE VALUES
 ('alzental400',N'Alzental 400mg'),
 ('albendazol400',N'Albendazol STELLA 400 mg'),
 ('acemuc200',N'Acemuc 200mg')
-GO
-/* todo
-	Thêm 1 bệnh có yêu cầu xét nghiệm
-	Thêm vào bảng xét nghiệm
-*/
+GO 
 INSERT INTO RECORD(rec_date,pat_id,doc_usr,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
 ('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
-('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ')
+('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Làm việc vừa sức, nghỉ ngơi đúng lúc, tránh làm việc nặng')
 
 GO
 INSERT INTO PRESCRIPTION VALUES
 (100000,'hapacolc500',1,1,1,N'Uống trước khi ăn'),
-(100001,'quazimin',1,0,1,N'Uống san khi ăn no')
+(100001,'quazimin',1,0,1,N'Uống sau khi ăn no')
 
 GO
+INSERT INTO EXAMINATION VALUES 
+(100000,N'Phòng khám đa khoa Hòa Hảo',N'Siêu âm dạ dày',N'Dạ dày bị chướng bụng đầy hơi, không có dị vật'),
+(100001,N'Viện Huyết Học - Truyền Máu Trung ương',N'Xét nghiệm máu','')
 
-select * from DOCTOR
+use FAMILY_DOCTOR
+select * from EXAMINATION
 /*
 
 CREATE PROCEDURE CREATEMODEL  

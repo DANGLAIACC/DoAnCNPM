@@ -28,7 +28,7 @@ namespace GUI.UserControls
         {
             loadAutoCompleteMedName(txtTen, frmAddRecord.lstMedicineSuggest);
 
-            txtTen.Text = getMedNameById(prescription.Med_id);
+            txtTen.Text = getMedNameById(prescription.Med_name);
             txtSang.Text = prescription.Pre_morning.ToString();
             txtTrua.Text = prescription.Pre_middle.ToString();
             txtToi.Text = prescription.Pre_afternoon.ToString();
@@ -156,16 +156,16 @@ namespace GUI.UserControls
                 "Mã thuốc chưa tồn tại.",
                 frmAlert.enmType.Warning);
 
-            UC_AddMedicine uc = new UC_AddMedicine(med_id);
+            UC_AddMedicine uc = new UC_AddMedicine(med_id,"");
             frmAdd f = new frmAdd("Thêm thuốc mới", uc);
 
             f.ShowDialog(this);
 
-            if (uc.med_name != "")
+            if (uc.m.Med_name != "")
             {
                 // Thêm thuốc vào database thành công
                 prescription.Med_id = med_id;
-                txtTen.Text = uc.med_name;
+                txtTen.Text = uc.m.Med_name;
             }
 
         }
