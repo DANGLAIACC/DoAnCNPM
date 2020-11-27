@@ -28,6 +28,8 @@ namespace GUI.Forms
         }
         private void frmExaminationResult_Load(object sender, EventArgs e)
         {
+            lblExa_content.Text = exa.Exa_content;
+            lblExa_place.Text = exa.Exa_place;
             if (exa.Exa_result != "")
             {
                 // Xét nghiệm đã có kết quả, chỉ cho xem kết quả thôi

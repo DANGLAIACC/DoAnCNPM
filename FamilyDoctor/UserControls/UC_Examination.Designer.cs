@@ -44,7 +44,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDoc_name = new System.Windows.Forms.Label();
             this.lblRec_place = new System.Windows.Forms.Label();
+            this.lblRec_content = new System.Windows.Forms.Label();
             this.lblRec_date = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblPat_name = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,7 +65,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(161)))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(979, 50);
+            this.label1.Size = new System.Drawing.Size(1128, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách yêu cầu xét nghiệm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,7 +80,7 @@
             this.panel1.MaximumSize = new System.Drawing.Size(0, 60);
             this.panel1.MinimumSize = new System.Drawing.Size(0, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(979, 60);
+            this.panel1.Size = new System.Drawing.Size(1128, 60);
             this.panel1.TabIndex = 2;
             // 
             // txtFilter
@@ -122,7 +124,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(985, 580);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1134, 674);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // grvLstExamination
@@ -154,7 +156,7 @@
             this.Column5});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -171,7 +173,7 @@
             this.grvLstExamination.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(4);
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -187,7 +189,7 @@
             this.grvLstExamination.RowTemplate.ReadOnly = true;
             this.grvLstExamination.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grvLstExamination.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvLstExamination.Size = new System.Drawing.Size(979, 354);
+            this.grvLstExamination.Size = new System.Drawing.Size(1128, 448);
             this.grvLstExamination.TabIndex = 3;
             this.grvLstExamination.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.FeterRiver;
             this.grvLstExamination.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
@@ -244,7 +246,9 @@
             // 
             this.panel2.Controls.Add(this.lblDoc_name);
             this.panel2.Controls.Add(this.lblRec_place);
+            this.panel2.Controls.Add(this.lblRec_content);
             this.panel2.Controls.Add(this.lblRec_date);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.lblPat_name);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label4);
@@ -253,7 +257,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(979, 94);
+            this.panel2.Size = new System.Drawing.Size(1128, 94);
             this.panel2.TabIndex = 4;
             // 
             // lblDoc_name
@@ -271,29 +275,49 @@
             // 
             this.lblRec_place.AutoSize = true;
             this.lblRec_place.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRec_place.Location = new System.Drawing.Point(589, 57);
+            this.lblRec_place.Location = new System.Drawing.Point(967, 57);
             this.lblRec_place.Name = "lblRec_place";
             this.lblRec_place.Size = new System.Drawing.Size(279, 28);
             this.lblRec_place.TabIndex = 0;
             this.lblRec_place.Text = "Phòng khám đa khoa Hòa Hảo";
             // 
+            // lblRec_content
+            // 
+            this.lblRec_content.AutoSize = true;
+            this.lblRec_content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRec_content.Location = new System.Drawing.Point(541, 57);
+            this.lblRec_content.Name = "lblRec_content";
+            this.lblRec_content.Size = new System.Drawing.Size(155, 28);
+            this.lblRec_content.TabIndex = 0;
+            this.lblRec_content.Text = "Xét nghiệm máu";
+            // 
             // lblRec_date
             // 
             this.lblRec_date.AutoSize = true;
             this.lblRec_date.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRec_date.Location = new System.Drawing.Point(589, 14);
+            this.lblRec_date.Location = new System.Drawing.Point(541, 14);
             this.lblRec_date.Name = "lblRec_date";
             this.lblRec_date.Size = new System.Drawing.Size(195, 28);
             this.lblRec_date.TabIndex = 0;
             this.lblRec_date.Text = "12:12:00 12/12/2020";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(806, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 28);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Nơi xét nghiệm: ";
+            // 
             // lblPat_name
             // 
             this.lblPat_name.AutoSize = true;
-            this.lblPat_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPat_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPat_name.Location = new System.Drawing.Point(176, 14);
             this.lblPat_name.Name = "lblPat_name";
-            this.lblPat_name.Size = new System.Drawing.Size(168, 28);
+            this.lblPat_name.Size = new System.Drawing.Size(182, 28);
             this.lblPat_name.TabIndex = 0;
             this.lblPat_name.Text = "Họ tên bệnh nhân";
             this.lblPat_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -304,9 +328,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(404, 57);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 28);
+            this.label6.Size = new System.Drawing.Size(99, 28);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Nơi xét nghiệm: ";
+            this.label6.Text = "Nội dung:";
             // 
             // label4
             // 
@@ -314,9 +338,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(404, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 28);
+            this.label4.Size = new System.Drawing.Size(139, 28);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Ngày xét nghiệm: ";
+            this.label4.Text = "Ngày yêu cầu: ";
             // 
             // label3
             // 
@@ -345,7 +369,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_Examination";
-            this.Size = new System.Drawing.Size(985, 580);
+            this.Size = new System.Drawing.Size(1134, 674);
             this.Load += new System.EventHandler(this.UC_Examination_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -370,11 +394,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblRec_date;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblRec_place;
+        private System.Windows.Forms.Label lblRec_content;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Label lblRec_place;
+        private System.Windows.Forms.Label label5;
     }
 }

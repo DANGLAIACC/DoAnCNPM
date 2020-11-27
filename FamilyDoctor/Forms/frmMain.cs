@@ -70,22 +70,22 @@ namespace GUI.Forms
         private void btnHospital_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnHospital);
-            UC_ManageExpense ea = new UC_ManageExpense();
+            UC_Hospital ea = new UC_Hospital();
             AddControlsToPanel(ea);
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnUsers);
-            UC_ManageUser um = new UC_ManageUser();
-            AddControlsToPanel(um);
+            //UC_ManageUser um = new UC_ManageUser();
+            //AddControlsToPanel(um);
         }
 
         private void btnViewSales_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnViewSales);
-            UC_ViewSales vs = new UC_ViewSales();
-            AddControlsToPanel(vs);
+            //UC_ViewSales vs = new UC_ViewSales();
+            //AddControlsToPanel(vs);
         }
 
         private void button7_Click(object sender, EventArgs e)

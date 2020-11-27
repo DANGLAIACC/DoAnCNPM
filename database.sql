@@ -116,12 +116,11 @@ INSERT INTO MEDICINE VALUES
 ('acemuc200',N'Acemuc 200mg')
 GO 
 INSERT INTO RECORD(rec_date,pat_id,doc_usr,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
-('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,0,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
+('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',N'Bệnh viện Chợ Rẫy',0,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
 ('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,0,N'Làm việc vừa sức, nghỉ ngơi đúng lúc, tránh làm việc nặng'),
 ('10:00:00 11/27/2020',1000,'dqlai',N'Ăn uống không đúng bữa gây đau dạ dày',null,1,N'Ăn uống đúng bữa'),
 ('13:00:00 11/22/2020',1000,'dqlai',N'Nghi ngờ loét dạ dày',null,1,N'Ăn uống đúng bữa'),
 ('15:00:00 11/22/2020',1003,'dqlai',N'Nghi ngờ loét dạ dày',null,1,N'Ăn uống đúng bữa')
-
 
 GO
 INSERT INTO PRESCRIPTION VALUES

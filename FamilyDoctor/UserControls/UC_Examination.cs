@@ -35,9 +35,7 @@ namespace GUI.UserControls
         {
             grvLstExamination.Rows.Clear();
             foreach (Examination_DTO m in lst)
-            {
                 grvLstExamination.Rows.Add(m.ToArrString());
-            }
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
@@ -60,6 +58,7 @@ namespace GUI.UserControls
             lblPat_name.Text = lstExamination[i].Pat_fullname;
             lblRec_date.Text = lstExamination[i].Rec_date.ToString("hh:mm:ss dd/MM/yyyy");
             lblRec_place.Text = lstExamination[i].Exa_place;
+            lblRec_content.Text = lstExamination[i].Exa_content;
         }
         private void grvLstThuoc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -22,7 +22,10 @@ namespace BLL
         {
             return Record_DAL.addRecord(r);
         }
-
+        public static List<Record_DTO> getRecordHospital()
+        {
+            return Record_DAL.getRecordHospital();
+        }
 
     }
 }

@@ -42,12 +42,13 @@ namespace GUI.Forms
 
                 // Chọn dòng thứ 0 ngay khi load
                 grvLstRecord.Rows[0].Selected = true;
+                grvLstRecord_CellClick(sender, new DataGridViewCellEventArgs(0, 0));
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnThemBenhAn_Click(object sender, EventArgs e)
@@ -80,7 +81,8 @@ namespace GUI.Forms
                 f2.ShowDialog();
 
                 Examination_DTO e1 = Examination_BLL.getExaminationDetailById(rec_id);
-                lblExa_result.Text = e1.Exa_result;
+                lblExa_result.Text = e1.Exa_result == "" ? "Đang đợi kết quả xét nghiệm" : e1.Exa_result;
+
             }
         }
     }

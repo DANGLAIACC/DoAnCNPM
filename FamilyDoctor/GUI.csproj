@@ -77,36 +77,6 @@
     <Compile Include="CustomControls\DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_AddCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_AddCategory.Designer.cs">
-      <DependentUpon>Form_AddCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_AddExpense.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_AddExpense.Designer.cs">
-      <DependentUpon>Form_AddExpense.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_AddNewBook.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_AddNewBook.Designer.cs">
-      <DependentUpon>Form_AddNewBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_AddStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_AddStock.Designer.cs">
-      <DependentUpon>Form_AddStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmExaminationResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,12 +106,6 @@
     </Compile>
     <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Form_FinishOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form_FinishOrder.Designer.cs">
-      <DependentUpon>Form_FinishOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
@@ -177,6 +141,12 @@
     <Compile Include="UserControls\UC_Examination.designer.cs">
       <DependentUpon>UC_Examination.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Hospital.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Hospital.Designer.cs">
+      <DependentUpon>UC_Hospital.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Medicine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,53 +159,12 @@
     <Compile Include="UserControls\UC_Patient.Designer.cs">
       <DependentUpon>UC_Patient.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_ManageExpense.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_ManageExpense.Designer.cs">
-      <DependentUpon>UC_ManageExpense.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_ManageUser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_ManageUser.Designer.cs">
-      <DependentUpon>UC_ManageUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UC_PrescriptionItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UC_PrescriptionItem.Designer.cs">
       <DependentUpon>UC_PrescriptionItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_PurchaseDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_PurchaseDetails.Designer.cs">
-      <DependentUpon>UC_PurchaseDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_ViewSales.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_ViewSales.Designer.cs">
-      <DependentUpon>UC_ViewSales.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_AddCategory.resx">
-      <DependentUpon>Form_AddCategory.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_AddExpense.resx">
-      <DependentUpon>Form_AddExpense.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_AddNewBook.resx">
-      <DependentUpon>Form_AddNewBook.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_AddStock.resx">
-      <DependentUpon>Form_AddStock.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmExaminationResult.resx">
       <DependentUpon>frmExaminationResult.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,9 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_FinishOrder.resx">
-      <DependentUpon>Form_FinishOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -279,26 +205,17 @@
     <EmbeddedResource Include="UserControls\UC_Examination.resx">
       <DependentUpon>UC_Examination.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Hospital.resx">
+      <DependentUpon>UC_Hospital.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Medicine.resx">
       <DependentUpon>UC_Medicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Patient.resx">
       <DependentUpon>UC_Patient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_ManageExpense.resx">
-      <DependentUpon>UC_ManageExpense.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_ManageUser.resx">
-      <DependentUpon>UC_ManageUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_PrescriptionItem.resx">
       <DependentUpon>UC_PrescriptionItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_PurchaseDetails.resx">
-      <DependentUpon>UC_PurchaseDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_ViewSales.resx">
-      <DependentUpon>UC_ViewSales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -39,7 +39,7 @@ namespace DTO
         public string[] ToArrString()
         {
             return new string[]{
-               Pat_id.ToString(), Rec_id.ToString(), Exa_content, Exa_result
+               Pat_id.ToString(), Rec_id.ToString(), Exa_content, Exa_result==""?"Đang đợi kết quả...":Exa_result
             };
         }
     }
