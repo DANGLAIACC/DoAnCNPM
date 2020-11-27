@@ -20,6 +20,12 @@ namespace GUI.Forms
             InitializeComponent();
             this.exa = exa;
         }
+        public frmExaminationResult(string rec_id)
+        {
+            InitializeComponent();
+
+            exa = Examination_BLL.getExaminationDetailById(rec_id);
+        }
         private void frmExaminationResult_Load(object sender, EventArgs e)
         {
             if (exa.Exa_result != "")
@@ -54,19 +60,19 @@ namespace GUI.Forms
                 if (Examination_BLL.updateResultExamination(exa.Rec_id,exa_result))
                 {
                     frmAlert f = new frmAlert();
-                    f.showAlert("Cập nhật kết quả thành công", frmAlert.enmType.Success);
+                    f.showAlert("Cập nhật thành công", frmAlert.enmType.Success);
                     this.Close();
                 }
                 else
                 {
                     frmAlert f = new frmAlert();
-                    f.showAlert("Cập nhật kết quả thất bại", frmAlert.enmType.Error);
+                    f.showAlert("Cập nhật thất bại", frmAlert.enmType.Error);
                 }
             }
             else
             {
                 frmAlert f = new frmAlert();
-                f.showAlert("Kết quả không được bỏ trống", frmAlert.enmType.Error);
+                f.showAlert("Kết quả không được trống", frmAlert.enmType.Error);
             }
             txtExa_result.Focus();
         }

@@ -23,12 +23,13 @@ namespace GUI.UserControls
         }
         private void UC_Examination_Load(object sender, EventArgs e)
         {
-            if (lstExamination.Count == 0)
                 lstExamination = Examination_BLL.getExamination();
 
             loadLstExaminationToGrv(lstExamination);
 
             grvLstExamination.Columns[0].Width = grvLstExamination.Columns[1].Width = 100;
+
+            loadInfoToUI(0);
         }
         private void loadLstExaminationToGrv(List<Examination_DTO> lst)
         {
@@ -53,14 +54,12 @@ namespace GUI.UserControls
                         grvLstExamination.Rows.Add(m.ToArrString());
             }
         }
-
-        private void grvLstExamination_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void loadInfoToUI(int i)
         {
-            Examination_DTO e2 = lstExamination[e.RowIndex];
-            lblDoc_name.Text = e2.Doc_fullname;
-            lblPat_name.Text = e2.Pat_fullname;
-            lblRec_date.Text = e2.Rec_date.ToString("hh:mm:ss dd/MM/yyyy");
-            lblRec_place.Text = e2.Exa_place;
+            lblDoc_name.Text = lstExamination[i].Doc_fullname;
+            lblPat_name.Text = lstExamination[i].Pat_fullname;
+            lblRec_date.Text = lstExamination[i].Rec_date.ToString("hh:mm:ss dd/MM/yyyy");
+            lblRec_place.Text = lstExamination[i].Exa_place;
         }
         private void grvLstThuoc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -68,6 +67,11 @@ namespace GUI.UserControls
             frmExaminationResult f = new frmExaminationResult(exa);
 
             f.ShowDialog(this);
+        }
+
+        private void grvLstExamination_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            loadInfoToUI(e.RowIndex);
         }
     }
 }

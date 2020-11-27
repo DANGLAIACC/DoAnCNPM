@@ -37,19 +37,19 @@
             this.txtFilter = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grvLstExamination = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblPat_name = new System.Windows.Forms.Label();
-            this.lblDoc_name = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblRec_date = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblRec_place = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDoc_name = new System.Windows.Forms.Label();
+            this.lblRec_place = new System.Windows.Forms.Label();
+            this.lblRec_date = new System.Windows.Forms.Label();
+            this.lblPat_name = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvLstExamination)).BeginInit();
@@ -154,7 +154,7 @@
             this.Column5});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -171,7 +171,7 @@
             this.grvLstExamination.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(4);
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -199,7 +199,7 @@
             this.grvLstExamination.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.grvLstExamination.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.grvLstExamination.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grvLstExamination.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grvLstExamination.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.grvLstExamination.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.grvLstExamination.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.grvLstExamination.ThemeStyle.HeaderStyle.Height = 30;
@@ -211,106 +211,8 @@
             this.grvLstExamination.ThemeStyle.RowsStyle.Height = 40;
             this.grvLstExamination.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
             this.grvLstExamination.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.grvLstExamination.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvLstExamination_CellContentClick);
+            this.grvLstExamination.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvLstExamination_CellClick);
             this.grvLstExamination.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvLstThuoc_CellDoubleClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblDoc_name);
-            this.panel2.Controls.Add(this.lblRec_place);
-            this.panel2.Controls.Add(this.lblRec_date);
-            this.panel2.Controls.Add(this.lblPat_name);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 53);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(979, 94);
-            this.panel2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên bệnh nhân: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 28);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Bác sĩ yêu cầu: ";
-            // 
-            // lblPat_name
-            // 
-            this.lblPat_name.AutoSize = true;
-            this.lblPat_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPat_name.Location = new System.Drawing.Point(176, 14);
-            this.lblPat_name.Name = "lblPat_name";
-            this.lblPat_name.Size = new System.Drawing.Size(168, 28);
-            this.lblPat_name.TabIndex = 0;
-            this.lblPat_name.Text = "Họ tên bệnh nhân";
-            this.lblPat_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblDoc_name
-            // 
-            this.lblDoc_name.AutoSize = true;
-            this.lblDoc_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoc_name.Location = new System.Drawing.Point(176, 57);
-            this.lblDoc_name.Name = "lblDoc_name";
-            this.lblDoc_name.Size = new System.Drawing.Size(125, 28);
-            this.lblDoc_name.TabIndex = 0;
-            this.lblDoc_name.Text = "Họ tên bác sĩ";
-            this.lblDoc_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(404, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ngày xét nghiệm: ";
-            // 
-            // lblRec_date
-            // 
-            this.lblRec_date.AutoSize = true;
-            this.lblRec_date.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRec_date.Location = new System.Drawing.Point(589, 14);
-            this.lblRec_date.Name = "lblRec_date";
-            this.lblRec_date.Size = new System.Drawing.Size(195, 28);
-            this.lblRec_date.TabIndex = 0;
-            this.lblRec_date.Text = "12:12:00 12/12/2020";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(404, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 28);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Nơi xét nghiệm: ";
-            // 
-            // lblRec_place
-            // 
-            this.lblRec_place.AutoSize = true;
-            this.lblRec_place.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRec_place.Location = new System.Drawing.Point(589, 57);
-            this.lblRec_place.Name = "lblRec_place";
-            this.lblRec_place.Size = new System.Drawing.Size(279, 28);
-            this.lblRec_place.TabIndex = 0;
-            this.lblRec_place.Text = "Phòng khám đa khoa Hòa Hảo";
             // 
             // Column1
             // 
@@ -337,6 +239,104 @@
             this.Column5.HeaderText = "Kết quả xét nghiệm";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblDoc_name);
+            this.panel2.Controls.Add(this.lblRec_place);
+            this.panel2.Controls.Add(this.lblRec_date);
+            this.panel2.Controls.Add(this.lblPat_name);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(979, 94);
+            this.panel2.TabIndex = 4;
+            // 
+            // lblDoc_name
+            // 
+            this.lblDoc_name.AutoSize = true;
+            this.lblDoc_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoc_name.Location = new System.Drawing.Point(176, 57);
+            this.lblDoc_name.Name = "lblDoc_name";
+            this.lblDoc_name.Size = new System.Drawing.Size(125, 28);
+            this.lblDoc_name.TabIndex = 0;
+            this.lblDoc_name.Text = "Họ tên bác sĩ";
+            this.lblDoc_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblRec_place
+            // 
+            this.lblRec_place.AutoSize = true;
+            this.lblRec_place.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRec_place.Location = new System.Drawing.Point(589, 57);
+            this.lblRec_place.Name = "lblRec_place";
+            this.lblRec_place.Size = new System.Drawing.Size(279, 28);
+            this.lblRec_place.TabIndex = 0;
+            this.lblRec_place.Text = "Phòng khám đa khoa Hòa Hảo";
+            // 
+            // lblRec_date
+            // 
+            this.lblRec_date.AutoSize = true;
+            this.lblRec_date.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRec_date.Location = new System.Drawing.Point(589, 14);
+            this.lblRec_date.Name = "lblRec_date";
+            this.lblRec_date.Size = new System.Drawing.Size(195, 28);
+            this.lblRec_date.TabIndex = 0;
+            this.lblRec_date.Text = "12:12:00 12/12/2020";
+            // 
+            // lblPat_name
+            // 
+            this.lblPat_name.AutoSize = true;
+            this.lblPat_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPat_name.Location = new System.Drawing.Point(176, 14);
+            this.lblPat_name.Name = "lblPat_name";
+            this.lblPat_name.Size = new System.Drawing.Size(168, 28);
+            this.lblPat_name.TabIndex = 0;
+            this.lblPat_name.Text = "Họ tên bệnh nhân";
+            this.lblPat_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(404, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 28);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Nơi xét nghiệm: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(404, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(170, 28);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ngày xét nghiệm: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(23, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 28);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Bác sĩ yêu cầu: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên bệnh nhân: ";
             // 
             // UC_Examination
             // 

@@ -28,19 +28,6 @@ namespace GUI.UserControls
                 grvLstBenhNhan.Rows.Add(p.ToArrString());
             }
         }
-        private void UC_Home_Load(object sender, EventArgs e)
-        {
-            if (List.lstPatient.Count == 0)
-                // mảng chưa có bệnh nhân nào
-                List.lstPatient = Patient_BLL.getPatient();
-
-            loadLstPatientToGrv(List.lstPatient);
-
-            grvLstBenhNhan.Columns[0].Width = 100;
-            grvLstBenhNhan.Columns[2].Width =
-                grvLstBenhNhan.Columns[3].Width =
-                grvLstBenhNhan.Columns[4].Width = 170;
-        }
 
         private void grvLstBenhNhan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -92,16 +79,28 @@ namespace GUI.UserControls
 
             if (btnTra.Text == "Tra theo tên")
             {
-                txtFilter.PlaceholderText = "Nhập tên cần tìm"; 
+                txtFilter.PlaceholderText = "Nhập tên cần tìm";
                 btnTra.Text = "Tra Mã Hồ sơ";
                 txtFilter.Focus();
             }
             else
             {
-                txtFilter.PlaceholderText = "Nhập mã bệnh nhân"; 
+                txtFilter.PlaceholderText = "Nhập mã bệnh nhân";
                 btnTra.Text = "Tra theo tên";
                 txtFilter.Focus();
             }
+        }
+
+        private void UC_Patient_Load(object sender, EventArgs e)
+        {
+            List.lstPatient = Patient_BLL.getPatient();
+
+            loadLstPatientToGrv(List.lstPatient);
+
+            grvLstBenhNhan.Columns[0].Width = 80;
+            grvLstBenhNhan.Columns[2].Width =
+                grvLstBenhNhan.Columns[3].Width =
+                grvLstBenhNhan.Columns[4].Width = 130;
         }
     }
 }

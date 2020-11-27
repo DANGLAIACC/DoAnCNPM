@@ -82,10 +82,10 @@ INSERT INTO DOCTOR VALUES
 GO
 
 INSERT INTO PATIENT(pat_fullname, pat_gender, pat_dob, pat_address, pat_phone1, pat_phone2, pat_anamnesis) VALUES
-(N'Nguyễn Thị Thập',0,'11/11/1960',N'123 Quốc Hương, P. Thảo Điền, Q.2','0468512167','0684235972',N'Viêm ruột thừa'),
+(N'Nguyễn Thị Định',0,'11/11/1960',N'123 Quốc Hương, P. Thảo Điền, Q.2','0468512167','0684235972',N'Viêm ruột thừa'),
 (N'Trần Văn Hòa',1,'10/09/1980',N'43 Trần Não, P. Bình An, Q.2','0992457859','0145012359',N'Sỏi thận'),
-(N'Phạm Quốc Tuấn',1,'12/08/1990',N'456 Lương Định Của, P. An Phú, Q.2','0881535859','0453823893',N'Tăng huyết áp')
-
+(N'Phạm Quốc Tuấn',1,'12/08/1990',N'456 Lương Định Của, P. An Phú, Q.2','0881535859','0453823893',N'Tăng huyết áp'),
+(N'Nguyễn Thị Minh Khai',0,'08/07/1960',N'234 Cộng Hòa, Q. Bình Tân Bình','0111111111','099999999',N'Cảm cúm')
 GO
 
 INSERT INTO EXAM_TYPE VALUES
@@ -116,8 +116,12 @@ INSERT INTO MEDICINE VALUES
 ('acemuc200',N'Acemuc 200mg')
 GO 
 INSERT INTO RECORD(rec_date,pat_id,doc_usr,rec_diagnostic, hospital,exam_type_id,rec_note) VALUES
-('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
-('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,1,N'Làm việc vừa sức, nghỉ ngơi đúng lúc, tránh làm việc nặng')
+('18:45:00 11/19/2020',1000,'dqlai',N'Viêm ruột thừa tái phát gây đau nhứt',null,0,N'Ăn uống đúng bữa, kiêng dầu mỡ'),
+('8:40:00 12/19/2020',1001,'nkuyen',N'Viêm ruột thừa tái phát gây đau nhứt',null,0,N'Làm việc vừa sức, nghỉ ngơi đúng lúc, tránh làm việc nặng'),
+('10:00:00 11/27/2020',1000,'dqlai',N'Ăn uống không đúng bữa gây đau dạ dày',null,1,N'Ăn uống đúng bữa'),
+('13:00:00 11/22/2020',1000,'dqlai',N'Nghi ngờ loét dạ dày',null,1,N'Ăn uống đúng bữa'),
+('15:00:00 11/22/2020',1003,'dqlai',N'Nghi ngờ loét dạ dày',null,1,N'Ăn uống đúng bữa')
+
 
 GO
 INSERT INTO PRESCRIPTION VALUES
@@ -127,9 +131,10 @@ INSERT INTO PRESCRIPTION VALUES
 GO
 INSERT INTO EXAMINATION VALUES 
 (100000,N'Phòng khám đa khoa Hòa Hảo',N'Siêu âm dạ dày',N'Dạ dày bị chướng bụng đầy hơi, không có dị vật'),
-(100001,N'Viện Huyết Học - Truyền Máu Trung ương',N'Xét nghiệm máu','')
-
-use FAMILY_DOCTOR
+(100001,N'Viện Huyết Học - Truyền Máu Trung ương',N'Xét nghiệm máu',''),
+(100003,N'Bệnh viện Đại học Y Dược',N'Nội soi dạ dày',N''),
+(100004,N'Bệnh viện Đại học Y Dược',N'Nội soi dạ dày',N'')
+go
 select * from EXAMINATION
 /*
 

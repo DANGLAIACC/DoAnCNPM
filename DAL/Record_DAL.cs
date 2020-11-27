@@ -18,7 +18,7 @@ namespace DAL
         public static List<Record_DTO> getRecord()
         {
             DataTable table = new DataTable();
-            string query = "select * from record";
+            string query = "select a.*,exa_result from RECORD a inner join EXAMINATION b on a.rec_id = b.rec_id";
             
             table = DataProvider.Execute(query);
             int count = table.Rows.Count;
@@ -40,6 +40,7 @@ namespace DAL
                         Int32.Parse(table.Rows[i]["exam_type_id"]
                         .ToString()),
                         table.Rows[i]["rec_note"].ToString());
+                    l.Exa_result = table.Rows[i]["exa_result"].ToString();
                     lst.Add(l);
                 }
                 return lst;
@@ -55,7 +56,7 @@ namespace DAL
         public static List<Record_DTO> getRecordByPatId(int pat_id)
         {
             DataTable table = new DataTable();
-            string query = "select rec_id,rec_date,doc_fullname,rec_diagnostic from record a inner join doctor b on a.doc_usr = b.doc_usr where pat_id = " + pat_id;
+            string query = "select a.rec_id,rec_date,doc_fullname,rec_diagnostic, exa_result from record a inner join doctor b on a.doc_usr = b.doc_usr left join EXAMINATION c on a.rec_id = c.rec_id where pat_id = " + pat_id;
 
             table = DataProvider.Execute(query);
             int count = table.Rows.Count;
@@ -71,6 +72,10 @@ namespace DAL
                         .ToString()),
                         table.Rows[i]["doc_fullname"].ToString(),
                         table.Rows[i]["rec_diagnostic"].ToString());
+                    if (DBNull.Value.Equals(table.Rows[i]["exa_result"]))
+                        l.Exa_result = null;
+                    else
+                        l.Exa_result = table.Rows[i]["exa_result"].ToString();
                     lst.Add(l);
                 }
                 return lst;

@@ -38,6 +38,19 @@ namespace DTO
         public string Rec_note { get; set; }
 
         public string Doc_fullname { get; set; }
+        public string Exa_result { get; set; }
+
+        public string[] ToArrayString()
+        {
+            string recId = Exa_result == null ? Rec_id.ToString() : Rec_id.ToString() + "*";
+            return new string[] {
+                        recId.ToString(),
+                        Rec_date.ToString("HH:mm:ss dd/MM/yyyy"),
+                        Doc_fullname,
+                        Rec_diagnostic
+                    };
+        }
+
     }
 
 

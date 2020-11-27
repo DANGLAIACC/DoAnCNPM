@@ -32,20 +32,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblExa_content = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtExa_result = new System.Windows.Forms.TextBox();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblExa_place = new System.Windows.Forms.Label();
+            this.lblExa_content = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,6 +93,17 @@
             this.lblTitle.Text = "Xem kết quả xét nghiệm";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -127,44 +138,6 @@
             this.pnMain.Size = new System.Drawing.Size(700, 282);
             this.pnMain.TabIndex = 9;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nội dung:";
-            // 
-            // lblExa_content
-            // 
-            this.lblExa_content.AutoSize = true;
-            this.lblExa_content.Location = new System.Drawing.Point(108, 51);
-            this.lblExa_content.Name = "lblExa_content";
-            this.lblExa_content.Size = new System.Drawing.Size(155, 28);
-            this.lblExa_content.TabIndex = 1;
-            this.lblExa_content.Text = "Xét nghiệm máu";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Kết quả:";
-            // 
             // txtExa_result
             // 
             this.txtExa_result.Location = new System.Drawing.Point(113, 92);
@@ -191,6 +164,35 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // lblExa_place
+            // 
+            this.lblExa_place.AutoSize = true;
+            this.lblExa_place.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExa_place.Location = new System.Drawing.Point(159, 11);
+            this.lblExa_place.Name = "lblExa_place";
+            this.lblExa_place.Size = new System.Drawing.Size(300, 28);
+            this.lblExa_place.TabIndex = 1;
+            this.lblExa_place.Text = "Phòng khám đa khoa Hòa Hảo";
+            // 
+            // lblExa_content
+            // 
+            this.lblExa_content.AutoSize = true;
+            this.lblExa_content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExa_content.Location = new System.Drawing.Point(108, 51);
+            this.lblExa_content.Name = "lblExa_content";
+            this.lblExa_content.Size = new System.Drawing.Size(168, 28);
+            this.lblExa_content.TabIndex = 1;
+            this.lblExa_content.Text = "Xét nghiệm máu";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Kết quả:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -200,14 +202,14 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nơi xét nghiệm:";
             // 
-            // lblExa_place
+            // label1
             // 
-            this.lblExa_place.AutoSize = true;
-            this.lblExa_place.Location = new System.Drawing.Point(159, 11);
-            this.lblExa_place.Name = "lblExa_place";
-            this.lblExa_place.Size = new System.Drawing.Size(279, 28);
-            this.lblExa_place.TabIndex = 1;
-            this.lblExa_place.Text = "Phòng khám đa khoa Hòa Hảo";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nội dung:";
             // 
             // frmExaminationResult
             // 
@@ -226,9 +228,9 @@
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnMain.ResumeLayout(false);
             this.pnMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

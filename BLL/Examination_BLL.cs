@@ -18,5 +18,9 @@ namespace BLL
         {
             return Examination_DAL.updateResultExamination(rec_id, exa_result);
         }
+        public static Examination_DTO getExaminationDetailById(string rec_id)
+        {
+            return Examination_DAL.getExaminationDetailById(rec_id);
+        }
     }
 }
