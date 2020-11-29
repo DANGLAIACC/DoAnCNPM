@@ -54,6 +54,11 @@
     <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
@@ -63,6 +68,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,6 +83,12 @@
   <ItemGroup>
     <Compile Include="CustomControls\DragControl.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHospital.Designer.cs">
+      <DependentUpon>frmHospital.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmExaminationResult.cs">
       <SubType>Form</SubType>
@@ -123,6 +136,18 @@
     <Compile Include="global\List.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\frmReportGioiThieuNhapVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReportGioiThieuNhapVien.Designer.cs">
+      <DependentUpon>frmReportGioiThieuNhapVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GioiThieuNhapVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GioiThieuNhapVien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\UC_AddMedicine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,6 +190,9 @@
     <Compile Include="UserControls\UC_PrescriptionItem.Designer.cs">
       <DependentUpon>UC_PrescriptionItem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmHospital.resx">
+      <DependentUpon>frmHospital.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmExaminationResult.resx">
       <DependentUpon>frmExaminationResult.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +224,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\frmReportGioiThieuNhapVien.resx">
+      <DependentUpon>frmReportGioiThieuNhapVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GioiThieuNhapVien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GioiThieuNhapVien.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_AddMedicine.resx">
       <DependentUpon>UC_AddMedicine.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +294,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

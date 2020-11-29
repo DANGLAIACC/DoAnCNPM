@@ -19,6 +19,18 @@ namespace GUI.UserControls
         public UC_Patient()
         {
             InitializeComponent();
+
+            grvLstBenhNhan.Columns[0].FillWeight = 40;
+             
+            grvLstBenhNhan.Columns[2].Width =
+                grvLstBenhNhan.Columns[3].Width =
+                grvLstBenhNhan.Columns[4].Width = 80; 
+        }
+        private void UC_Patient_Load(object sender, EventArgs e)
+        {
+            List.lstPatient = Patient_BLL.getPatient();
+
+            loadLstPatientToGrv(List.lstPatient);
         }
         private void loadLstPatientToGrv(List<Patient_DTO> lst)
         {
@@ -91,16 +103,5 @@ namespace GUI.UserControls
             }
         }
 
-        private void UC_Patient_Load(object sender, EventArgs e)
-        {
-            List.lstPatient = Patient_BLL.getPatient();
-
-            loadLstPatientToGrv(List.lstPatient);
-
-            grvLstBenhNhan.Columns[0].Width = 80;
-            grvLstBenhNhan.Columns[2].Width =
-                grvLstBenhNhan.Columns[3].Width =
-                grvLstBenhNhan.Columns[4].Width = 130;
-        }
     }
 }
