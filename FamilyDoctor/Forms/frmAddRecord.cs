@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GUI.UserControls;
 using DTO;
 using BLL;
+using GUI.global;
 
 namespace GUI.Forms
 {
@@ -113,7 +114,7 @@ namespace GUI.Forms
             DialogResult result = MessageBox.Show("Phí khám bệnh: " + a.Exam_type_price, "Xác nhận thanh toán", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                Record_DTO r = new Record_DTO(0, DateTime.Now, 1000, "dqlai", txtRec_diagnostic.Text, txtHospital.Text, cboExamType.SelectedIndex, txtRec_note.Text);
+                Record_DTO r = new Record_DTO(0, DateTime.Now, 1000, List.curentDoctor.Doc_usr, txtRec_diagnostic.Text, txtHospital.Text, cboExamType.SelectedIndex, txtRec_note.Text);
 
                 string rec_id = Record_BLL.addRecord(r);
 

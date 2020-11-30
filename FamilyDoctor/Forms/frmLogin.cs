@@ -55,6 +55,7 @@ namespace GUI.Forms
                     List.curentDoctor = d;
 
                     frmMain f = new frmMain();
+
                     this.Hide();
                     f.ShowDialog();
                     this.Close();

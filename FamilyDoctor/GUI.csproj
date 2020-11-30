@@ -136,6 +136,12 @@
     <Compile Include="global\List.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Analytic.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Analytic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\frmReportPrescription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     <Compile Include="UserControls\UC_Medicine.Designer.cs">
       <DependentUpon>UC_Medicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Analytic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Analytic.Designer.cs">
+      <DependentUpon>UC_Analytic.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Patient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +248,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\Analytic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Analytic.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmReportPrescription.resx">
       <DependentUpon>frmReportPrescription.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Medicine.resx">
       <DependentUpon>UC_Medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Analytic.resx">
+      <DependentUpon>UC_Analytic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Patient.resx">
       <DependentUpon>UC_Patient.cs</DependentUpon>

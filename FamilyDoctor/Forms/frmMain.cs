@@ -77,8 +77,8 @@ namespace GUI.Forms
         private void btnUsers_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnUsers);
-            //UC_ManageUser um = new UC_ManageUser();
-            //AddControlsToPanel(um);
+            UC_Analytic ua = new UC_Analytic();
+            AddControlsToPanel(ua);
         }
 
         private void btnViewSales_Click(object sender, EventArgs e)
