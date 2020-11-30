@@ -14,7 +14,7 @@ namespace BLL
         {
             return Prescription_DAL.addPrescription(rec_id, p);
         }
-        public static List<Prescription_DTO> getPrescriptionByRecId(int rec_id)
+        public static List<Prescription_DTO> getPrescriptionByRecId(string rec_id)
         {
             return Prescription_DAL.getPrescriptionByRecId(rec_id);
         }

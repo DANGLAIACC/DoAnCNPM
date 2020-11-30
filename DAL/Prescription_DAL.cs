@@ -27,7 +27,7 @@ namespace DAL
         /// </summary>
         /// <param name="rec_id"></param>
         /// <returns></returns>
-        public static List<Prescription_DTO> getPrescriptionByRecId(int rec_id)
+        public static List<Prescription_DTO> getPrescriptionByRecId(string rec_id)
         {
             DataTable table = new DataTable();
             string query = string.Format("select * from prescription where rec_id = {0}", rec_id);
@@ -41,7 +41,7 @@ namespace DAL
                 for (int i = 0; i < count; i++)
                 {
                     l = new Prescription_DTO(
-                        rec_id,
+                        Int32.Parse(rec_id),
                         table.Rows[i]["med_name"].ToString(),
                         Int32.Parse(table.Rows[i]["pre_morning"].ToString()),
                         Int32.Parse(table.Rows[i]["pre_middle"].ToString()),

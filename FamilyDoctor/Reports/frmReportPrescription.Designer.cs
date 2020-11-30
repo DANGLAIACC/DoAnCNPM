@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CrystalReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.rpt = new GUI.Reports.Prescription();
+            this.CrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // CrystalReport
+            // CrystalReportViewer
             // 
-            this.CrystalReport.ActiveViewIndex = -1;
-            this.CrystalReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CrystalReport.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CrystalReport.DisplayStatusBar = false;
-            this.CrystalReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CrystalReport.Location = new System.Drawing.Point(0, 0);
-            this.CrystalReport.Name = "CrystalReport";
-            this.CrystalReport.Size = new System.Drawing.Size(886, 571);
-            this.CrystalReport.TabIndex = 0;
-            this.CrystalReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.CrystalReportViewer.ActiveViewIndex = -1;
+            this.CrystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CrystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CrystalReportViewer.DisplayStatusBar = false;
+            this.CrystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CrystalReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.CrystalReportViewer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CrystalReportViewer.Name = "CrystalReportViewer";
+            this.CrystalReportViewer.Size = new System.Drawing.Size(1181, 703);
+            this.CrystalReportViewer.TabIndex = 0;
+            this.CrystalReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // frmReportPrescription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 571);
-            this.Controls.Add(this.CrystalReport);
+            this.ClientSize = new System.Drawing.Size(1181, 703);
+            this.Controls.Add(this.CrystalReportViewer);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReportPrescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrescription";
@@ -61,7 +62,6 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer CrystalReport;
-        private Prescription rpt;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer CrystalReportViewer;
     }
 }

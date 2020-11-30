@@ -36,7 +36,7 @@ namespace GUI.Forms
             lblPhone.Text = patient.Pat_phone1;
 
             lstRecord = Record_BLL.getRecordByPatId(patient.Pat_id);
-            if (lstRecord != null && lstRecord.Count>0)
+            if (lstRecord != null && lstRecord.Count > 0)
             {
                 foreach (Record_DTO r in lstRecord)
                     grvLstRecord.Rows.Add(r.ToArrayString());
@@ -77,7 +77,7 @@ namespace GUI.Forms
             }
             else
             {
-                string rec_id = grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[0].Value.ToString().Substring(0,6);
+                string rec_id = grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[0].Value.ToString().Substring(0, 6);
                 frmExaminationResult f2 = new frmExaminationResult(rec_id);
                 f2.ShowDialog();
 
@@ -89,19 +89,32 @@ namespace GUI.Forms
 
         private void grvLstRecord_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //MessageBox.Show(grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[0].Value.ToString().Substring(0, 6));
+            string Rec_id = grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[0].Value.ToString().Substring(0, 6);
 
-            frmReportPrescription f = new frmReportPrescription(
-                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[0].Value.ToString().Substring(0, 6),
-                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[1].Value.ToString(),
-                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[3].Value.ToString(),
-                lblName.Text,
-                lblAge.Text,
-                "Địa chỉ tạm",
-                "Giới tính",
-                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[2].Value.ToString()
-                );
-            f.ShowDialog();
+            List<Prescription_DTO> lstPrescription = Prescription_BLL.getPrescriptionByRecId(Rec_id);
+
+            if (lstPrescription.Count > 0)
+            {
+
+                frmReportPrescription f = new frmReportPrescription(
+                    Rec_id,
+                    grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[1].Value.ToString(),
+                    grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[3].Value.ToString(),
+                    lblName.Text,
+                    lblAge.Text,
+                    patient.Pat_address,
+                    patient.Pat_gender?"Nam":"Nữ",
+                    grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[2].Value.ToString().ToUpper(),
+                    lstPrescription
+                    );
+                f.ShowDialog();
+            }
+            else
+            {
+                frmAlert f = new frmAlert();
+                f.showAlert("Bệnh án không có đơn thuốc.", frmAlert.enmType.Warning);
+            }
+
         }
     }
 }
