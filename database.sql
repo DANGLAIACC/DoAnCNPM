@@ -54,14 +54,14 @@ CREATE TABLE MEDICINE(
 GO
 CREATE TABLE PRESCRIPTION(
 	rec_id int foreign key references RECORD(rec_id),
-	med_id varchar(70) not null,
+	med_name varchar(100) not null,
 	
 	pre_morning int,
 	pre_middle int,
 	pre_afternoon int,
 
 	pre_note nvarchar(100),
-	primary key (rec_id,med_id)
+	primary key (rec_id,med_name)
 )
 GO
 CREATE TABLE EXAMINATION(
@@ -124,8 +124,10 @@ INSERT INTO RECORD(rec_date,pat_id,doc_usr,rec_diagnostic, hospital,exam_type_id
 
 GO
 INSERT INTO PRESCRIPTION VALUES
-(100000,'hapacolc500',1,1,1,N'Uống trước khi ăn'),
-(100001,'quazimin',1,0,1,N'Uống sau khi ăn no')
+(100000,'Hapacol Caplet Acetaminophen 500mg',1,1,1,N'Uống trước khi ăn'),
+(100000,'Quazimin Arginine Aspartate 1000mg Opv',1,0,1,N'Uống trước sau ăn 15 phút'),
+(100000,'Dalekine Natri Valproat 200mg Danapha',0,0,1,N'Uống trước khi ăn'),
+(100001,'Quazimin Arginine Aspartate 1000mg Opv',1,0,1,N'Uống sau khi ăn no')
 
 GO
 INSERT INTO EXAMINATION VALUES 
@@ -134,7 +136,7 @@ INSERT INTO EXAMINATION VALUES
 (100003,N'Bệnh viện Đại học Y Dược',N'Nội soi dạ dày',N''),
 (100004,N'Bệnh viện Đại học Y Dược',N'Nội soi dạ dày',N'')
 go
-select * from EXAMINATION
+select * from DOCTOR
 /*
 
 CREATE PROCEDURE CREATEMODEL  

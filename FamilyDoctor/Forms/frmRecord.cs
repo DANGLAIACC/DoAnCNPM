@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
+using GUI.Reports;
 
 namespace GUI.Forms
 {
@@ -84,6 +85,23 @@ namespace GUI.Forms
                 lblExa_result.Text = e1.Exa_result == "" ? "Đang đợi kết quả xét nghiệm" : e1.Exa_result;
 
             }
+        }
+
+        private void grvLstRecord_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //MessageBox.Show(grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[0].Value.ToString().Substring(0, 6));
+
+            frmReportPrescription f = new frmReportPrescription(
+                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[0].Value.ToString().Substring(0, 6),
+                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[1].Value.ToString(),
+                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[3].Value.ToString(),
+                lblName.Text,
+                lblAge.Text,
+                "Địa chỉ tạm",
+                "Giới tính",
+                grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[2].Value.ToString()
+                );
+            f.ShowDialog();
         }
     }
 }

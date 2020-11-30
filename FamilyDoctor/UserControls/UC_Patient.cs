@@ -24,7 +24,7 @@ namespace GUI.UserControls
              
             grvLstBenhNhan.Columns[2].Width =
                 grvLstBenhNhan.Columns[3].Width =
-                grvLstBenhNhan.Columns[4].Width = 80; 
+                grvLstBenhNhan.Columns[4].Width = 100; 
         }
         private void UC_Patient_Load(object sender, EventArgs e)
         {
