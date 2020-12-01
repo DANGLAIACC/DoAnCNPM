@@ -9,16 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using GUI.global;
 using GUI.Reports;
 
 namespace GUI.Forms
 {
     public partial class frmHospital : Form
     {
-        public frmHospital()
+        private Record_DTO record;
+        private Patient_DTO patient;
+        
+        public frmHospital(Record_DTO record)
         {
             InitializeComponent();
-        } 
+            this.record = record; 
+
+            lblHospital.Text = record.Hospital;
+        }
+        private void frmHospital_Load(object sender, EventArgs e)
+        {
+            patient = Patient_BLL.getPatientByRecId(record.Rec_id.ToString());
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -34,16 +45,12 @@ namespace GUI.Forms
 
                 return;
             }
+            Hide();
 
-
-            frmReportGioiThieuNhapVien f2 = new frmReportGioiThieuNhapVien("ngày 29 tháng 12 năm 2020", "123456", lblHospital.Text, "Nguyễn Thị Chung", "36", "Phù Mỹ, Bình Định", "Nữ", "Đau đầu, ho, sốt", "Rối loạn tiền đình", "Không", "Thích nên cho chuyển đi", "23:41:00 29/11/2020", "Bác sĩ CKII. ĐẶNG QUỐC LAI");
+            frmReportGioiThieuNhapVien f2 = new frmReportGioiThieuNhapVien(Function.getDatetime(record.Rec_date), record.Rec_id.ToString(), record.Hospital, patient.Pat_fullname, (DateTime.Now.Year - patient.Pat_dob.Year).ToString(), patient.Pat_address, patient.Pat_gender?"Nam":"Nữ", txtBieuHien.Text, txtChanDoan.Text, "Không", txtLyDo.Text, DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy"), "Bác sĩ CKII. "+List.curentDoctor.Doc_fullname.ToUpper());
             f2.ShowDialog();
-            
+            Close();
         }
 
-        private void frmHospital_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

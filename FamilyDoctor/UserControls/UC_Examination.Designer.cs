@@ -37,10 +37,6 @@
             this.txtFilter = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grvLstExamination = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDoc_name = new System.Windows.Forms.Label();
             this.lblRec_place = new System.Windows.Forms.Label();
@@ -52,6 +48,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rec_result = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvLstExamination)).BeginInit();
@@ -153,7 +153,7 @@
             this.Column1,
             this.Column2,
             this.Column4,
-            this.Column5});
+            this.Rec_result});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,32 +215,6 @@
             this.grvLstExamination.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.grvLstExamination.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvLstExamination_CellClick);
             this.grvLstExamination.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvLstThuoc_CellDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã HS";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.ToolTipText = "Mã hồ sơ";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã BA";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.ToolTipText = "Mã bệnh án";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Nội dung xét nghiệm";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Kết quả xét nghiệm";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // panel2
             // 
@@ -362,6 +336,32 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên bệnh nhân: ";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã HS";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.ToolTipText = "Mã hồ sơ";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã BA";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.ToolTipText = "Mã bệnh án";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Nội dung xét nghiệm";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Rec_result
+            // 
+            this.Rec_result.HeaderText = "Kết quả xét nghiệm";
+            this.Rec_result.Name = "Rec_result";
+            this.Rec_result.ReadOnly = true;
+            // 
             // UC_Examination
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -396,11 +396,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblRec_content;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblRec_place;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label lblRec_place;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rec_result;
     }
 }

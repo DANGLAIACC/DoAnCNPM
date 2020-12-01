@@ -51,19 +51,20 @@ namespace GUI.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string exa_result = txtExa_result.Text.Trim();
-            if(exa_result != "")
+            if(exa_result != "" && exa_result != "Điền kết quả xét nghiệm vào đây.")
             {
                 if (Examination_BLL.updateResultExamination(exa.Rec_id,exa_result))
                 {
+                    exa.Exa_result = exa_result;
                     frmAlert f = new frmAlert();
                     f.showAlert("Cập nhật thành công", frmAlert.enmType.Success);
-                    this.Close();
+                    Close();
                 }
                 else
                 {

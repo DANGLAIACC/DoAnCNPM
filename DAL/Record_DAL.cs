@@ -103,7 +103,7 @@ namespace DAL
         public static List<Record_DTO> getRecordHospital()
         {
             DataTable table = new DataTable();
-            string query = "select a.rec_id,rec_date, pat_fullname, hospital from record a inner join PATIENT d on a.pat_id=d.pat_id where hospital is not null";
+            string query = "select a.rec_id,rec_date, pat_fullname, hospital from record a inner join PATIENT d on a.pat_id=d.pat_id where hospital is not null and (hospital != '')";
 
             table = DataProvider.Execute(query);
             int count = table.Rows.Count;
@@ -153,6 +153,7 @@ namespace DAL
                 return lst;
             }
             return null;
-        } 
+        }
+        
     }
 }

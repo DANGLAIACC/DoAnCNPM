@@ -87,7 +87,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(394, 34);
             this.txtTen.TabIndex = 0;
-            this.txtTen.Enter += new System.EventHandler(this.txtTen_Enter);
+            this.txtTen.TextChanged += new System.EventHandler(this.txtTen_TextChanged);
             this.txtTen.Leave += new System.EventHandler(this.txtTen_Leave);
             // 
             // guna2HtmlLabel2

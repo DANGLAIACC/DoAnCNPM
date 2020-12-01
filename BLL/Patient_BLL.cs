@@ -22,5 +22,9 @@ namespace BLL
         {
             return Patient_DAL.updatePatient(p);
         }
+        public static Patient_DTO getPatientByRecId(string rec_id)
+        {
+            return Patient_DAL.getPatientByRecId(rec_id);
+        }
     }
 }

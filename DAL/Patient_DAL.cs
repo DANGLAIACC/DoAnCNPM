@@ -50,5 +50,31 @@ namespace DAL
             return DataProvider.ExecuteNonQuery(query);
         }
 
+        /// <summary>
+        /// Lấy chi tiết bệnh nhân trong bệnh án trong frm Hospital
+        /// </summary>
+        /// <param name="rec_id">mã bệnh án</param>
+        /// <returns>Patient_DTO bệnh nhân</returns>
+        public static Patient_DTO getPatientByRecId(string rec_id)
+        {
+            DataTable table = new DataTable();
+            string query = "select b.pat_id,pat_fullname,pat_gender,pat_dob,pat_address from RECORD a inner join PATIENT b on a.pat_id= b.pat_id where a.rec_id = " + rec_id;
+
+            table = DataProvider.Execute(query);
+            int count = table.Rows.Count;
+            if (table != null && count > 0)
+            {
+                Patient_DTO p = new Patient_DTO();
+                p.Pat_id = Int32.Parse(table.Rows[0]["pat_id"].ToString());
+                p.Pat_fullname = table.Rows[0]["pat_fullname"].ToString();
+                p.Pat_gender = table.Rows[0]["pat_gender"].ToString() == "1";
+                p.Pat_dob = DateTime.Parse(table.Rows[0]["pat_dob"].ToString());
+                p.Pat_address = table.Rows[0]["pat_address"].ToString();
+
+                return p;
+            }
+            return null;
+        }
+
     }
 }

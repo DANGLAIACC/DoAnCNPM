@@ -75,7 +75,7 @@ namespace GUI.Forms
             if (lblExa_result.Text == "Không yêu cầu xét nghiệm")
             {
                 frmAlert f1 = new frmAlert();
-                f1.showAlert("Không yêu cầu kết quả xét nghiệm.", frmAlert.enmType.Error);
+                f1.showAlert("Không yêu cầu xét nghiệm.", frmAlert.enmType.Warning);
             }
             else
             {
@@ -115,7 +115,7 @@ namespace GUI.Forms
             else
             {
                 frmAlert f = new frmAlert();
-                f.showAlert("Bệnh án không có đơn thuốc.", frmAlert.enmType.Warning);
+                f.showAlert("Không có đơn thuốc.", frmAlert.enmType.Warning);
             }
 
         }

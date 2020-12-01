@@ -106,12 +106,15 @@ namespace GUI.UserControls
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
-        
+        private bool blured = false;
+
         private void txtTen_Leave(object sender, EventArgs e)
         {
+            if (!blured) return;
+
             string med_id = txtTen.Text.Trim();
 
-            if(med_id == "")
+            if(blured && med_id == "")
             {
                 frmAlert frmAlert = new frmAlert();
                 frmAlert.showAlert(
@@ -197,9 +200,9 @@ namespace GUI.UserControls
             }
         }
 
-        private void txtTen_Enter(object sender, EventArgs e)
+        private void txtTen_TextChanged(object sender, EventArgs e)
         {
-
+            blured = true;
         }
     }
 }

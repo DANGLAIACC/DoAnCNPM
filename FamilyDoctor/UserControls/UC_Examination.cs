@@ -23,7 +23,7 @@ namespace GUI.UserControls
         }
         private void UC_Examination_Load(object sender, EventArgs e)
         {
-                lstExamination = Examination_BLL.getExamination();
+            lstExamination = Examination_BLL.getExamination();
 
             loadLstExaminationToGrv(lstExamination);
 
@@ -63,9 +63,11 @@ namespace GUI.UserControls
         private void grvLstThuoc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Examination_DTO exa = lstExamination[e.RowIndex];
-            frmExaminationResult f = new frmExaminationResult(exa);
 
+            frmExaminationResult f = new frmExaminationResult(lstExamination[e.RowIndex]);
             f.ShowDialog(this);
+
+            grvLstExamination.Rows[e.RowIndex].Cells[3].Value = f.exa.Exa_result == "" ? "Đang đợi kết quả..." : f.exa.Exa_result;
         }
 
         private void grvLstExamination_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -137,7 +137,6 @@ namespace GUI.Forms
                         {
                             Prescription_BLL.addPrescription(rec_id, u.prescription);
                             lst.Add(u.prescription);
-                            Console.WriteLine(lst[0].Med_name);
                         }
 
                     Hide();

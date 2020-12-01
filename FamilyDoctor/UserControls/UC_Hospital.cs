@@ -54,7 +54,8 @@ namespace GUI.UserControls
 
         private void grvLstHospital_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("Hiện bảng in giấy giới thiệu cho bệnh viện");
+            frmHospital f = new frmHospital(lstRecord[grvLstHospital.CurrentCell.RowIndex]);
+            f.ShowDialog(this);
         }
         /// <summary>
         /// Trả về mảng điền vào grid view

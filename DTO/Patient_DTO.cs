@@ -8,6 +8,7 @@ namespace DTO
 {
     public class Patient_DTO
     {
+        public Patient_DTO() { }
         public Patient_DTO(int pat_id, string pat_fullname, bool pat_gender, DateTime pat_dob, string pat_address, string pat_phone1,string phone2, string pat_anamnesis)
         {
             Pat_id = pat_id;
