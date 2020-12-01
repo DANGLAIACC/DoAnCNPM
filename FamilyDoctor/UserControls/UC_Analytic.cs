@@ -36,9 +36,6 @@ namespace GUI.UserControls
         {
             if (dtpStart.Value > dtpEnd.Value)
             {
-                Console.WriteLine("start: "+dtpStart.Value);
-                Console.WriteLine("end:   "+dtpEnd.Value);
-
                 MessageBox.Show("Ngày bắt đầu không được nhỏ hơn ngày kết thúc.", "Lỗi lọc data");
                 return;
             }
@@ -63,11 +60,9 @@ namespace GUI.UserControls
                 f1.showAlert("Không có bệnh án nào", frmAlert.enmType.Warning);
                 return;
             }
-
-            string rec_date = string.Format("ngày {0} tháng {1} năm {2}.", DateTime.Now.Day.ToString("00"), DateTime.Now.Month.ToString("00"), DateTime.Now.Year);
-
+            
             frmAnalytic f = new frmAnalytic(List.curentDoctor.Doc_fullname.ToUpper(),
-                rec_date,
+                Function.getDatetime(DateTime.Now),
                 dtpStart.Value.ToString("dd/MM/yyyy"), dtpEnd.Value.ToString("dd/MM/yyyy"), lst);
             f.Show();
         }

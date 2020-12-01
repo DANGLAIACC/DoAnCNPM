@@ -9,6 +9,15 @@ namespace GUI.global
 {
     public class Function
     {
+        /// <summary>
+        /// Trả về dạng ngày ... tháng ... năm ...
+        /// </summary>
+        /// <param name="d">ngày cần định dạng</param>
+        /// <returns></returns>
+        public static string getDatetime(DateTime d)
+        {
+           return string.Format("ngày {0} tháng {1} năm {2}.", d.Day.ToString("00"), d.Month.ToString("00"), d.Year);
+        }
         public static void styleButtonEnter(Guna2Button btn)
         {
             btn.Enter += (o, e) =>

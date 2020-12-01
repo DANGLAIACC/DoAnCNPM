@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using BLL;
 using DTO;
 using GUI.Reports;
-
+using GUI.global;
 namespace GUI.Forms
 {
     public partial class frmRecord : Form
@@ -54,8 +54,10 @@ namespace GUI.Forms
 
         private void btnThemBenhAn_Click(object sender, EventArgs e)
         {
-            frmAddRecord f = new frmAddRecord(patient.Pat_id, patient.Pat_fullname);
+            Hide();
+            frmAddRecord f = new frmAddRecord(patient);
             f.ShowDialog();
+            Close();
         }
 
         private void grvLstRecord_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,11 +99,9 @@ namespace GUI.Forms
             {
                 DateTime d = DateTime.Parse(grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[1].Value.ToString());
 
-                string rec_date = string.Format("ngày {0} tháng {1} năm {2}.", d.Day.ToString("00"), d.Month.ToString("00"), d.Year);
-
                 frmReportPrescription f = new frmReportPrescription(
                     Rec_id,
-                    rec_date,
+                    Function.getDatetime(d),
                     grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[3].Value.ToString(),
                     lblName.Text,
                     lblAge.Text,

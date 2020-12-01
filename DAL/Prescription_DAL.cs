@@ -19,6 +19,7 @@ namespace DAL
         {
             string query = string.Format("INSERT INTO PRESCRIPTION VALUES ({0}, '{1}', {2}, {3}, {4}, N'{5}')", rec_id, p.Med_name, p.Pre_morning, p.Pre_middle,
               p.Pre_afternoon, p.Pre_note);
+            
             return DataProvider.ExecuteNonQuery(query);
         }
 

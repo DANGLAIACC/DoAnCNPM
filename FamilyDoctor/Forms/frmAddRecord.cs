@@ -11,6 +11,8 @@ using GUI.UserControls;
 using DTO;
 using BLL;
 using GUI.global;
+using GUI.Reports;
+
 
 namespace GUI.Forms
 {
@@ -24,14 +26,16 @@ namespace GUI.Forms
         public static List<Prescription_DTO> lstPrescription = new List<Prescription_DTO>();
 
         private List<ExamType_DTO> lstComboExamType;
+        private Patient_DTO patient;
 
-        public frmAddRecord(int pat_id, string pat_fullname)
+        public frmAddRecord(Patient_DTO patient)
         {
             InitializeComponent();
             lstAllMedicine = lstMedicineSuggest = Medicine_BLL.getMedicine();
 
-            lblPat_id.Text = pat_id.ToString();
-            lblPat_name.Text = pat_fullname;
+            this.patient = patient;
+            lblPat_id.Text = patient.Pat_id.ToString();
+            lblPat_name.Text = patient.Pat_fullname;
         }
         private void frmAddPrescription_Load(object sender, EventArgs e)
         {
@@ -114,7 +118,7 @@ namespace GUI.Forms
             DialogResult result = MessageBox.Show("Phí khám bệnh: " + a.Exam_type_price, "Xác nhận thanh toán", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                Record_DTO r = new Record_DTO(0, DateTime.Now, 1000, List.curentDoctor.Doc_usr, txtRec_diagnostic.Text, txtHospital.Text, cboExamType.SelectedIndex, txtRec_note.Text);
+                Record_DTO r = new Record_DTO(0, DateTime.Now, patient.Pat_id, List.curentDoctor.Doc_usr, txtRec_diagnostic.Text, txtHospital.Text, cboExamType.SelectedIndex, txtRec_note.Text);
 
                 string rec_id = Record_BLL.addRecord(r);
 
@@ -125,10 +129,24 @@ namespace GUI.Forms
                 }
 
                 if (cboExamType.SelectedIndex == 0)
+                {
+                    List<Prescription_DTO> lst=new List<Prescription_DTO>();
                     // cboExamtype chọn 0 = có thêm đơn thuốc
                     foreach (UC_PrescriptionItem u in pnPrescritionItems.Controls)
                         if (u.isUcValid())
+                        {
                             Prescription_BLL.addPrescription(rec_id, u.prescription);
+                            lst.Add(u.prescription);
+                            Console.WriteLine(lst[0].Med_name);
+                        }
+
+                    Hide();
+
+                    frmReportPrescription f2 = new frmReportPrescription(rec_id, Function.getDatetime(DateTime.Now), txtRec_diagnostic.Text, patient.Pat_fullname, (DateTime.Now.Year - patient.Pat_dob.Year).ToString(), patient.Pat_address, patient.Pat_gender ? "Nam" : "Nữ", "BS CKII. "+List.curentDoctor.Doc_fullname.ToUpper(), lst);
+                    f2.ShowDialog(this);
+
+                    Close();
+                }
             }
 
         }

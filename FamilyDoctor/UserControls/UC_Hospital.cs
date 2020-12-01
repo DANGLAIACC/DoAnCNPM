@@ -62,7 +62,6 @@ namespace GUI.UserControls
         /// <returns></returns>
         public string[] ToArrayStringHospital(Record_DTO r)
         {
-            Console.Write(r.Rec_id);
             return new string[]{
                 r.Rec_id.ToString(),
                 r.Rec_date.ToString("HH:mm:ss dd/MM/yyyy"),

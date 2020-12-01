@@ -145,6 +145,7 @@ namespace GUI.UserControls
                     prescription.Med_id = med_id;
                     txtTen.Text = m.Med_name;
                     frmAddRecord.lstMedicineSuggest.Remove(m);
+                    prescription.Med_name = m.Med_name;
                     txtTen.Enabled = false;
                     return;
                 }
@@ -198,7 +199,7 @@ namespace GUI.UserControls
 
         private void txtTen_Enter(object sender, EventArgs e)
         {
-            Console.WriteLine("Enter nè ");
+
         }
     }
 }
