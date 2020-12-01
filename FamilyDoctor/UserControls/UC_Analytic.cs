@@ -17,6 +17,7 @@ namespace GUI.UserControls
 {
     public partial class UC_Analytic : UserControl
     {
+        List<DTO.Analytic_DTO> lst = new List<DTO.Analytic_DTO>();
         public UC_Analytic()
         {
             InitializeComponent();
@@ -42,16 +43,24 @@ namespace GUI.UserControls
                 return;
             }
             grvLstRecord.Rows.Clear();
-            List<DTO.Analytic_DTO> lst = Record_BLL.getRecordByDate(List.curentDoctor.Doc_usr, dtpStart.Value.ToString("MM/dd/yyyy"), dtpEnd.Value.ToString("MM/dd/yyyy"));
+            lst = Record_BLL.getRecordByDate(List.curentDoctor.Doc_usr, dtpStart.Value.ToString("MM/dd/yyyy"), dtpEnd.Value.ToString("MM/dd/yyyy"));
 
             if(lst != null)
                 foreach (DTO.Analytic_DTO a in lst)
-                    grvLstRecord.Rows.Add(a);
+                    grvLstRecord.Rows.Add(new string[] {
+                        a.Rec_id,
+                        a.Pat_fullname,
+                        a.Rec_date,
+                        a.Exam_type_price.ToString("#,##0")
+                    }); 
         }
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            frmAnalytic f = new frmAnalytic();
+            string rec_date = string.Format("ngày {0} tháng {1} năm {2}.", DateTime.Now.Day.ToString("00"), DateTime.Now.Month.ToString("00"), DateTime.Now.Year);
+            frmAnalytic f = new frmAnalytic(List.curentDoctor.Doc_fullname.ToUpper(),
+                rec_date,
+                dtpStart.Value.ToString("dd/MM/yyyy"), dtpEnd.Value.ToString("dd/MM/yyyy"), lst);
             f.Show();
         }
     }
