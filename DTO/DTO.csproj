@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analytic_DTO.cs" />
     <Compile Include="Doctor_DTO.cs" />
     <Compile Include="Examination_DTO.cs" />
     <Compile Include="ExamType_DTO.cs" />

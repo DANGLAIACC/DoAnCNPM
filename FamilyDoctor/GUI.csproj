@@ -142,6 +142,17 @@
       <DependentUpon>Analytic.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\Analytic_DTO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Analytic_DTO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmAnalytic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmAnalytic.Designer.cs">
+      <DependentUpon>frmAnalytic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\frmReportPrescription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +263,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Analytic.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmAnalytic.resx">
+      <DependentUpon>frmAnalytic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmReportPrescription.resx">
       <DependentUpon>frmReportPrescription.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +329,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Reports\Analytic_DTO.xsc">
+      <DependentUpon>Analytic_DTO.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Analytic_DTO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Analytic_DTO.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Analytic_DTO.xss">
+      <DependentUpon>Analytic_DTO.xsd</DependentUpon>
+    </None>
     <None Include="Resources\warning.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\info.png" />

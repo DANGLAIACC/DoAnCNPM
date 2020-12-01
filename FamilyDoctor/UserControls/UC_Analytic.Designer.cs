@@ -150,6 +150,7 @@
             this.btnIn.Size = new System.Drawing.Size(104, 45);
             this.btnIn.TabIndex = 5;
             this.btnIn.Text = "In";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -276,7 +277,7 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Thanh toán";
+            this.Column5.HeaderText = "Chi phí";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 

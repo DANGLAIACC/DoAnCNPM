@@ -11,6 +11,7 @@ using DTO;
 using BLL;
 using GUI.global;
 using GUI.Forms;
+using GUI.Reports;
 
 namespace GUI.UserControls
 {
@@ -41,11 +42,17 @@ namespace GUI.UserControls
                 return;
             }
             grvLstRecord.Rows.Clear();
-            List<string[]> lst = Record_BLL.getRecordByDate(List.curentDoctor.Doc_usr, dtpStart.Value.ToString("MM/dd/yyyy"), dtpEnd.Value.ToString("MM/dd/yyyy"));
+            List<DTO.Analytic_DTO> lst = Record_BLL.getRecordByDate(List.curentDoctor.Doc_usr, dtpStart.Value.ToString("MM/dd/yyyy"), dtpEnd.Value.ToString("MM/dd/yyyy"));
 
             if(lst != null)
-                foreach (string[] str in lst)
-                    grvLstRecord.Rows.Add(str);
+                foreach (DTO.Analytic_DTO a in lst)
+                    grvLstRecord.Rows.Add(a);
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frmAnalytic f = new frmAnalytic();
+            f.Show();
         }
     }
 }

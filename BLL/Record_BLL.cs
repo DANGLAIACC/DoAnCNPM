@@ -27,7 +27,7 @@ namespace BLL
             return Record_DAL.getRecordHospital();
         }
 
-        public static List<string[]> getRecordByDate(string doc_usr, string start, string end)
+        public static List<Analytic_DTO> getRecordByDate(string doc_usr, string start, string end)
         {
             return Record_DAL.getRecordByDate(doc_usr, start, end);
         }

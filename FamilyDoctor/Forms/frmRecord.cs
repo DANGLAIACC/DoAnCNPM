@@ -104,7 +104,7 @@ namespace GUI.Forms
                     lblAge.Text,
                     patient.Pat_address,
                     patient.Pat_gender?"Nam":"Nữ",
-                    grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[2].Value.ToString().ToUpper(),
+                    "BS CKII."+grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[2].Value.ToString().ToUpper(),
                     lstPrescription
                     );
                 f.ShowDialog();
