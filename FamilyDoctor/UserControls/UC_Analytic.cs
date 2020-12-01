@@ -57,7 +57,15 @@ namespace GUI.UserControls
 
         private void btnIn_Click(object sender, EventArgs e)
         {
+            if (lst.Count == 0)
+            {
+                frmAlert f1 = new frmAlert();
+                f1.showAlert("Không có bệnh án nào", frmAlert.enmType.Warning);
+                return;
+            }
+
             string rec_date = string.Format("ngày {0} tháng {1} năm {2}.", DateTime.Now.Day.ToString("00"), DateTime.Now.Month.ToString("00"), DateTime.Now.Year);
+
             frmAnalytic f = new frmAnalytic(List.curentDoctor.Doc_fullname.ToUpper(),
                 rec_date,
                 dtpStart.Value.ToString("dd/MM/yyyy"), dtpEnd.Value.ToString("dd/MM/yyyy"), lst);

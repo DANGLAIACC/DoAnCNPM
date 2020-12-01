@@ -17,10 +17,35 @@ namespace GUI.UserControls
     {
         public Patient_DTO p;
         int pat_id;
+        /// <summary>
+        /// Dùng cho thêm bệnh nhân
+        /// </summary>
+        /// <param name="pat_id">Mã bệnh nhân mới</param>
         public UC_AddPatient(int pat_id)
         {
-            this.pat_id = pat_id;
             InitializeComponent();
+            this.pat_id = pat_id;
+        }
+        /// <summary>
+        /// Dùng cho sửa bệnh nhân
+        /// </summary>
+        /// <param name="p">bệnh nhân được sửa</param>
+        public UC_AddPatient(Patient_DTO p, string pat_id)
+        { 
+            InitializeComponent();
+            btnThem.Text = "Lưu";
+            btnClear.Visible = false;
+
+            txtTen.Text = p.Pat_fullname;
+            dtpTuoi.Value = p.Pat_dob;
+            txtPhone1.Text = p.Pat_phone1;
+            txtPhone2.Text = p.Pat_phone2;
+            txtDiaChi.Text = p.Pat_address;
+            txtTienSu.Text = p.Pat_anamnesis;
+            tglGender.Checked = p.Pat_gender;
+
+            this.p = p;
+            this.pat_id = Int32.Parse(pat_id);
         }
 
         private void UC_AddPatient_Load(object sender, EventArgs e)
@@ -64,17 +89,35 @@ namespace GUI.UserControls
                 txtPhone2.Text.Trim(),
                 txtTienSu.Text.Trim());
 
-            if(Patient_BLL.addPatient(p))
+            if(btnThem.Text == "Thêm")
             {
-                frmAlert f = new frmAlert();
-                f.showAlert("Thêm thành công", frmAlert.enmType.Success);
+                if(Patient_BLL.addPatient(p))
+                {
+                    frmAlert f = new frmAlert();
+                    f.showAlert("Thêm thành công", frmAlert.enmType.Success);
 
-                ((Form)this.TopLevelControl).Close();
+                    ((Form)this.TopLevelControl).Close();
+                }
+                else
+                {
+                    frmAlert f = new frmAlert();
+                    f.showAlert("Thêm thất bại", frmAlert.enmType.Error);
+                }
             }
             else
-            {
-                frmAlert f = new frmAlert();
-                f.showAlert("Thêm thất bại", frmAlert.enmType.Error);
+            {// Lưu
+                if (Patient_BLL.updatePatient(p))
+                {
+                    frmAlert f = new frmAlert();
+                    f.showAlert("Lưu thành công", frmAlert.enmType.Success);
+
+                    ((Form)this.TopLevelControl).Close();
+                }
+                else
+                {
+                    frmAlert f = new frmAlert();
+                    f.showAlert("Lưu thất bại", frmAlert.enmType.Error);
+                }
             }
         }
     }

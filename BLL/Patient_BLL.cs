@@ -18,5 +18,9 @@ namespace BLL
         {
             return Patient_DAL.addPatient(p);
         }
+        public static bool updatePatient(Patient_DTO p)
+        {
+            return Patient_DAL.updatePatient(p);
+        }
     }
 }

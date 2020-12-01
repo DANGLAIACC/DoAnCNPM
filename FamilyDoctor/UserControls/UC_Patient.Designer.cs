@@ -97,6 +97,7 @@
             this.btnEdit.Size = new System.Drawing.Size(172, 43);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Sửa thông tin";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtFilter
             // 

@@ -103,5 +103,21 @@ namespace GUI.UserControls
             }
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int currentRow = grvLstBenhNhan.CurrentCell.RowIndex;
+            UC_AddPatient u = new UC_AddPatient(List.lstPatient[currentRow], 
+                grvLstBenhNhan.Rows[currentRow].Cells[0].Value.ToString());
+
+            frmAdd f = new frmAdd("Sửa thông tin bệnh nhân", u);
+            f.ShowDialog();
+
+            if (u.p != null)
+            {
+                List.lstPatient.RemoveAt(currentRow);
+                List.lstPatient.Insert(currentRow,u.p);
+                loadLstPatientToGrv(List.lstPatient);
+            }
+        }
     }
 }

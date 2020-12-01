@@ -93,18 +93,21 @@ namespace GUI.Forms
 
             List<Prescription_DTO> lstPrescription = Prescription_BLL.getPrescriptionByRecId(Rec_id);
 
-            if (lstPrescription.Count > 0)
+            if (lstPrescription != null && lstPrescription.Count>0)
             {
+                DateTime d = DateTime.Parse(grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[1].Value.ToString());
+
+                string rec_date = string.Format("ngày {0} tháng {1} năm {2}.", d.Day.ToString("00"), d.Month.ToString("00"), d.Year);
 
                 frmReportPrescription f = new frmReportPrescription(
                     Rec_id,
-                    grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[1].Value.ToString(),
+                    rec_date,
                     grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[3].Value.ToString(),
                     lblName.Text,
                     lblAge.Text,
                     patient.Pat_address,
                     patient.Pat_gender?"Nam":"Nữ",
-                    "BS CKII."+grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[2].Value.ToString().ToUpper(),
+                    "BS CKII. "+grvLstRecord.Rows[grvLstRecord.CurrentCell.RowIndex].Cells[2].Value.ToString().ToUpper(),
                     lstPrescription
                     );
                 f.ShowDialog();
