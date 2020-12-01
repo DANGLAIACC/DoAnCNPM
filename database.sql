@@ -48,13 +48,13 @@ CREATE TABLE RECORD(
 )
 GO
 CREATE TABLE MEDICINE(
-	med_id varchar(50) primary key,
-	med_name nvarchar(70) not null
+	med_id varchar(50),
+	med_name nvarchar(70) primary key
 )
 GO
 CREATE TABLE PRESCRIPTION(
 	rec_id int foreign key references RECORD(rec_id),
-	med_name varchar(100) not null,
+	med_name nvarchar(70) foreign key references MEDICINE(med_name),
 	
 	pre_morning int,
 	pre_middle int,
