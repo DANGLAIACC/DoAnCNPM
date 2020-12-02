@@ -340,8 +340,9 @@
             this.Controls.Add(this.panelLeft);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
-            this.Text = "Form_Dashboard";
+            this.Text = "Family Doctor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelLeft.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

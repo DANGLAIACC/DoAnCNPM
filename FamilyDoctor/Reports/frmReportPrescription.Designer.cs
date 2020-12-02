@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportPrescription));
             this.CrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             this.CrystalReportViewer.DisplayStatusBar = false;
             this.CrystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CrystalReportViewer.Location = new System.Drawing.Point(0, 0);
-            this.CrystalReportViewer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CrystalReportViewer.Margin = new System.Windows.Forms.Padding(4);
             this.CrystalReportViewer.Name = "CrystalReportViewer";
             this.CrystalReportViewer.Size = new System.Drawing.Size(1181, 703);
             this.CrystalReportViewer.TabIndex = 0;
@@ -51,10 +52,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 703);
             this.Controls.Add(this.CrystalReportViewer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReportPrescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrescription";
+            this.Text = "In đơn thuốc";
             this.Load += new System.EventHandler(this.frmReportPrescription_Load);
             this.ResumeLayout(false);
 
