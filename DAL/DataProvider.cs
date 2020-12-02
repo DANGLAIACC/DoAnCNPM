@@ -12,7 +12,7 @@ namespace DAL
     {
         public static SqlConnection OpenConnection()
         {
-            string strConnection = @"server=DANGLAI_PC\DANGLAI_PC;"
+            string strConnection = @"server=TTTVT2-33\DANGLAI;"
                 + "database=FAMILY_DOCTOR;Integrated Security=True;"
                 + "Trusted_Connection=true";
 
