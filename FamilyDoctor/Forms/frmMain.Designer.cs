@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btnViewSales = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnHospital = new System.Windows.Forms.Button();
             this.btnExamination = new System.Windows.Forms.Button();
@@ -62,8 +60,6 @@
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.panelLeft.Controls.Add(this.panelSide);
-            this.panelLeft.Controls.Add(this.btnSettings);
-            this.panelLeft.Controls.Add(this.btnViewSales);
             this.panelLeft.Controls.Add(this.btnUsers);
             this.panelLeft.Controls.Add(this.btnHospital);
             this.panelLeft.Controls.Add(this.btnExamination);
@@ -83,40 +79,6 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(7, 60);
             this.panelSide.TabIndex = 1;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(12, 530);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(203, 60);
-            this.btnSettings.TabIndex = 2;
-            this.btnSettings.Text = "     Nothing";
-            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnViewSales
-            // 
-            this.btnViewSales.FlatAppearance.BorderSize = 0;
-            this.btnViewSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewSales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewSales.ForeColor = System.Drawing.Color.White;
-            this.btnViewSales.Image = ((System.Drawing.Image)(resources.GetObject("btnViewSales.Image")));
-            this.btnViewSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewSales.Location = new System.Drawing.Point(12, 466);
-            this.btnViewSales.Name = "btnViewSales";
-            this.btnViewSales.Size = new System.Drawing.Size(203, 60);
-            this.btnViewSales.TabIndex = 2;
-            this.btnViewSales.Text = "     Nothing";
-            this.btnViewSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnViewSales.UseVisualStyleBackColor = true;
-            this.btnViewSales.Click += new System.EventHandler(this.btnViewSales_Click);
             // 
             // btnUsers
             // 
@@ -367,8 +329,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblDoctor;
-        private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnViewSales;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnHospital;
         private System.Windows.Forms.Button btnExamination;

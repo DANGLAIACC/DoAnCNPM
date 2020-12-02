@@ -19,9 +19,7 @@ namespace GUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmLogin());
-            Application.Run(new frmMain());
-            //Application.Run(new frmHospital());
+            Application.Run(new frmLogin());
         }
     }
 }

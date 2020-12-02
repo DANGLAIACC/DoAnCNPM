@@ -81,18 +81,6 @@ namespace GUI.Forms
             AddControlsToPanel(ua);
         }
 
-        private void btnViewSales_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnViewSales);
-            //UC_ViewSales vs = new UC_ViewSales();
-            //AddControlsToPanel(vs);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnSettings);
-        }
-
         private void timerTime_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
