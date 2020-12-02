@@ -2,7 +2,7 @@
 
 ### Đề tài: <b> Xây dựng hệ thống quản lý phòng khám bác sĩ gia đình </b>
 
-## Demo tại: 
+## Demo tại: https://youtu.be/fmC_nc6uQCs
 
 ## Yêu cầu khi chạy chương trình:
 - Khuyến nghị Visual Studio 2015.
